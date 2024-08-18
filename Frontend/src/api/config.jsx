@@ -6,7 +6,7 @@ import APIS from ".";
 // https://cwbackend-5hrgqvyba-awais-zubairs-projects.vercel.app
 
 const baseModule = axios.create({
-  baseURL: "https://tj6h9ng2-8080.inc1.devtunnels.ms/api/",
+  baseURL: "http://flightsavior.com:8080//api/",
 });
 
 const useAPI = (api) => {
