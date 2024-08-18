@@ -1,0 +1,309 @@
+.card {
+    box-shadow: 0px 0px 7px 4px #f3eded;
+    border-radius: 16px;
+}
+
+.section .mini-heading {
+    color: var(--stroke-tb);
+    font-size: 0.875em;
+}
+
+.section .main-heading {
+    font-size: 2.25em;
+}
+
+.section .main-para p {
+    font-size: 1.125em;
+    color: var(--stroke-tb);
+}
+
+.section-5-img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.section-7 {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-7 .main-para {
+    margin-bottom: 0;
+}
+
+.section-7 .mini-heading,
+.section-7 .main-heading {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.section-7 button {
+    margin: auto 2.5rem;
+}
+
+.section-8 .w-16 {
+    width: 3rem !important;
+}
+
+.section-8 .card {
+    box-shadow: none !important;
+}
+
+.dynamic-container label {
+    font-size: 1rem;
+    color: grey;
+}
+
+.tab button.active {
+    border-bottom: solid 4px var(--primary-500);
+    color: var(--primary-500);
+    font-weight: bold;
+}
+
+.tabcontent {
+    border: #ccc;
+    border-top: none;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+.form-group {
+    /* border-right: solid 2px rgb(231, 231, 231); */
+}
+
+.form-group input,
+.form-group select {
+    /* padding: 8px; */
+    box-sizing: border-box;
+    /* border: none; */
+    background-color: transparent;
+    border-radius: 5px;
+    margin-right: 7px;
+    font-size: 1rem;
+}
+
+.form-group input[type="text"] {
+    border: 1px solid;
+    padding: 4px;
+}
+
+.form-group input[type="radio"] {
+    width: auto;
+}
+
+.form-container button {
+    width: auto !important;
+    font-size: 1rem;
+}
+
+.trip-options select {
+    text-align: right !important;
+}
+
+.dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-toggle {
+    width: 100%;
+    text-align: left;
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown-toggle:focus {
+    outline: none;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    text-decoration: none;
+    color: #000;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+.arrow-down {
+    display: inline-block;
+    margin-left: 5px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: rotate(45deg);
+}
+
+.carRentalBtn {
+    padding: 20px 25px;
+}
+
+.rating {
+    border-radius: 4px;
+    background-color: #1ab64f;
+    color: var(--white);
+}
+
+.hotelCost {
+    color: var(--primary-500);
+}
+
+.depart-details {
+    color: var(--stroke-tb)
+}
+
+.filter-heading,
+.slider-value,
+.filter-radio {
+    color: var(--neutral);
+}
+
+.result-box {
+    background-color: white;
+    box-shadow: var(--result-shadow);
+}
+
+.result-numbers-item {
+    cursor: default;
+}
+
+.result-numbers-item-sub {
+    color: var(--text-100);
+}
+
+.flight-accordion,
+.flight-accordion * {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.numbers,
+.numbers * {
+    font-size: 2rem !important;
+}
+
+.react-datepicker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.react-datepicker__day--selected {
+    background-color: #007bff;
+    color: white;
+}
+
+.react-datepicker__day--in-range {
+    background-color: #d0eaff;
+    color: black;
+}
+
+#fromSuggestions li:hover,
+#toSuggestions li:hover {
+    background: rgb(219, 211, 211) !important;
+}
+
+.footer-page *,
+.privacy-section * {
+    font-family: "Quicksand", sans-serif !important;
+}
+
+button.multiCityBtn {
+    width: min-content !important;
+}
+
+.user-account {
+    background-color: rgb(250, 250, 250) !important;
+}
+
+.vl {
+    border-left: 0.15rem solid rgb(238, 236, 236);
+    height: 2rem;
+}
+
+.user-tab-active {
+    border-bottom: 4px solid var(--primary-500) !important;
+}
+
+.checkout-tab {
+    font-family: "Quicksand", sans-serif !important;
+    font-weight: 600 !important;
+}
+
+.passenger-info-form * {
+    font-family: "Quicksand", sans-serif !important;
+}
+
+.inline-nav {
+    background: hsla(0, 0%, 100%, .17);
+}
+
+.active-navlink {
+    color: #000;
+    background: #ffffff;
+}
+
+.card-payment__container {
+    width: auto !important;
+    max-width: 100% !important;
+}
+
+.back-arrow :hover {
+    color: var(--primary-300) !important;
+}
+
+.PhoneInput * {
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.PhoneInput input {
+    padding: 4px;
+    border: 1px solid #e0dfdf;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    .md\:card-30 {
+        width: 30%;
+    }
+}
+
+@media (max-width: 640px) {
+    .main-heading {
+        font-size: 1.75rem !important;
+    }
+}
+
+@media (max-width: 330px) {
+    .bg-no-repeat h1 {
+        font-size: 2.75rem !important;
+    }
+}

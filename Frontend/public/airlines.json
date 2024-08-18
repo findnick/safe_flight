@@ -1,0 +1,1609 @@
+{
+  "meta": {
+    "before": null,
+    "limit": 200,
+    "after": "g3QAAAACdwJpZG0AAAAaYXJsXzAwMDA5Vk1FN0RCS2VNYWdzNUNsajJ3BG5hbWVtAAAADEJ1bGdhcmlhIEFpcg=="
+  },
+  "data": [
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "12",
+      "name": "12 North",
+      "id": "arl_00009VME7DEWSV8v1yhJgK"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/Q5.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/Q5.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "Q5",
+      "name": "40-Mile Air",
+      "id": "arl_00009VME7DAGiJjwomhv2x"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "GB",
+      "name": "ABX Air",
+      "id": "arl_0000AiejdnUtkkmhKvCPk8"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/A3.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/A3.svg",
+      "conditions_of_carriage_url": "https://en.aegeanair.com/conditions-notices/conditions-notices/",
+      "iata_code": "A3",
+      "name": "Aegean Airlines",
+      "id": "arl_00009VME7DAGiJjwomhv3K"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "AX",
+      "name": "Aergo International Pty Ltd",
+      "id": "arl_0000AiejdoS6Ce8iIWth1E"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/EI.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/EI.svg",
+      "conditions_of_carriage_url": "https://www.aerlingus.com/support/legal/conditions-of-carriage/",
+      "iata_code": "EI",
+      "name": "Aer Lingus",
+      "id": "arl_00009VME7DAyfgJ6qz2UAH"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/EG.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/EG.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "EG",
+      "name": "Aer Lingus UK",
+      "id": "arl_0000ACxYBmXgp0rX9ogi3c"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "7T",
+      "name": "Aero Express del Ecuador - Trans A",
+      "id": "arl_0000AiejdnKGOIHGnwDvAO"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/SU.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/SU.svg",
+      "conditions_of_carriage_url": "https://www.aeroflot.ru/gb-en/information/legal/contract",
+      "iata_code": "SU",
+      "name": "Aeroflot",
+      "id": "arl_00009VME7DAch01WpssCbG"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "RF",
+      "name": "Aero-K Airlines",
+      "id": "arl_0000AiejdnlYko70AaziiG"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "EF",
+      "name": "Aerolinea del Caribe Peru S.A.C.",
+      "id": "arl_0000AiejdnkUolGG7IUs3V"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "JK",
+      "name": "Aerolinea Del Caribe S.A.",
+      "id": "arl_0000AiejdoNUTmSA4Ek0ps"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AR.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AR.svg",
+      "conditions_of_carriage_url": "https://www.aerolineas.com.ar/legales?tab=condicionestransporte",
+      "iata_code": "AR",
+      "name": "Aerolineas Argentinas",
+      "id": "arl_00009VME7DAch01WpssCcL"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "3S",
+      "name": "Aerologic",
+      "id": "arl_0000AiejdnH4a9j2e2jNC4"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/VW.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/VW.svg",
+      "conditions_of_carriage_url": "https://www.aeromar.mx/es/terminos-y-condiciones",
+      "iata_code": "VW",
+      "name": "Aeromar",
+      "id": "arl_00009VME7DBKeMags5CliC"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AM.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AM.svg",
+      "conditions_of_carriage_url": "https://aeromexico.com/en-us/legal-information",
+      "iata_code": "AM",
+      "name": "Aeromexico",
+      "id": "arl_00009VME7DAch01WpssCbz"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": "https://aeromexico.com/en-us/legal-information",
+      "iata_code": "5D",
+      "name": "Aeromexico Connect",
+      "id": "arl_00009VME7DAch01WpssCbO"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "DC",
+      "name": "AERONAVES DOMINICANAS SRL",
+      "id": "arl_0000AiejdnXNbWllScMObw"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "KA",
+      "name": "Aero Nomad Airlines LLC",
+      "id": "arl_0000AiejdnaZPfJzcVqwaG"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/OT.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/OT.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "OT",
+      "name": "Aeropelican Air Services",
+      "id": "arl_00009VME7DBKeMags5Clho"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/VH.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/VH.svg",
+      "conditions_of_carriage_url": "https://www.vivaair.com/co/en/legal-information_terms-and-conditions",
+      "iata_code": "VH",
+      "name": "Aeropostal Airlines",
+      "id": "arl_0000AOnLULhHSZlbzXx8dq"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "5L",
+      "name": "Aerosur",
+      "id": "arl_00009VME7DBKeMags5Cli5"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "M7",
+      "name": "Aerotransportes Mas de Carga",
+      "id": "arl_0000Aiejdo53aJhx947I6T"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "6R",
+      "name": "Aerounion",
+      "id": "arl_0000AiejdnC6sbkuOePPSS"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "4D",
+      "name": "Aerro Direkt S.R.L.",
+      "id": "arl_0000AiejdnOA9nOf0232FE"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "J7",
+      "name": "Afrijet",
+      "id": "arl_0000AiejdnGMcn9sbqOo5Y"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/8U.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/8U.svg",
+      "conditions_of_carriage_url": "https://afriqiyah.aero/en/",
+      "iata_code": "8U",
+      "name": "Afriqiyah Airways",
+      "id": "arl_00009VME7DAGiJjwomhv35"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZB.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/ZB.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "ZB",
+      "name": "Air Albania",
+      "id": "arl_0000Aa89SShUhFS6h3ufS4"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AH.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AH.svg",
+      "conditions_of_carriage_url": "https://airalgerie.dz/en/legal-notice/general-conditions-of-carriage-2/",
+      "iata_code": "AH",
+      "name": "Air Algerie",
+      "id": "arl_00009VME7DAyfgJ6qz2UA8"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/G9.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/G9.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "G9",
+      "name": "Air Arabia",
+      "id": "arl_00009VME7DAch01WpssCc3"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AK.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AK.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "AK",
+      "name": "AirAsia",
+      "id": "arl_00009VME7DAyfgJ6qz2U9g"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "I5",
+      "name": "AirAsia India",
+      "id": "arl_0000AYadHL8G2QvC0vSdkG"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/D7.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/D7.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "D7",
+      "name": "AirAsia X",
+      "id": "arl_00009VME7DC2bj9quHXKp6"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/KC.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/KC.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "KC",
+      "name": "Air Astana",
+      "id": "arl_00009VME7DAyfgJ6qz2UAh"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "CT",
+      "name": "Air Atlanta Europe Ltd",
+      "id": "arl_0000AiejdnQI1t696d2jYm"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/UU.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/UU.svg",
+      "conditions_of_carriage_url": "https://www.air-austral.com/en/general-conditions-of-carriage.html",
+      "iata_code": "UU",
+      "name": "Air Austral",
+      "id": "arl_00009VME7DBKeMags5Clhv"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "BT",
+      "name": "Air Baltic Corporation A/S",
+      "id": "arl_0000AiejdnI8WCZmhLEDqq"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/KF.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/KF.svg",
+      "conditions_of_carriage_url": "https://www.airbelgium.com/en/legal/general-terms-and-conditions-of-carriage/",
+      "iata_code": "KF",
+      "name": "Air Belgium",
+      "id": "arl_0000AOtmcer4giohSyoIkg"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": null,
+      "name": "Air Belgium as British Airways",
+      "id": "arl_0000AXLdCO5HTbcu1NDt0y"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/PA.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/PA.svg",
+      "conditions_of_carriage_url": "https://www.airblue.com/corp/terms",
+      "iata_code": "PA",
+      "name": "Airblue",
+      "id": "arl_00009VME7DAch01WpssCba"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BP.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BP.svg",
+      "conditions_of_carriage_url": "https://www.airbotswana.co.bw/general-conditions-carriage",
+      "iata_code": "BP",
+      "name": "Air Botswana",
+      "id": "arl_00009VME7DAyfgJ6qz2U9r"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/2J.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/2J.svg",
+      "conditions_of_carriage_url": "https://air-burkina.com/en/general-conditions-of-carriage#:~:text=The%20passenger%20is%20required%20to,departure%20formalities%20to%20be%20completed.",
+      "iata_code": "2J",
+      "name": "Air Burkina",
+      "id": "arl_00009VME7DAch01WpssCcT"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BX.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BX.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "BX",
+      "name": "Air Busan",
+      "id": "arl_00009VME7DEATorL0sX285"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "SM",
+      "name": "Air Cairo",
+      "id": "arl_0000AiejdoNUTmSA4Ek0pt"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "SB",
+      "name": "Aircalin",
+      "id": "arl_0000AiejdnOs79xp2ENbLk"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AC.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AC.svg",
+      "conditions_of_carriage_url": "https://www.aircanada.com/us/en/aco/home/legal/conditions-carriage-tariffs.html#/",
+      "iata_code": "AC",
+      "name": "Air Canada",
+      "id": "arl_00009VME7DAch01WpssCc4"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "RV",
+      "name": "Air Canada Rouge",
+      "id": "arl_00009v2FtJonDdBD44Funw"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/TX.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/TX.svg",
+      "conditions_of_carriage_url": "https://en.aircaraibes.com/en/general-conditions-sale-and-carriage",
+      "iata_code": "TX",
+      "name": "Air Caraïbes",
+      "id": "arl_00009VME7DAyfgJ6qz2U9c"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "2Q",
+      "name": "Air Cargo Carriers",
+      "id": "arl_00009VME7DAch01WpssCbL"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/3C.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/3C.svg",
+      "conditions_of_carriage_url": "https://www.airchathams.co.nz/terms-and-conditions",
+      "iata_code": "3C",
+      "name": "Air Chathams",
+      "id": "arl_00009VME7DAyfgJ6qz2UA5"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/CA.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/CA.svg",
+      "conditions_of_carriage_url": "https://www.airchina.co.uk/GB/GB/General-Conditions-of-Carriage-for-Passengers-and-Baggage",
+      "iata_code": "CA",
+      "name": "Air China",
+      "id": "arl_00009VME7DAyfgJ6qz2UA0"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "LV",
+      "name": "Aircompany Airzena",
+      "id": "arl_0000AiejdnPw3CoZ5WsS0X"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/RM.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/RM.svg",
+      "conditions_of_carriage_url": "https://armeniafly.com/conditions-of-carriage-en",
+      "iata_code": "RM",
+      "name": "Aircompany Armenia",
+      "id": "arl_0000APtpnoH6pyM0gu3z7o"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "ZK",
+      "name": "Aircompany ZetAvia",
+      "id": "arl_0000AiejdnoOaGNeJOJz8L"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "KS",
+      "name": "AIR CONNECT AVIATION GROUP S.A.",
+      "id": "arl_0000AiejdoDv3MnTaYGMuu"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/XK.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/XK.svg",
+      "conditions_of_carriage_url": "https://www.aircorsica.com/flights/conditions-carriage-passengers.html",
+      "iata_code": "XK",
+      "name": "Air Corsica",
+      "id": "arl_00009VME7DBgd2sGtBN3H0"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/HF.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/HF.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "HF",
+      "name": "Air Côte d'Ivoire",
+      "id": "arl_0000Adu9oDJjEdqAs6MTfk"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/YN.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/YN.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "YN",
+      "name": "Air Creebec",
+      "id": "arl_0000AOnLULhHSZlbzXx8dt"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "DJ",
+      "name": "Air Djibouti",
+      "id": "arl_0000Adttgacx5QZJaDhCZU"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/HD.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/HD.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "HD",
+      "name": "Air Do",
+      "id": "arl_00009VME7DCOaPRQvNhcMo"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/EN.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/EN.svg",
+      "conditions_of_carriage_url": "https://www.airdolomiti.eu/legal-info/air-carrier-liability",
+      "iata_code": "EN",
+      "name": "Air Dolomiti",
+      "id": "arl_00009VME7DAyfgJ6qz2UAC"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/UX.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/UX.svg",
+      "conditions_of_carriage_url": "https://www.aireuropa.com/uk/en/aea/travel-information/terms-and-conditions/conditions-of-carriage.html",
+      "iata_code": "UX",
+      "name": "Air Europa",
+      "id": "arl_00009VME7DAGiJjwomhv3I"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AF.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AF.svg",
+      "conditions_of_carriage_url": "https://wwws.airfrance.co.uk/information/legal/edito-cg-airfrance",
+      "iata_code": "AF",
+      "name": "Air France",
+      "id": "arl_00009VME7DAch01WpssCbI"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/GL.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/GL.svg",
+      "conditions_of_carriage_url": "https://as-agl-web-prod.azurewebsites.net/media/5hkdqc4p/provisions-of-carriage-air-greenland.pdf",
+      "iata_code": "GL",
+      "name": "Air Greenland",
+      "id": "arl_00009VME7DAyfgJ6qz2UAV"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "GT",
+      "name": "Air Guilin",
+      "id": "arl_0000AiejdnngctoUHBzQ1o"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "HT",
+      "name": "Air Horizont",
+      "id": "arl_0000AiejdnqWSM58PzJgRs"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "RE",
+      "name": "Airhub Airlines Limited",
+      "id": "arl_0000AiejdnDAoebeRwuG7E"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NY.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NY.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "NY",
+      "name": "Air Iceland Connect",
+      "id": "arl_00009VME7DAyfgJ6qz2UAP"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "KJ",
+      "name": "Air Incheon Co, Ltd",
+      "id": "arl_0000AiejdnY5YtKvUogxiT"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AI.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AI.svg",
+      "conditions_of_carriage_url": "https://www.airindia.in/terms-conditions.htm",
+      "iata_code": "AI",
+      "name": "Air India",
+      "id": "arl_00009VME7DAch01WpssCbd"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/IX.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/IX.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "IX",
+      "name": "Air India Express",
+      "id": "arl_00009VME7DAyfgJ6qz2U9d"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/3H.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/3H.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "3H",
+      "name": "Air Inuit",
+      "id": "arl_0000AOnLULhHSZlbzXx8dM"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": "https://www.air-japan.co.jp/",
+      "iata_code": "NQ",
+      "name": "Air Japan",
+      "id": "arl_00009VME7DAch01WpssCbp"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "IK",
+      "name": "Air Kiribati",
+      "id": "arl_0000AiejdnrwN5DSUNyoev"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/JS.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/JS.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "JS",
+      "name": "Air Koryo",
+      "id": "arl_00009VME7DAyfgJ6qz2UAg"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/4Z.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/4Z.svg",
+      "conditions_of_carriage_url": "https://www.flyairlink.com/en/za/conditions-of-carriage",
+      "iata_code": "4Z",
+      "name": "Airlink",
+      "id": "arl_0000A8HCIZSfGF7PTABhC4"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NX.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NX.svg",
+      "conditions_of_carriage_url": "http://www.airmacau.com.mo/",
+      "iata_code": "NX",
+      "name": "Air Macau",
+      "id": "arl_00009VME7DAch01WpssCbw"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/MD.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/MD.svg",
+      "conditions_of_carriage_url": "https://madagascarairlines.com/en/informations/general-conditions-of-sale-and-carriage.html",
+      "iata_code": "MD",
+      "name": "Air Madagascar",
+      "id": "arl_00009VME7DAyfgJ6qz2UAq"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "NM",
+      "name": "Air Madrid",
+      "id": "arl_00009VME7DAyfgJ6qz2UAE"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/KM.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/KM.svg",
+      "conditions_of_carriage_url": "https://airmalta.com/en-gb/legal-and-policies/general-conditions-of-carriage",
+      "iata_code": "KM",
+      "name": "Air Malta",
+      "id": "arl_00009VME7DAch01WpssCbn"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/MK.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/MK.svg",
+      "conditions_of_carriage_url": "https://www.airmauritius.com/conditions-of-carriage",
+      "iata_code": "MK",
+      "name": "Air Mauritius",
+      "id": "arl_00009VME7DAyfgJ6qz2UAp"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/9U.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/9U.svg",
+      "conditions_of_carriage_url": "https://www.airmoldova.md/terms-of-carriage-en/",
+      "iata_code": "9U",
+      "name": "Air Moldova",
+      "id": "arl_00009VME7DBKeMags5Clhg"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NZ.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NZ.svg",
+      "conditions_of_carriage_url": "https://www.airnewzealand.co.uk/conditions-of-carriage",
+      "iata_code": "NZ",
+      "name": "Air New Zealand",
+      "id": "arl_00009VME7DAch01WpssCcA"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/EL.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/EL.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "EL",
+      "name": "Air Nippon",
+      "id": "arl_00009VME7DAch01WpssCc6"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/PX.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/PX.svg",
+      "conditions_of_carriage_url": "https://www.airniugini.com.pg/conditions-of-carriage/",
+      "iata_code": "PX",
+      "name": "Air Niugini",
+      "id": "arl_00009VME7DAch01WpssCc2"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/TL.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/TL.svg",
+      "conditions_of_carriage_url": "https://www.airnorth.com.au/plan/fare-information/conditions-of-carriage/",
+      "iata_code": "TL",
+      "name": "Airnorth",
+      "id": "arl_00009VME7DAch01WpssCc7"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/4N.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/4N.svg",
+      "conditions_of_carriage_url": "https://www.flyairnorth.com/support",
+      "iata_code": "4N",
+      "name": "Air North",
+      "id": "arl_00009VME7DAch01WpssCc8"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "YW",
+      "name": "Air Nostrum",
+      "id": "arl_00009VME7DAch01WpssCc1"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": null,
+      "name": "Air Nostrum for Iberia",
+      "id": "arl_0000A4zpmTvai3p7GykWf2"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "7P",
+      "name": "Air Panama",
+      "id": "arl_0000Aiejdo67WMYhCMc8lF"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/P4.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/P4.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "P4",
+      "name": "Air Peace",
+      "id": "arl_0000Adw2v2lYYGpYoObhwm"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/A7.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/A7.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "A7",
+      "name": "Air Plus Comet",
+      "id": "arl_00009VME7DBKeMags5Clhi"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "YP",
+      "name": "Air Premia",
+      "id": "arl_0000AduUlYEV73PHuQUJPs"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "20",
+      "name": "Air Salone",
+      "id": "arl_00009VME7DBKeMags5Cli0"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/HC.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/HC.svg",
+      "conditions_of_carriage_url": "https://flyairsenegal.com/en/legal-notice/conditions-of-carriage/",
+      "iata_code": "HC",
+      "name": "Air Senegal",
+      "id": "arl_0000AOtmceqii2X7Rse1Cg"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/JU.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/JU.svg",
+      "conditions_of_carriage_url": "https://www.airserbia.com/en/footer_copy_menu/legal/general-conditions-of-carriage",
+      "iata_code": "JU",
+      "name": "Air Serbia",
+      "id": "arl_00009VME7DCOaPRQvNhcNQ"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/HM.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/HM.svg",
+      "conditions_of_carriage_url": "https://www.airseychelles.com/en/conditions-of-carriage",
+      "iata_code": "HM",
+      "name": "Air Seychelles",
+      "id": "arl_00009VME7DAch01WpssCby"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/VT.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/VT.svg",
+      "conditions_of_carriage_url": "https://www.airtahitinui.com/uk-en/conditions-carriage",
+      "iata_code": "VT",
+      "name": "Air Tahiti",
+      "id": "arl_00009VME7DAyfgJ6qz2U9t"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/TN.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/TN.svg",
+      "conditions_of_carriage_url": "https://www.airtahitinui.com/uk-en/conditions-carriage",
+      "iata_code": "TN",
+      "name": "Air Tahiti Nui",
+      "id": "arl_00009VME7DAch01WpssCbh"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/TC.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/TC.svg",
+      "conditions_of_carriage_url": "https://www.airtanzania.co.tz/",
+      "iata_code": "TC",
+      "name": "Air Tanzania",
+      "id": "arl_00009VME7DAch01WpssCcS"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "ST",
+      "name": "Air Thanlwin",
+      "id": "arl_0000Adtv8a0x3hi5kEpe2S"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/FL.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/FL.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "FL",
+      "name": "AirTran Airways",
+      "id": "arl_00009VME7DBKeMags5CliH"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/TS.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/TS.svg",
+      "conditions_of_carriage_url": "https://www.airtransat.com/en-GB/legal-notice-uk/general-terms-and-conditions",
+      "iata_code": "TS",
+      "name": "Air Transat",
+      "id": "arl_00009VME7DBKeMags5CliI"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NF.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NF.svg",
+      "conditions_of_carriage_url": "https://www.airvanuatu.com/travel-info/conditions-of-carriage",
+      "iata_code": "NF",
+      "name": "Air Vanuatu",
+      "id": "arl_00009VME7DAyfgJ6qz2U9X"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "D1",
+      "name": "Air Wakanda",
+      "id": "arl_00009VME7DAGiJjwomhv2v"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "ZW",
+      "name": "Air Wisconsin",
+      "id": "arl_00009VME7DAch01WpssCbs"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": null,
+      "name": "Air Wisconsin as American Airlines",
+      "id": "arl_0000ARZRCqmThus81Oo3o8"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": null,
+      "name": "Air Wisconsin as American Eagle",
+      "id": "arl_0000AgDVAjffAdEYFNuWLQ"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": null,
+      "name": "Air Wisconsin as United Express",
+      "id": "arl_00009khl3rsLx6wSUxjK0e"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/UM.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/UM.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "UM",
+      "name": "Air Zimbabwe",
+      "id": "arl_00009VME7DAyfgJ6qz2U9l"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AS.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AS.svg",
+      "conditions_of_carriage_url": "https://www.alaskaair.com/content/legal/contract-of-carriage/rule-1",
+      "iata_code": "AS",
+      "name": "Alaska Airlines",
+      "id": "arl_00009VME7DAch01WpssCcN"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "JN",
+      "name": "Alaska Air Transit",
+      "id": "arl_0000Aiejdnk8q4yg6CKaVE"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/KO.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/KO.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "KO",
+      "name": "Alaska Central Express",
+      "id": "arl_00009VME7DAGiJjwomhv3N"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "2B",
+      "name": "Albawings",
+      "id": "arl_0000AiejdnFIgkJ8YXtxQm"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "CP",
+      "name": "ALISCARGO AIRLINES S.P.A.",
+      "id": "arl_0000AiejdnZVTcTFZDM5vU"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/G4.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/G4.svg",
+      "conditions_of_carriage_url": "https://www.allegiantair.com/contract-carriage",
+      "iata_code": "G4",
+      "name": "Allegiant Air",
+      "id": "arl_00009VME7DAGiJjwomhv36"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/QQ.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/QQ.svg",
+      "conditions_of_carriage_url": "https://www.allianceairlines.com.au/terms-conditions",
+      "iata_code": "QQ",
+      "name": "Alliance Airlines",
+      "id": "arl_00009VME7DAch01WpssCbE"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "UJ",
+      "name": "Almasria",
+      "id": "arl_0000AiejdnPw3CoZ5WsS0W"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "MZ",
+      "name": "Amakusa Airlines Co.,Ltd",
+      "id": "arl_0000Aiejdo5PYzzXAAHZei"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/HP.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/HP.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "HP",
+      "name": "Amapola Flyg AB dba PopulAir",
+      "id": "arl_0000AdQwkrQrDHyr8hvegC"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "8R",
+      "name": "AMELIA",
+      "id": "arl_0000AiejdoQKJEioD24HFw"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "NL",
+      "name": "Amelia International",
+      "id": "arl_0000AiejdoKIfdtvuLFSrZ"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AA.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AA.svg",
+      "conditions_of_carriage_url": "https://www.aa.com/i18n/customer-service/support/conditions-of-carriage.jsp",
+      "iata_code": "AA",
+      "name": "American Airlines",
+      "id": "arl_00009VME7DAGiJjwomhv32"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NH.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NH.svg",
+      "conditions_of_carriage_url": "https://www.ana.co.jp/en/gb/siteinfo/international/conditions-of-carriage/",
+      "iata_code": "NH",
+      "name": "ANA",
+      "id": "arl_00009VME7DAch01WpssCc0"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": "https://www.ana.co.jp/en/gb/siteinfo/international/conditions-of-carriage/",
+      "iata_code": "EH",
+      "name": "ANA Wings",
+      "id": "arl_0000AOtJ117NufbYDt4mAa"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "A2",
+      "name": "Anima Wings Aviation S.A.",
+      "id": "arl_0000AiejdnS3vIW3C7s9K4"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/GP.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/GP.svg",
+      "conditions_of_carriage_url": "https://back-apgairlines.orchestra-platform.com/admin/TS/fckUserFiles/Content_File/carriage_conditions_APGAirlines_EN.pdf",
+      "iata_code": "GP",
+      "name": "APG Airlines",
+      "id": "arl_0000AOtmceqii2X7Rse1Cd"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "A1",
+      "name": "A.P.G. Distribution System",
+      "id": "arl_0000AiejdnT7rLMnFQMzyq"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "DM",
+      "name": "Arajet",
+      "id": "arl_0000AfNBtWd2k9c3VRPSJk"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/FG.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/FG.svg",
+      "conditions_of_carriage_url": "https://www.flyariana.com/FooterLinks/Legal",
+      "iata_code": "FG",
+      "name": "Ariana Afghan Airlines",
+      "id": "arl_00009VME7DAch01WpssCbF"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "IZ",
+      "name": "Arkia Israeli Airlines",
+      "id": "arl_0000AiejdnS3vIW3C7s9K5"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "6A",
+      "name": "Armenia Airways Air Company CJSC",
+      "id": "arl_0000AiejdndPF7adlJBD0K"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "JW",
+      "name": "Arrow Air",
+      "id": "arl_00009VME7DAch01WpssCcH"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "D4",
+      "name": "Asgard Airways",
+      "id": "arl_00009VME7DAGiJjwomhv2u"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/OZ.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/OZ.svg",
+      "conditions_of_carriage_url": "https://flyasiana.com/C/GB/EN/contents/terms-of-transportation-and-notification",
+      "iata_code": "OZ",
+      "name": "Asiana Airlines",
+      "id": "arl_00009VME7DAGiJjwomhv33"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "6K",
+      "name": "Asian Spirit",
+      "id": "arl_00009VME7DBKeMags5Clhw"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": "https://askariaviation.com/",
+      "iata_code": "4K",
+      "name": "Askari Aviation",
+      "id": "arl_00009VME7DAGiJjwomhv34"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/KP.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/KP.svg",
+      "conditions_of_carriage_url": "https://www.flyasky.com/aa/en/plan",
+      "iata_code": "KP",
+      "name": "ASKY",
+      "id": "arl_00009zkEKxVQFkKSsT9q1g"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/5O.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/5O.svg",
+      "conditions_of_carriage_url": "https://www.aslairlines.fr/wp-content/uploads/2013/04/190219-GAL-CONDITIONS-OF-CARRIAGE-2019-1.pdf",
+      "iata_code": "5O",
+      "name": "ASL Airlines France",
+      "id": "arl_00009w8ZaCFoHHsAahwGSO"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": null,
+      "name": "ASL Airlines IRL for Aer Lingus",
+      "id": "arl_00009VME7DAyfgJ6qz2UJP"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/8V.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/8V.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "8V",
+      "name": "Astral Aviation",
+      "id": "arl_00009VME7DAGiJjwomhv3C"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/RC.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/RC.svg",
+      "conditions_of_carriage_url": "https://www.atlanticairways.com/media/1523/iata_conditions-of-contract_en.pdf",
+      "iata_code": "RC",
+      "name": "Atlantic Airways",
+      "id": "arl_00009VME7DAyfgJ6qz2UAN"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/5Y.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/5Y.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "5Y",
+      "name": "Atlas Air",
+      "id": "arl_00009VME7DAyfgJ6qz2UAX"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/V8.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/V8.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "V8",
+      "name": "ATRAN",
+      "id": "arl_00009VME7DAyfgJ6qz2U9x"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "UI",
+      "name": "Auric Air",
+      "id": "arl_0000Aiejdni0xzHBzbKtBg"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/GR.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/GR.svg",
+      "conditions_of_carriage_url": "https://www.aurigny.com/legal/conditions-carriage",
+      "iata_code": "GR",
+      "name": "Aurigny Air Services",
+      "id": "arl_00009VME7DAyfgJ6qz2U9T"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "HZ",
+      "name": "Aurora Airlines",
+      "id": "arl_0000AiejdoIWmEU1oqQ36H"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/OS.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/OS.svg",
+      "conditions_of_carriage_url": "https://www.austrian.com/at/en/conditions-of-carriage",
+      "iata_code": "OS",
+      "name": "Austrian",
+      "id": "arl_00009VME7DAch01WpssCcW"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "VO",
+      "name": "Austrian Arrows",
+      "id": "arl_00009VME7DBKeMags5CliK"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "DP",
+      "name": "Aviakompaniya Pobeda",
+      "id": "arl_0000AiejdnlCm7pQ9UpRA0"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "V2",
+      "name": "Avialeasing Aviation Company",
+      "id": "arl_0000AiejdoXPssOQZ1NwJ6"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AV.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AV.svg",
+      "conditions_of_carriage_url": "https://www.avianca.com/uk/en/sobre-nosotros/informacion-legal/contrato-transporte/",
+      "iata_code": "AV",
+      "name": "Avianca",
+      "id": "arl_00009VME7DAyfgJ6qz2U9W"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": "https://www.avianca.com/uk/en/sobre-nosotros/informacion-legal/contrato-transporte/",
+      "iata_code": "LR",
+      "name": "Avianca Costa Rica",
+      "id": "arl_00009VME7DCkZ5j0wTrtuq"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": "avianca.com/otr/en/about-us/legal-documentation/contract-of-carriage/",
+      "iata_code": "2K",
+      "name": "Avianca Ecuador",
+      "id": "arl_00009VME7DBKeMags5CliN"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": "https://www.avianca.com/uk/en/sobre-nosotros/informacion-legal/contrato-transporte/",
+      "iata_code": "TA",
+      "name": "Avianca El Salvador",
+      "id": "arl_00009VME7DC2bj9quHXKpc"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": "https://www.avianca.com/uk/en/sobre-nosotros/informacion-legal/contrato-transporte/",
+      "iata_code": "EX",
+      "name": "Avianca Express",
+      "id": "arl_0000AgDVfDrjTJtQa85qYS"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": null,
+      "name": "Avianca For Avianca Express",
+      "id": "arl_0000AgDVqEZbBKDLxfrVc8"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/Z3.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/Z3.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "Z3",
+      "name": "Avient Aviation",
+      "id": "arl_00009VME7DBKeMags5Cli8"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "X9",
+      "name": "Avion Express",
+      "id": "arl_0000AYacwCCs1odcFaXJQG"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": null,
+      "name": "Avion Express as BA Euroflyer",
+      "id": "arl_0000AYioOpXq16757lsbHk"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "4X",
+      "name": "Avion Express Malta",
+      "id": "arl_0000AfNA8YbhTEF24qozFw"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/9V.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/9V.svg",
+      "conditions_of_carriage_url": "https://aviorair.com/en/legal",
+      "iata_code": "9V",
+      "name": "Avior Airlines",
+      "id": "arl_00009VME7DBKeMags5Cl18"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/J2.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/J2.svg",
+      "conditions_of_carriage_url": "https://www.azal.az/en/information/rules-and-conditions",
+      "iata_code": "J2",
+      "name": "Azerbaijan Airlines",
+      "id": "arl_00009VME7DAch01WpssCbW"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/A4.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/A4.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "A4",
+      "name": "Azimuth",
+      "id": "arl_0000Adtsa6QkLRuGEnKV3Q"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/S4.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/S4.svg",
+      "conditions_of_carriage_url": "https://www.azoresairlines.pt/en/information/customer-commitment/general-conditions-of-carriage",
+      "iata_code": "S4",
+      "name": "Azores Airlines",
+      "id": "arl_00009VME7DDSWSIAygCT1O"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "AJ",
+      "name": "Aztec Worldwide Airlines",
+      "id": "arl_0000AiejdnDWnKtET34XfU"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AD.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AD.svg",
+      "conditions_of_carriage_url": "https://www.voeazul.com.br/en/for-your-trip/international-flights/contract-of-carriage",
+      "iata_code": "AD",
+      "name": "Azul Airlines",
+      "id": "arl_0000AHfbp6fmwbZGuADYNk"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/QU.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/QU.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "QU",
+      "name": "Azur Air Ukraine",
+      "id": "arl_0000AOtmcer4giohSyoIl1"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/CJ.svg",
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "CJ",
+      "name": "BA CityFlyer",
+      "id": "arl_00009VME7DBgd2sGtBN3Gg"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "A0",
+      "name": "BA Euroflyer",
+      "id": "arl_0000AYcFcBSXBiZtVlGsoy"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": null,
+      "name": "BA Euroflyer as British Airways",
+      "id": "arl_0000ASAcwbiaeJNpvowsJU"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/UP.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/UP.svg",
+      "conditions_of_carriage_url": "https://www.bahamasair.com/other-policies-forms/conditions-of-carriage",
+      "iata_code": "UP",
+      "name": "Bahamasair",
+      "id": "arl_00009VME7DBKeMags5CliZ"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/QH.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/QH.svg",
+      "conditions_of_carriage_url": "https://www.bambooairways.com/global-en/terms-and-conditions/conditions-of-carriage/",
+      "iata_code": "QH",
+      "name": "Bamboo Airways",
+      "id": "arl_0000AOtmcer4giohSyoIl0"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/PG.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/PG.svg",
+      "conditions_of_carriage_url": "https://www.bangkokair.com/conditions/conditions-of-carriage",
+      "iata_code": "PG",
+      "name": "Bangkok Airways",
+      "id": "arl_00009VME7DBKeMags5Clic"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "RP",
+      "name": "Base Airlines",
+      "id": "arl_0000AiejdnbHN1t9eiBVgm"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "ID",
+      "name": "Batik Air",
+      "id": "arl_0000AiejdnVxgndRODhGOv"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "JV",
+      "name": "Bearskin Airlines",
+      "id": "arl_0000AiejdnWJfTv1PJrXxA"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/JD.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/JD.svg",
+      "conditions_of_carriage_url": "https://intl.jdair.net/news/index?id=73&valueMenuaid=75",
+      "iata_code": "JD",
+      "name": "Beijing Capital Airlines",
+      "id": "arl_0000AOtmcer4giohSyoIka"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/B2.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/B2.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "B2",
+      "name": "Belavia",
+      "id": "arl_00009VME7DBKeMags5Clio"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "CH",
+      "name": "Bemidji Aviation Services",
+      "id": "arl_00009VME7DBKeMags5Clii"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/8E.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/8E.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "8E",
+      "name": "Bering Air",
+      "id": "arl_00009VME7DBKeMags5Clin"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "J8",
+      "name": "Berjaya Air",
+      "id": "arl_00009VME7DBKeMags5Cliu"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "NB",
+      "name": "Berniq Airways",
+      "id": "arl_0000AiejdoOCR91K6R4ZwO"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "8H",
+      "name": "BH Air",
+      "id": "arl_0000AiejdnqATfnYOt9Otd"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/B3.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/B3.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "B3",
+      "name": "Bhutan Airlines",
+      "id": "arl_0000AduATMOCPUAysh4ZJA"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BG.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BG.svg",
+      "conditions_of_carriage_url": "https://www.biman-airlines.com/termsConditions#Carriage-for-Passengers-and-Baggage",
+      "iata_code": "BG",
+      "name": "Biman Bangladesh Airlines",
+      "id": "arl_00009VME7DBKeMags5CliR"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NT.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NT.svg",
+      "conditions_of_carriage_url": "https://www.bintercanarias.com/eng/information/contract-of-carriage",
+      "iata_code": "NT",
+      "name": "Binter Canarias",
+      "id": "arl_0000AOWZIbUr2d7EbRNpvE"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/0B.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/0B.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "0B",
+      "name": "Blue Air",
+      "id": "arl_00009VME7DBKeMags5Clj0"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "BZ",
+      "name": "Blue Bird Airways",
+      "id": "arl_0000AiejdnX1cqUBRWC73g"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/SI.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/SI.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "SI",
+      "name": "Blue Islands",
+      "id": "arl_0000Adtu69G3T324ECAnR2"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/OB.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/OB.svg",
+      "conditions_of_carriage_url": "https://www.boa.bo/content/docs/contrato_transporte_en.pdf",
+      "iata_code": "OB",
+      "name": "Boliviana de Aviación",
+      "id": "arl_0000AOtmcer4giohSyoIkv"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/4B.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/4B.svg",
+      "conditions_of_carriage_url": "https://www.boutiqueair.com/pages/terms",
+      "iata_code": "4B",
+      "name": "Boutique Air",
+      "id": "arl_0000AOnLULhHSZlbzXx8dO"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/TF.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/TF.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "TF",
+      "name": "BRA",
+      "id": "arl_00009VME7DCkZ5j0wTrtvW"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "B1",
+      "name": "Bravo Passenger Soloutions",
+      "id": "arl_0000AiejdnVbi7LrN7Wyqe"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "MX",
+      "name": "Breeze Airways",
+      "id": "arl_0000Aiejdo6TV2qHDSmQJU"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+      "conditions_of_carriage_url": "https://www.britishairways.com/en-gb/information/legal/british-airways/general-conditions-of-carriage",
+      "iata_code": "BA",
+      "name": "British Airways",
+      "id": "arl_00009VME7DBKeMags5CliQ"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/SN.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/SN.svg",
+      "conditions_of_carriage_url": "https://www.brusselsairlines.com/de/en/legal-notices/terms-and-conditions-conditions-of-carriage",
+      "iata_code": "SN",
+      "name": "Brussels Airlines",
+      "id": "arl_00009VME7DBKeMags5Cliz"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/U4.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/U4.svg",
+      "conditions_of_carriage_url": null,
+      "iata_code": "U4",
+      "name": "Buddha Air",
+      "id": "arl_0000Adu9ii1s8TwONyNtzs"
+    },
+    {
+      "logo_symbol_url": null,
+      "logo_lockup_url": null,
+      "conditions_of_carriage_url": null,
+      "iata_code": "BD",
+      "name": "Budget Lines",
+      "id": "arl_0000AiejdocNaQMYoPhu2i"
+    },
+    {
+      "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/FB.svg",
+      "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/FB.svg",
+      "conditions_of_carriage_url": "https://www.air.bg/en/customer-support/general-conditions-of-carriage/",
+      "iata_code": "FB",
+      "name": "Bulgaria Air",
+      "id": "arl_00009VME7DBKeMags5Clj2"
+    }
+  ]
+}

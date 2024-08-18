@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+/* @QuickSand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+/* @Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Quicksand", sans-serif !important;
+  line-height: 1.5;
+  font-weight: 500;
+
+  --primary-500: #0062e3;
+  --primary-300: #4d91eb;
+  --primary-100: #cce0f9;
+
+  --text: #060000;
+  --text-100: #919191;
+  --stroke-tb: #74777d;
+  --stroke-100: #dedede;
+  -storke-200: #d7e2ee;
+
+  --bg-card: linear-gradient(#ffffff, #97bae7);
+  --bg: #fafbfc;
+  --bg-light: #eff4f9;
+
+  --neutral: #1f2223;
+
+  --white: #ffffff;
+  --blue: #4d94ff;
+  --orange: #ff7c43;
+  --red: #f93e3e;
+  --green: #13b013;
+  --light-green: #d2fcd2;
+
+  --light-orange: #fff5ef;
+  --light-purple: #eeeefb;
+
+  --green-blue: #e2f8f3;
+
+  --result-shadow: 0px 0px 8px 3px #9594941a;
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif !important;
+}
+
+.raleway {
+  font-family: "Raleway", serif;
+}
+
+.playfair {
+  font-family: "Playfair Display", serif !important;
+  font-optical-sizing: auto;
+}
+
+h1 {
+  font-family: "Raleway", serif;
+  font-size: 3.2em;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2 {
+  font-family: "Raleway", serif;
+  font-size: 2.25em !important;
+  font-weight: 700 !important;
+}
+
+h3 {
+  font-family: "Raleway", serif;
+}
+
+span {
+  font-family: "Quicksand", serif;
+}
+
+.main-heading {
+  font-family: "Raleway", serif;
+}
+
+h6 {
+  font-size: 0.875em !important;
+  font-weight: 500 !important;
+  color: var(--stroke-tb);
+}
+
+p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.125em;
+  color: var(--stroke-tb);
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button:active {
+  background: var(--primary-300) !important;
+}
+
+.nav-button {
+  color: var(--primary-500);
+}
+
+.footer {
+  /* background-color: #07072c; */
+  background-color: #0e0e0e;
+  color: var(--white) !important;
+}
+
+.footer-para {
+  /* color: var(--stroke-tb) !important; */
+}
+
+.footer-divider {
+  color: var(--text-100) !important;
+}
+
+.text-100 {
+  color: var(--text-100);
+}
+
+.primary-500 {
+  color: var(--primary-500);
+}
+
+.primary-300 {
+  color: var(--primary-300);
+}
+
+.primary-100 {
+  color: var(--primary-100);
+}
+
+.bg-primary-500 {
+  background-color: var(--primary-500);
+}
+
+.bg-primary-300 {
+  background-color: var(--primary-300);
+}
+
+.bg-primary-100 {
+  background-color: var(--primary-100);
+}
+
+.button-3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  font-family: "Quicksand", sans-serif;
+}

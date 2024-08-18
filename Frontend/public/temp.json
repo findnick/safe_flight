@@ -1,0 +1,4141 @@
+{
+  "data": {
+    "offers": [
+      {
+        "total_emissions_kg": "929",
+        "allowed_passenger_identity_document_types": [
+          "passport",
+          "tax_id",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "payment_requirements": {
+          "price_guarantee_expires_at": "2024-06-10T15:09:03Z",
+          "payment_required_by": "2024-06-11T15:09:03Z",
+          "requires_instant_payment": false
+        },
+        "supported_passenger_identity_document_types": [
+          "passport",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "passenger_identity_documents_required": false,
+        "tax_currency": "GBP",
+        "base_currency": "GBP",
+        "base_amount": "60.74",
+        "private_fares": [],
+        "tax_amount": "10.93",
+        "total_currency": "GBP",
+        "created_at": "2024-06-08T15:09:03.755875Z",
+        "live_mode": false,
+        "total_amount": "71.67",
+        "slices": [
+          {
+            "comparison_key": "BFa8wg==",
+            "ngs_shelf": 1,
+            "destination_type": "airport",
+            "origin_type": "airport",
+            "fare_brand_name": "Basic",
+            "conditions": {
+              "priority_check_in": null,
+              "priority_boarding": null,
+              "advance_seat_selection": null,
+              "change_before_departure": {
+                "penalty_currency": "GBP",
+                "penalty_amount": "10.00",
+                "allowed": true
+              }
+            },
+            "segments": [
+              {
+                "origin_terminal": "2",
+                "destination_terminal": "1",
+                "aircraft": {
+                  "iata_code": "773",
+                  "name": "Boeing 777-300",
+                  "id": "arc_00009VMF8AhXSSRnQDI6HE"
+                },
+                "departing_at": "2024-06-21T15:29:00",
+                "arriving_at": "2024-06-21T16:40:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                  "logo_lockup_url": null,
+                  "conditions_of_carriage_url": null,
+                  "iata_code": "ZZ",
+                  "name": "Duffel Airways",
+                  "id": "arl_00009VME7D6ivUu8dn35WK"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                  "logo_lockup_url": null,
+                  "conditions_of_carriage_url": null,
+                  "iata_code": "ZZ",
+                  "name": "Duffel Airways",
+                  "id": "arl_00009VME7D6ivUu8dn35WK"
+                },
+                "operating_carrier_flight_number": "0279",
+                "marketing_carrier_flight_number": "0279",
+                "distance": "1200.6437844654433",
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": {
+                        "wifi": {
+                          "cost": "paid",
+                          "available": true
+                        },
+                        "seat": {
+                          "pitch": "30",
+                          "legroom": "n/a",
+                          "type": null
+                        },
+                        "power": {
+                          "available": true
+                        }
+                      },
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [
+                      {
+                        "quantity": 1,
+                        "type": "checked"
+                      },
+                      {
+                        "quantity": 1,
+                        "type": "carry_on"
+                      }
+                    ],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "Y20LGTN2",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT2H11M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "BNA",
+                  "icao_code": "KBNA",
+                  "city_name": "Nashville",
+                  "iata_country_code": "US",
+                  "iata_code": "BNA",
+                  "latitude": 36.125408,
+                  "longitude": -86.677785,
+                  "city": null,
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "Nashville International Airport",
+                  "id": "arp_bna_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "NYC",
+                  "icao_code": "KEWR",
+                  "city_name": "Newark",
+                  "iata_country_code": "US",
+                  "iata_code": "EWR",
+                  "latitude": 40.691016,
+                  "longitude": -74.171581,
+                  "city": {
+                    "iata_city_code": "NYC",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "NYC",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "New York",
+                    "id": "cit_nyc_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Newark Liberty International Airport",
+                  "id": "arp_ewr_us"
+                },
+                "id": "seg_0000Aiimm6sr4IrtTEx49Q"
+              }
+            ],
+            "duration": "PT2H11M",
+            "destination": {
+              "airports": null,
+              "iata_city_code": "BNA",
+              "icao_code": "KBNA",
+              "city_name": "Nashville",
+              "iata_country_code": "US",
+              "iata_code": "BNA",
+              "latitude": 36.125408,
+              "longitude": -86.677785,
+              "city": null,
+              "time_zone": "America/Chicago",
+              "type": "airport",
+              "name": "Nashville International Airport",
+              "id": "arp_bna_us"
+            },
+            "origin": {
+              "airports": null,
+              "iata_city_code": "NYC",
+              "icao_code": "KEWR",
+              "city_name": "Newark",
+              "iata_country_code": "US",
+              "iata_code": "EWR",
+              "latitude": 40.691016,
+              "longitude": -74.171581,
+              "city": {
+                "iata_city_code": "NYC",
+                "icao_code": null,
+                "city_name": null,
+                "iata_country_code": "US",
+                "iata_code": "NYC",
+                "latitude": null,
+                "longitude": null,
+                "time_zone": null,
+                "type": "city",
+                "name": "New York",
+                "id": "cit_nyc_us"
+              },
+              "time_zone": "America/New_York",
+              "type": "airport",
+              "name": "Newark Liberty International Airport",
+              "id": "arp_ewr_us"
+            },
+            "id": "sli_0000Aiimm6tD2z9TUL7Lhg"
+          }
+        ],
+        "passengers": [
+          {
+            "fare_type": null,
+            "loyalty_programme_accounts": [],
+            "family_name": null,
+            "given_name": null,
+            "age": null,
+            "type": "adult",
+            "id": "pas_0000Aiimm6efv1WelGJk38"
+          }
+        ],
+        "conditions": {
+          "refund_before_departure": {
+            "penalty_currency": null,
+            "penalty_amount": null,
+            "allowed": false
+          },
+          "change_before_departure": {
+            "penalty_currency": "GBP",
+            "penalty_amount": "10.00",
+            "allowed": true
+          }
+        },
+        "updated_at": "2024-06-08T15:09:03.755875Z",
+        "expires_at": "2024-06-08T15:39:03.755129Z",
+        "partial": false,
+        "owner": {
+          "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+          "logo_lockup_url": null,
+          "conditions_of_carriage_url": null,
+          "iata_code": "ZZ",
+          "name": "Duffel Airways",
+          "id": "arl_00009VME7D6ivUu8dn35WK"
+        },
+        "id": "off_0000Aiimm6tD2z9TUL7Lhi"
+      },
+      {
+        "total_emissions_kg": "66",
+        "allowed_passenger_identity_document_types": [
+          "passport",
+          "tax_id",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "payment_requirements": {
+          "price_guarantee_expires_at": "2024-06-10T15:09:03Z",
+          "payment_required_by": "2024-06-11T15:09:03Z",
+          "requires_instant_payment": false
+        },
+        "supported_passenger_identity_document_types": [
+          "passport",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "passenger_identity_documents_required": false,
+        "tax_currency": "GBP",
+        "base_currency": "GBP",
+        "base_amount": "61.07",
+        "private_fares": [],
+        "tax_amount": "10.99",
+        "total_currency": "GBP",
+        "created_at": "2024-06-08T15:09:03.757088Z",
+        "live_mode": false,
+        "total_amount": "72.06",
+        "slices": [
+          {
+            "comparison_key": "AsehBw==",
+            "ngs_shelf": 1,
+            "destination_type": "airport",
+            "origin_type": "airport",
+            "fare_brand_name": "Basic",
+            "conditions": {
+              "priority_check_in": null,
+              "priority_boarding": null,
+              "advance_seat_selection": null,
+              "change_before_departure": {
+                "penalty_currency": "GBP",
+                "penalty_amount": "10.00",
+                "allowed": true
+              }
+            },
+            "segments": [
+              {
+                "origin_terminal": "2",
+                "destination_terminal": "1",
+                "aircraft": {
+                  "iata_code": "738",
+                  "name": "Boeing 737-800",
+                  "id": "arc_00009VMF8AhBTmADP77oj0"
+                },
+                "departing_at": "2024-06-21T15:29:00",
+                "arriving_at": "2024-06-21T16:40:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AA.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AA.svg",
+                  "conditions_of_carriage_url": "https://www.aa.com/i18n/customer-service/support/conditions-of-carriage.jsp",
+                  "iata_code": "AA",
+                  "name": "American Airlines",
+                  "id": "arl_00009VME7DAGiJjwomhv32"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AA.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AA.svg",
+                  "conditions_of_carriage_url": "https://www.aa.com/i18n/customer-service/support/conditions-of-carriage.jsp",
+                  "iata_code": "AA",
+                  "name": "American Airlines",
+                  "id": "arl_00009VME7DAGiJjwomhv32"
+                },
+                "operating_carrier_flight_number": "1274",
+                "marketing_carrier_flight_number": "1274",
+                "distance": "1200.6437844654433",
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": {
+                        "wifi": {
+                          "cost": "paid",
+                          "available": true
+                        },
+                        "seat": {
+                          "pitch": "30",
+                          "legroom": "n/a",
+                          "type": null
+                        },
+                        "power": {
+                          "available": true
+                        }
+                      },
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [
+                      {
+                        "quantity": 1,
+                        "type": "checked"
+                      },
+                      {
+                        "quantity": 1,
+                        "type": "carry_on"
+                      }
+                    ],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "Y20LGTN2",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT2H11M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "BNA",
+                  "icao_code": "KBNA",
+                  "city_name": "Nashville",
+                  "iata_country_code": "US",
+                  "iata_code": "BNA",
+                  "latitude": 36.125408,
+                  "longitude": -86.677785,
+                  "city": null,
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "Nashville International Airport",
+                  "id": "arp_bna_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "NYC",
+                  "icao_code": "KEWR",
+                  "city_name": "Newark",
+                  "iata_country_code": "US",
+                  "iata_code": "EWR",
+                  "latitude": 40.691016,
+                  "longitude": -74.171581,
+                  "city": {
+                    "iata_city_code": "NYC",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "NYC",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "New York",
+                    "id": "cit_nyc_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Newark Liberty International Airport",
+                  "id": "arp_ewr_us"
+                },
+                "id": "seg_0000Aiimm6tZ1fR3VRHdFw"
+              }
+            ],
+            "duration": "PT2H11M",
+            "destination": {
+              "airports": null,
+              "iata_city_code": "BNA",
+              "icao_code": "KBNA",
+              "city_name": "Nashville",
+              "iata_country_code": "US",
+              "iata_code": "BNA",
+              "latitude": 36.125408,
+              "longitude": -86.677785,
+              "city": null,
+              "time_zone": "America/Chicago",
+              "type": "airport",
+              "name": "Nashville International Airport",
+              "id": "arp_bna_us"
+            },
+            "origin": {
+              "airports": null,
+              "iata_city_code": "NYC",
+              "icao_code": "KEWR",
+              "city_name": "Newark",
+              "iata_country_code": "US",
+              "iata_code": "EWR",
+              "latitude": 40.691016,
+              "longitude": -74.171581,
+              "city": {
+                "iata_city_code": "NYC",
+                "icao_code": null,
+                "city_name": null,
+                "iata_country_code": "US",
+                "iata_code": "NYC",
+                "latitude": null,
+                "longitude": null,
+                "time_zone": null,
+                "type": "city",
+                "name": "New York",
+                "id": "cit_nyc_us"
+              },
+              "time_zone": "America/New_York",
+              "type": "airport",
+              "name": "Newark Liberty International Airport",
+              "id": "arp_ewr_us"
+            },
+            "id": "sli_0000Aiimm6tZ1fR3VRHdFx"
+          }
+        ],
+        "passengers": [
+          {
+            "fare_type": null,
+            "loyalty_programme_accounts": [],
+            "family_name": null,
+            "given_name": null,
+            "age": null,
+            "type": "adult",
+            "id": "pas_0000Aiimm6efv1WelGJk38"
+          }
+        ],
+        "conditions": {
+          "refund_before_departure": {
+            "penalty_currency": null,
+            "penalty_amount": null,
+            "allowed": false
+          },
+          "change_before_departure": {
+            "penalty_currency": "GBP",
+            "penalty_amount": "10.00",
+            "allowed": true
+          }
+        },
+        "updated_at": "2024-06-08T15:09:03.757088Z",
+        "expires_at": "2024-06-08T15:39:03.756622Z",
+        "partial": false,
+        "owner": {
+          "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AA.svg",
+          "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AA.svg",
+          "conditions_of_carriage_url": "https://www.aa.com/i18n/customer-service/support/conditions-of-carriage.jsp",
+          "iata_code": "AA",
+          "name": "American Airlines",
+          "id": "arl_00009VME7DAGiJjwomhv32"
+        },
+        "id": "off_0000Aiimm6tZ1fR3VRHdFz"
+      },
+      {
+        "total_emissions_kg": "29",
+        "allowed_passenger_identity_document_types": [
+          "passport",
+          "tax_id",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "payment_requirements": {
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null,
+          "requires_instant_payment": true
+        },
+        "supported_passenger_identity_document_types": [],
+        "passenger_identity_documents_required": false,
+        "tax_currency": "GBP",
+        "base_currency": "GBP",
+        "base_amount": "185.03",
+        "private_fares": [],
+        "tax_amount": "29.99",
+        "total_currency": "GBP",
+        "created_at": "2024-06-08T15:09:07.510677Z",
+        "live_mode": false,
+        "total_amount": "215.02",
+        "slices": [
+          {
+            "comparison_key": "A78lEQ==",
+            "ngs_shelf": 1,
+            "destination_type": "airport",
+            "origin_type": "airport",
+            "fare_brand_name": "Base Fare",
+            "conditions": {
+              "priority_check_in": null,
+              "priority_boarding": null,
+              "advance_seat_selection": null,
+              "change_before_departure": {
+                "penalty_currency": "USD",
+                "penalty_amount": "0.00",
+                "allowed": true
+              }
+            },
+            "segments": [
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T18:26:00",
+                "arriving_at": "2024-06-21T19:45:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "1592",
+                "marketing_carrier_flight_number": "1592",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT2H19M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "BNA",
+                  "icao_code": "KBNA",
+                  "city_name": "Nashville",
+                  "iata_country_code": "US",
+                  "iata_code": "BNA",
+                  "latitude": 36.125408,
+                  "longitude": -86.677785,
+                  "city": null,
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "Nashville International Airport",
+                  "id": "arp_bna_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "NYC",
+                  "icao_code": "KEWR",
+                  "city_name": "Newark",
+                  "iata_country_code": "US",
+                  "iata_code": "EWR",
+                  "latitude": 40.691016,
+                  "longitude": -74.171581,
+                  "city": {
+                    "iata_city_code": "NYC",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "NYC",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "New York",
+                    "id": "cit_nyc_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Newark Liberty International Airport",
+                  "id": "arp_ewr_us"
+                },
+                "id": "seg_0000AiimmSN3BEV26yEye7"
+              }
+            ],
+            "duration": "PT2H19M",
+            "destination": {
+              "airports": null,
+              "iata_city_code": "BNA",
+              "icao_code": "KBNA",
+              "city_name": "Nashville",
+              "iata_country_code": "US",
+              "iata_code": "BNA",
+              "latitude": 36.125408,
+              "longitude": -86.677785,
+              "city": null,
+              "time_zone": "America/Chicago",
+              "type": "airport",
+              "name": "Nashville International Airport",
+              "id": "arp_bna_us"
+            },
+            "origin": {
+              "airports": null,
+              "iata_city_code": "NYC",
+              "icao_code": "KEWR",
+              "city_name": "Newark",
+              "iata_country_code": "US",
+              "iata_code": "EWR",
+              "latitude": 40.691016,
+              "longitude": -74.171581,
+              "city": {
+                "iata_city_code": "NYC",
+                "icao_code": null,
+                "city_name": null,
+                "iata_country_code": "US",
+                "iata_code": "NYC",
+                "latitude": null,
+                "longitude": null,
+                "time_zone": null,
+                "type": "city",
+                "name": "New York",
+                "id": "cit_nyc_us"
+              },
+              "time_zone": "America/New_York",
+              "type": "airport",
+              "name": "Newark Liberty International Airport",
+              "id": "arp_ewr_us"
+            },
+            "id": "sli_0000AiimmSN3BEV26yEye8"
+          }
+        ],
+        "passengers": [
+          {
+            "fare_type": null,
+            "loyalty_programme_accounts": [],
+            "family_name": null,
+            "given_name": null,
+            "age": null,
+            "type": "adult",
+            "id": "pas_0000Aiimm6efv1WelGJk38"
+          }
+        ],
+        "conditions": {
+          "refund_before_departure": {
+            "penalty_currency": null,
+            "penalty_amount": null,
+            "allowed": false
+          },
+          "change_before_departure": {
+            "penalty_currency": "USD",
+            "penalty_amount": "0.00",
+            "allowed": true
+          }
+        },
+        "updated_at": "2024-06-08T15:09:07.510677Z",
+        "expires_at": "2024-06-08T15:24:07.295432Z",
+        "partial": false,
+        "owner": {
+          "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+          "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+          "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+          "iata_code": "NK",
+          "name": "Spirit Airlines",
+          "id": "arl_00009VME7DDSWSIAygCT2J"
+        },
+        "id": "off_0000AiimmSN3BEV26yEyeA"
+      },
+      {
+        "total_emissions_kg": "113",
+        "allowed_passenger_identity_document_types": [
+          "passport",
+          "tax_id",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "payment_requirements": {
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null,
+          "requires_instant_payment": true
+        },
+        "supported_passenger_identity_document_types": [],
+        "passenger_identity_documents_required": false,
+        "tax_currency": "GBP",
+        "base_currency": "GBP",
+        "base_amount": "185.03",
+        "private_fares": [],
+        "tax_amount": "55.57",
+        "total_currency": "GBP",
+        "created_at": "2024-06-08T15:09:07.510677Z",
+        "live_mode": false,
+        "total_amount": "240.60",
+        "slices": [
+          {
+            "comparison_key": "Ba2M9w==",
+            "ngs_shelf": 1,
+            "destination_type": "airport",
+            "origin_type": "airport",
+            "fare_brand_name": "Base Fare",
+            "conditions": {
+              "priority_check_in": null,
+              "priority_boarding": null,
+              "advance_seat_selection": null,
+              "change_before_departure": {
+                "penalty_currency": "USD",
+                "penalty_amount": "0.00",
+                "allowed": true
+              }
+            },
+            "segments": [
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T15:49:00",
+                "arriving_at": "2024-06-21T18:57:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "993",
+                "marketing_carrier_flight_number": "993",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT3H8M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "FLL",
+                  "icao_code": "KFLL",
+                  "city_name": "Fort Lauderdale",
+                  "iata_country_code": "US",
+                  "iata_code": "FLL",
+                  "latitude": 26.073416,
+                  "longitude": -80.151652,
+                  "city": {
+                    "iata_city_code": "FLL",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "FLL",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Fort Lauderdale",
+                    "id": "cit_fll_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Fort Lauderdale-Hollywood International Airport",
+                  "id": "arp_fll_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "NYC",
+                  "icao_code": "KEWR",
+                  "city_name": "Newark",
+                  "iata_country_code": "US",
+                  "iata_code": "EWR",
+                  "latitude": 40.691016,
+                  "longitude": -74.171581,
+                  "city": {
+                    "iata_city_code": "NYC",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "NYC",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "New York",
+                    "id": "cit_nyc_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Newark Liberty International Airport",
+                  "id": "arp_ewr_us"
+                },
+                "id": "seg_0000AiimmSMLDrvs4luPWx"
+              },
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T21:36:00",
+                "arriving_at": "2024-06-21T22:57:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "297",
+                "marketing_carrier_flight_number": "297",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT2H21M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "BNA",
+                  "icao_code": "KBNA",
+                  "city_name": "Nashville",
+                  "iata_country_code": "US",
+                  "iata_code": "BNA",
+                  "latitude": 36.125408,
+                  "longitude": -86.677785,
+                  "city": null,
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "Nashville International Airport",
+                  "id": "arp_bna_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "FLL",
+                  "icao_code": "KFLL",
+                  "city_name": "Fort Lauderdale",
+                  "iata_country_code": "US",
+                  "iata_code": "FLL",
+                  "latitude": 26.073416,
+                  "longitude": -80.151652,
+                  "city": {
+                    "iata_city_code": "FLL",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "FLL",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Fort Lauderdale",
+                    "id": "cit_fll_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Fort Lauderdale-Hollywood International Airport",
+                  "id": "arp_fll_us"
+                },
+                "id": "seg_0000AiimmSN3BEV26yEydE"
+              }
+            ],
+            "duration": "PT8H8M",
+            "destination": {
+              "airports": null,
+              "iata_city_code": "BNA",
+              "icao_code": "KBNA",
+              "city_name": "Nashville",
+              "iata_country_code": "US",
+              "iata_code": "BNA",
+              "latitude": 36.125408,
+              "longitude": -86.677785,
+              "city": null,
+              "time_zone": "America/Chicago",
+              "type": "airport",
+              "name": "Nashville International Airport",
+              "id": "arp_bna_us"
+            },
+            "origin": {
+              "airports": null,
+              "iata_city_code": "NYC",
+              "icao_code": "KEWR",
+              "city_name": "Newark",
+              "iata_country_code": "US",
+              "iata_code": "EWR",
+              "latitude": 40.691016,
+              "longitude": -74.171581,
+              "city": {
+                "iata_city_code": "NYC",
+                "icao_code": null,
+                "city_name": null,
+                "iata_country_code": "US",
+                "iata_code": "NYC",
+                "latitude": null,
+                "longitude": null,
+                "time_zone": null,
+                "type": "city",
+                "name": "New York",
+                "id": "cit_nyc_us"
+              },
+              "time_zone": "America/New_York",
+              "type": "airport",
+              "name": "Newark Liberty International Airport",
+              "id": "arp_ewr_us"
+            },
+            "id": "sli_0000AiimmSN3BEV26yEydF"
+          }
+        ],
+        "passengers": [
+          {
+            "fare_type": null,
+            "loyalty_programme_accounts": [],
+            "family_name": null,
+            "given_name": null,
+            "age": null,
+            "type": "adult",
+            "id": "pas_0000Aiimm6efv1WelGJk38"
+          }
+        ],
+        "conditions": {
+          "refund_before_departure": {
+            "penalty_currency": null,
+            "penalty_amount": null,
+            "allowed": false
+          },
+          "change_before_departure": {
+            "penalty_currency": "USD",
+            "penalty_amount": "0.00",
+            "allowed": true
+          }
+        },
+        "updated_at": "2024-06-08T15:09:07.510677Z",
+        "expires_at": "2024-06-08T15:24:07.295432Z",
+        "partial": false,
+        "owner": {
+          "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+          "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+          "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+          "iata_code": "NK",
+          "name": "Spirit Airlines",
+          "id": "arl_00009VME7DDSWSIAygCT2J"
+        },
+        "id": "off_0000AiimmSN3BEV26yEydH"
+      },
+      {
+        "total_emissions_kg": "113",
+        "allowed_passenger_identity_document_types": [
+          "passport",
+          "tax_id",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "payment_requirements": {
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null,
+          "requires_instant_payment": true
+        },
+        "supported_passenger_identity_document_types": [],
+        "passenger_identity_documents_required": false,
+        "tax_currency": "GBP",
+        "base_currency": "GBP",
+        "base_amount": "185.03",
+        "private_fares": [],
+        "tax_amount": "55.57",
+        "total_currency": "GBP",
+        "created_at": "2024-06-08T15:09:07.510677Z",
+        "live_mode": false,
+        "total_amount": "240.60",
+        "slices": [
+          {
+            "comparison_key": "AT+JTA==",
+            "ngs_shelf": 1,
+            "destination_type": "airport",
+            "origin_type": "airport",
+            "fare_brand_name": "Base Fare",
+            "conditions": {
+              "priority_check_in": null,
+              "priority_boarding": null,
+              "advance_seat_selection": null,
+              "change_before_departure": {
+                "penalty_currency": "USD",
+                "penalty_amount": "0.00",
+                "allowed": true
+              }
+            },
+            "segments": [
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T13:45:00",
+                "arriving_at": "2024-06-21T16:52:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "2337",
+                "marketing_carrier_flight_number": "2337",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT3H7M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "FLL",
+                  "icao_code": "KFLL",
+                  "city_name": "Fort Lauderdale",
+                  "iata_country_code": "US",
+                  "iata_code": "FLL",
+                  "latitude": 26.073416,
+                  "longitude": -80.151652,
+                  "city": {
+                    "iata_city_code": "FLL",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "FLL",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Fort Lauderdale",
+                    "id": "cit_fll_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Fort Lauderdale-Hollywood International Airport",
+                  "id": "arp_fll_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "NYC",
+                  "icao_code": "KEWR",
+                  "city_name": "Newark",
+                  "iata_country_code": "US",
+                  "iata_code": "EWR",
+                  "latitude": 40.691016,
+                  "longitude": -74.171581,
+                  "city": {
+                    "iata_city_code": "NYC",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "NYC",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "New York",
+                    "id": "cit_nyc_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Newark Liberty International Airport",
+                  "id": "arp_ewr_us"
+                },
+                "id": "seg_0000AiimmSN3BEV26yEydK"
+              },
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T21:36:00",
+                "arriving_at": "2024-06-21T22:57:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "297",
+                "marketing_carrier_flight_number": "297",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT2H21M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "BNA",
+                  "icao_code": "KBNA",
+                  "city_name": "Nashville",
+                  "iata_country_code": "US",
+                  "iata_code": "BNA",
+                  "latitude": 36.125408,
+                  "longitude": -86.677785,
+                  "city": null,
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "Nashville International Airport",
+                  "id": "arp_bna_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "FLL",
+                  "icao_code": "KFLL",
+                  "city_name": "Fort Lauderdale",
+                  "iata_country_code": "US",
+                  "iata_code": "FLL",
+                  "latitude": 26.073416,
+                  "longitude": -80.151652,
+                  "city": {
+                    "iata_city_code": "FLL",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "FLL",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Fort Lauderdale",
+                    "id": "cit_fll_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Fort Lauderdale-Hollywood International Airport",
+                  "id": "arp_fll_us"
+                },
+                "id": "seg_0000AiimmSN3BEV26yEydL"
+              }
+            ],
+            "duration": "PT10H12M",
+            "destination": {
+              "airports": null,
+              "iata_city_code": "BNA",
+              "icao_code": "KBNA",
+              "city_name": "Nashville",
+              "iata_country_code": "US",
+              "iata_code": "BNA",
+              "latitude": 36.125408,
+              "longitude": -86.677785,
+              "city": null,
+              "time_zone": "America/Chicago",
+              "type": "airport",
+              "name": "Nashville International Airport",
+              "id": "arp_bna_us"
+            },
+            "origin": {
+              "airports": null,
+              "iata_city_code": "NYC",
+              "icao_code": "KEWR",
+              "city_name": "Newark",
+              "iata_country_code": "US",
+              "iata_code": "EWR",
+              "latitude": 40.691016,
+              "longitude": -74.171581,
+              "city": {
+                "iata_city_code": "NYC",
+                "icao_code": null,
+                "city_name": null,
+                "iata_country_code": "US",
+                "iata_code": "NYC",
+                "latitude": null,
+                "longitude": null,
+                "time_zone": null,
+                "type": "city",
+                "name": "New York",
+                "id": "cit_nyc_us"
+              },
+              "time_zone": "America/New_York",
+              "type": "airport",
+              "name": "Newark Liberty International Airport",
+              "id": "arp_ewr_us"
+            },
+            "id": "sli_0000AiimmSN3BEV26yEydM"
+          }
+        ],
+        "passengers": [
+          {
+            "fare_type": null,
+            "loyalty_programme_accounts": [],
+            "family_name": null,
+            "given_name": null,
+            "age": null,
+            "type": "adult",
+            "id": "pas_0000Aiimm6efv1WelGJk38"
+          }
+        ],
+        "conditions": {
+          "refund_before_departure": {
+            "penalty_currency": null,
+            "penalty_amount": null,
+            "allowed": false
+          },
+          "change_before_departure": {
+            "penalty_currency": "USD",
+            "penalty_amount": "0.00",
+            "allowed": true
+          }
+        },
+        "updated_at": "2024-06-08T15:09:07.510677Z",
+        "expires_at": "2024-06-08T15:24:07.295432Z",
+        "partial": false,
+        "owner": {
+          "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+          "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+          "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+          "iata_code": "NK",
+          "name": "Spirit Airlines",
+          "id": "arl_00009VME7DDSWSIAygCT2J"
+        },
+        "id": "off_0000AiimmSN3BEV26yEydO"
+      },
+      {
+        "total_emissions_kg": "113",
+        "allowed_passenger_identity_document_types": [
+          "passport",
+          "tax_id",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "payment_requirements": {
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null,
+          "requires_instant_payment": true
+        },
+        "supported_passenger_identity_document_types": [],
+        "passenger_identity_documents_required": false,
+        "tax_currency": "GBP",
+        "base_currency": "GBP",
+        "base_amount": "185.03",
+        "private_fares": [],
+        "tax_amount": "55.57",
+        "total_currency": "GBP",
+        "created_at": "2024-06-08T15:09:07.510677Z",
+        "live_mode": false,
+        "total_amount": "240.60",
+        "slices": [
+          {
+            "comparison_key": "AtuqIA==",
+            "ngs_shelf": 1,
+            "destination_type": "airport",
+            "origin_type": "airport",
+            "fare_brand_name": "Base Fare",
+            "conditions": {
+              "priority_check_in": null,
+              "priority_boarding": null,
+              "advance_seat_selection": null,
+              "change_before_departure": {
+                "penalty_currency": "USD",
+                "penalty_amount": "0.00",
+                "allowed": true
+              }
+            },
+            "segments": [
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T13:45:00",
+                "arriving_at": "2024-06-21T16:52:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "2337",
+                "marketing_carrier_flight_number": "2337",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT3H7M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "FLL",
+                  "icao_code": "KFLL",
+                  "city_name": "Fort Lauderdale",
+                  "iata_country_code": "US",
+                  "iata_code": "FLL",
+                  "latitude": 26.073416,
+                  "longitude": -80.151652,
+                  "city": {
+                    "iata_city_code": "FLL",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "FLL",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Fort Lauderdale",
+                    "id": "cit_fll_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Fort Lauderdale-Hollywood International Airport",
+                  "id": "arp_fll_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "NYC",
+                  "icao_code": "KEWR",
+                  "city_name": "Newark",
+                  "iata_country_code": "US",
+                  "iata_code": "EWR",
+                  "latitude": 40.691016,
+                  "longitude": -74.171581,
+                  "city": {
+                    "iata_city_code": "NYC",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "NYC",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "New York",
+                    "id": "cit_nyc_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Newark Liberty International Airport",
+                  "id": "arp_ewr_us"
+                },
+                "id": "seg_0000AiimmSN3BEV26yEydR"
+              },
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T19:03:00",
+                "arriving_at": "2024-06-21T20:27:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "300",
+                "marketing_carrier_flight_number": "300",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT2H24M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "BNA",
+                  "icao_code": "KBNA",
+                  "city_name": "Nashville",
+                  "iata_country_code": "US",
+                  "iata_code": "BNA",
+                  "latitude": 36.125408,
+                  "longitude": -86.677785,
+                  "city": null,
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "Nashville International Airport",
+                  "id": "arp_bna_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "FLL",
+                  "icao_code": "KFLL",
+                  "city_name": "Fort Lauderdale",
+                  "iata_country_code": "US",
+                  "iata_code": "FLL",
+                  "latitude": 26.073416,
+                  "longitude": -80.151652,
+                  "city": {
+                    "iata_city_code": "FLL",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "FLL",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Fort Lauderdale",
+                    "id": "cit_fll_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Fort Lauderdale-Hollywood International Airport",
+                  "id": "arp_fll_us"
+                },
+                "id": "seg_0000AiimmSN3BEV26yEydS"
+              }
+            ],
+            "duration": "PT7H42M",
+            "destination": {
+              "airports": null,
+              "iata_city_code": "BNA",
+              "icao_code": "KBNA",
+              "city_name": "Nashville",
+              "iata_country_code": "US",
+              "iata_code": "BNA",
+              "latitude": 36.125408,
+              "longitude": -86.677785,
+              "city": null,
+              "time_zone": "America/Chicago",
+              "type": "airport",
+              "name": "Nashville International Airport",
+              "id": "arp_bna_us"
+            },
+            "origin": {
+              "airports": null,
+              "iata_city_code": "NYC",
+              "icao_code": "KEWR",
+              "city_name": "Newark",
+              "iata_country_code": "US",
+              "iata_code": "EWR",
+              "latitude": 40.691016,
+              "longitude": -74.171581,
+              "city": {
+                "iata_city_code": "NYC",
+                "icao_code": null,
+                "city_name": null,
+                "iata_country_code": "US",
+                "iata_code": "NYC",
+                "latitude": null,
+                "longitude": null,
+                "time_zone": null,
+                "type": "city",
+                "name": "New York",
+                "id": "cit_nyc_us"
+              },
+              "time_zone": "America/New_York",
+              "type": "airport",
+              "name": "Newark Liberty International Airport",
+              "id": "arp_ewr_us"
+            },
+            "id": "sli_0000AiimmSN3BEV26yEydT"
+          }
+        ],
+        "passengers": [
+          {
+            "fare_type": null,
+            "loyalty_programme_accounts": [],
+            "family_name": null,
+            "given_name": null,
+            "age": null,
+            "type": "adult",
+            "id": "pas_0000Aiimm6efv1WelGJk38"
+          }
+        ],
+        "conditions": {
+          "refund_before_departure": {
+            "penalty_currency": null,
+            "penalty_amount": null,
+            "allowed": false
+          },
+          "change_before_departure": {
+            "penalty_currency": "USD",
+            "penalty_amount": "0.00",
+            "allowed": true
+          }
+        },
+        "updated_at": "2024-06-08T15:09:07.510677Z",
+        "expires_at": "2024-06-08T15:24:07.295432Z",
+        "partial": false,
+        "owner": {
+          "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+          "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+          "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+          "iata_code": "NK",
+          "name": "Spirit Airlines",
+          "id": "arl_00009VME7DDSWSIAygCT2J"
+        },
+        "id": "off_0000AiimmSN3BEV26yEydV"
+      },
+      {
+        "total_emissions_kg": "113",
+        "allowed_passenger_identity_document_types": [
+          "passport",
+          "tax_id",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "payment_requirements": {
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null,
+          "requires_instant_payment": true
+        },
+        "supported_passenger_identity_document_types": [],
+        "passenger_identity_documents_required": false,
+        "tax_currency": "GBP",
+        "base_currency": "GBP",
+        "base_amount": "185.03",
+        "private_fares": [],
+        "tax_amount": "55.57",
+        "total_currency": "GBP",
+        "created_at": "2024-06-08T15:09:07.510677Z",
+        "live_mode": false,
+        "total_amount": "240.60",
+        "slices": [
+          {
+            "comparison_key": "BZq0ZQ==",
+            "ngs_shelf": 1,
+            "destination_type": "airport",
+            "origin_type": "airport",
+            "fare_brand_name": "Base Fare",
+            "conditions": {
+              "priority_check_in": null,
+              "priority_boarding": null,
+              "advance_seat_selection": null,
+              "change_before_departure": {
+                "penalty_currency": "USD",
+                "penalty_amount": "0.00",
+                "allowed": true
+              }
+            },
+            "segments": [
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T09:50:00",
+                "arriving_at": "2024-06-21T12:57:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "374",
+                "marketing_carrier_flight_number": "374",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT3H7M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "FLL",
+                  "icao_code": "KFLL",
+                  "city_name": "Fort Lauderdale",
+                  "iata_country_code": "US",
+                  "iata_code": "FLL",
+                  "latitude": 26.073416,
+                  "longitude": -80.151652,
+                  "city": {
+                    "iata_city_code": "FLL",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "FLL",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Fort Lauderdale",
+                    "id": "cit_fll_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Fort Lauderdale-Hollywood International Airport",
+                  "id": "arp_fll_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "NYC",
+                  "icao_code": "KEWR",
+                  "city_name": "Newark",
+                  "iata_country_code": "US",
+                  "iata_code": "EWR",
+                  "latitude": 40.691016,
+                  "longitude": -74.171581,
+                  "city": {
+                    "iata_city_code": "NYC",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "NYC",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "New York",
+                    "id": "cit_nyc_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Newark Liberty International Airport",
+                  "id": "arp_ewr_us"
+                },
+                "id": "seg_0000AiimmSN3BEV26yEydY"
+              },
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T19:03:00",
+                "arriving_at": "2024-06-21T20:27:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "300",
+                "marketing_carrier_flight_number": "300",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT2H24M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "BNA",
+                  "icao_code": "KBNA",
+                  "city_name": "Nashville",
+                  "iata_country_code": "US",
+                  "iata_code": "BNA",
+                  "latitude": 36.125408,
+                  "longitude": -86.677785,
+                  "city": null,
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "Nashville International Airport",
+                  "id": "arp_bna_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "FLL",
+                  "icao_code": "KFLL",
+                  "city_name": "Fort Lauderdale",
+                  "iata_country_code": "US",
+                  "iata_code": "FLL",
+                  "latitude": 26.073416,
+                  "longitude": -80.151652,
+                  "city": {
+                    "iata_city_code": "FLL",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "FLL",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Fort Lauderdale",
+                    "id": "cit_fll_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Fort Lauderdale-Hollywood International Airport",
+                  "id": "arp_fll_us"
+                },
+                "id": "seg_0000AiimmSN3BEV26yEydZ"
+              }
+            ],
+            "duration": "PT11H37M",
+            "destination": {
+              "airports": null,
+              "iata_city_code": "BNA",
+              "icao_code": "KBNA",
+              "city_name": "Nashville",
+              "iata_country_code": "US",
+              "iata_code": "BNA",
+              "latitude": 36.125408,
+              "longitude": -86.677785,
+              "city": null,
+              "time_zone": "America/Chicago",
+              "type": "airport",
+              "name": "Nashville International Airport",
+              "id": "arp_bna_us"
+            },
+            "origin": {
+              "airports": null,
+              "iata_city_code": "NYC",
+              "icao_code": "KEWR",
+              "city_name": "Newark",
+              "iata_country_code": "US",
+              "iata_code": "EWR",
+              "latitude": 40.691016,
+              "longitude": -74.171581,
+              "city": {
+                "iata_city_code": "NYC",
+                "icao_code": null,
+                "city_name": null,
+                "iata_country_code": "US",
+                "iata_code": "NYC",
+                "latitude": null,
+                "longitude": null,
+                "time_zone": null,
+                "type": "city",
+                "name": "New York",
+                "id": "cit_nyc_us"
+              },
+              "time_zone": "America/New_York",
+              "type": "airport",
+              "name": "Newark Liberty International Airport",
+              "id": "arp_ewr_us"
+            },
+            "id": "sli_0000AiimmSN3BEV26yEyda"
+          }
+        ],
+        "passengers": [
+          {
+            "fare_type": null,
+            "loyalty_programme_accounts": [],
+            "family_name": null,
+            "given_name": null,
+            "age": null,
+            "type": "adult",
+            "id": "pas_0000Aiimm6efv1WelGJk38"
+          }
+        ],
+        "conditions": {
+          "refund_before_departure": {
+            "penalty_currency": null,
+            "penalty_amount": null,
+            "allowed": false
+          },
+          "change_before_departure": {
+            "penalty_currency": "USD",
+            "penalty_amount": "0.00",
+            "allowed": true
+          }
+        },
+        "updated_at": "2024-06-08T15:09:07.510677Z",
+        "expires_at": "2024-06-08T15:24:07.295432Z",
+        "partial": false,
+        "owner": {
+          "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+          "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+          "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+          "iata_code": "NK",
+          "name": "Spirit Airlines",
+          "id": "arl_00009VME7DDSWSIAygCT2J"
+        },
+        "id": "off_0000AiimmSN3BEV26yEydc"
+      },
+      {
+        "total_emissions_kg": "103",
+        "allowed_passenger_identity_document_types": [
+          "passport",
+          "tax_id",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "payment_requirements": {
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null,
+          "requires_instant_payment": true
+        },
+        "supported_passenger_identity_document_types": [],
+        "passenger_identity_documents_required": false,
+        "tax_currency": "GBP",
+        "base_currency": "GBP",
+        "base_amount": "185.03",
+        "private_fares": [],
+        "tax_amount": "55.57",
+        "total_currency": "GBP",
+        "created_at": "2024-06-08T15:09:07.510677Z",
+        "live_mode": false,
+        "total_amount": "240.60",
+        "slices": [
+          {
+            "comparison_key": "4N1i",
+            "ngs_shelf": 1,
+            "destination_type": "airport",
+            "origin_type": "airport",
+            "fare_brand_name": "Base Fare",
+            "conditions": {
+              "priority_check_in": null,
+              "priority_boarding": null,
+              "advance_seat_selection": null,
+              "change_before_departure": {
+                "penalty_currency": "USD",
+                "penalty_amount": "0.00",
+                "allowed": true
+              }
+            },
+            "segments": [
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T07:40:00",
+                "arriving_at": "2024-06-21T10:35:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "58",
+                "marketing_carrier_flight_number": "58",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT2H55M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "ORL",
+                  "icao_code": "KMCO",
+                  "city_name": "Orlando",
+                  "iata_country_code": "US",
+                  "iata_code": "MCO",
+                  "latitude": 28.43026,
+                  "longitude": -81.308493,
+                  "city": {
+                    "iata_city_code": "ORL",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "ORL",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Orlando",
+                    "id": "cit_orl_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Orlando International Airport",
+                  "id": "arp_mco_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "NYC",
+                  "icao_code": "KEWR",
+                  "city_name": "Newark",
+                  "iata_country_code": "US",
+                  "iata_code": "EWR",
+                  "latitude": 40.691016,
+                  "longitude": -74.171581,
+                  "city": {
+                    "iata_city_code": "NYC",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "NYC",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "New York",
+                    "id": "cit_nyc_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Newark Liberty International Airport",
+                  "id": "arp_ewr_us"
+                },
+                "id": "seg_0000AiimmSN3BEV26yEydf"
+              },
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T17:47:00",
+                "arriving_at": "2024-06-21T18:55:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "3030",
+                "marketing_carrier_flight_number": "3030",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT2H8M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "BNA",
+                  "icao_code": "KBNA",
+                  "city_name": "Nashville",
+                  "iata_country_code": "US",
+                  "iata_code": "BNA",
+                  "latitude": 36.125408,
+                  "longitude": -86.677785,
+                  "city": null,
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "Nashville International Airport",
+                  "id": "arp_bna_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "ORL",
+                  "icao_code": "KMCO",
+                  "city_name": "Orlando",
+                  "iata_country_code": "US",
+                  "iata_code": "MCO",
+                  "latitude": 28.43026,
+                  "longitude": -81.308493,
+                  "city": {
+                    "iata_city_code": "ORL",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "ORL",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Orlando",
+                    "id": "cit_orl_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Orlando International Airport",
+                  "id": "arp_mco_us"
+                },
+                "id": "seg_0000AiimmSN3BEV26yEydg"
+              }
+            ],
+            "duration": "PT12H15M",
+            "destination": {
+              "airports": null,
+              "iata_city_code": "BNA",
+              "icao_code": "KBNA",
+              "city_name": "Nashville",
+              "iata_country_code": "US",
+              "iata_code": "BNA",
+              "latitude": 36.125408,
+              "longitude": -86.677785,
+              "city": null,
+              "time_zone": "America/Chicago",
+              "type": "airport",
+              "name": "Nashville International Airport",
+              "id": "arp_bna_us"
+            },
+            "origin": {
+              "airports": null,
+              "iata_city_code": "NYC",
+              "icao_code": "KEWR",
+              "city_name": "Newark",
+              "iata_country_code": "US",
+              "iata_code": "EWR",
+              "latitude": 40.691016,
+              "longitude": -74.171581,
+              "city": {
+                "iata_city_code": "NYC",
+                "icao_code": null,
+                "city_name": null,
+                "iata_country_code": "US",
+                "iata_code": "NYC",
+                "latitude": null,
+                "longitude": null,
+                "time_zone": null,
+                "type": "city",
+                "name": "New York",
+                "id": "cit_nyc_us"
+              },
+              "time_zone": "America/New_York",
+              "type": "airport",
+              "name": "Newark Liberty International Airport",
+              "id": "arp_ewr_us"
+            },
+            "id": "sli_0000AiimmSN3BEV26yEydh"
+          }
+        ],
+        "passengers": [
+          {
+            "fare_type": null,
+            "loyalty_programme_accounts": [],
+            "family_name": null,
+            "given_name": null,
+            "age": null,
+            "type": "adult",
+            "id": "pas_0000Aiimm6efv1WelGJk38"
+          }
+        ],
+        "conditions": {
+          "refund_before_departure": {
+            "penalty_currency": null,
+            "penalty_amount": null,
+            "allowed": false
+          },
+          "change_before_departure": {
+            "penalty_currency": "USD",
+            "penalty_amount": "0.00",
+            "allowed": true
+          }
+        },
+        "updated_at": "2024-06-08T15:09:07.510677Z",
+        "expires_at": "2024-06-08T15:24:07.295432Z",
+        "partial": false,
+        "owner": {
+          "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+          "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+          "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+          "iata_code": "NK",
+          "name": "Spirit Airlines",
+          "id": "arl_00009VME7DDSWSIAygCT2J"
+        },
+        "id": "off_0000AiimmSN3BEV26yEydj"
+      },
+      {
+        "total_emissions_kg": "103",
+        "allowed_passenger_identity_document_types": [
+          "passport",
+          "tax_id",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "payment_requirements": {
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null,
+          "requires_instant_payment": true
+        },
+        "supported_passenger_identity_document_types": [],
+        "passenger_identity_documents_required": false,
+        "tax_currency": "GBP",
+        "base_currency": "GBP",
+        "base_amount": "185.03",
+        "private_fares": [],
+        "tax_amount": "55.57",
+        "total_currency": "GBP",
+        "created_at": "2024-06-08T15:09:07.510677Z",
+        "live_mode": false,
+        "total_amount": "240.60",
+        "slices": [
+          {
+            "comparison_key": "BStEWQ==",
+            "ngs_shelf": 1,
+            "destination_type": "airport",
+            "origin_type": "airport",
+            "fare_brand_name": "Base Fare",
+            "conditions": {
+              "priority_check_in": null,
+              "priority_boarding": null,
+              "advance_seat_selection": null,
+              "change_before_departure": {
+                "penalty_currency": "USD",
+                "penalty_amount": "0.00",
+                "allowed": true
+              }
+            },
+            "segments": [
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T07:40:00",
+                "arriving_at": "2024-06-21T10:35:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "58",
+                "marketing_carrier_flight_number": "58",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT2H55M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "ORL",
+                  "icao_code": "KMCO",
+                  "city_name": "Orlando",
+                  "iata_country_code": "US",
+                  "iata_code": "MCO",
+                  "latitude": 28.43026,
+                  "longitude": -81.308493,
+                  "city": {
+                    "iata_city_code": "ORL",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "ORL",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Orlando",
+                    "id": "cit_orl_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Orlando International Airport",
+                  "id": "arp_mco_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "NYC",
+                  "icao_code": "KEWR",
+                  "city_name": "Newark",
+                  "iata_country_code": "US",
+                  "iata_code": "EWR",
+                  "latitude": 40.691016,
+                  "longitude": -74.171581,
+                  "city": {
+                    "iata_city_code": "NYC",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "NYC",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "New York",
+                    "id": "cit_nyc_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Newark Liberty International Airport",
+                  "id": "arp_ewr_us"
+                },
+                "id": "seg_0000AiimmSN3BEV26yEydm"
+              },
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T11:46:00",
+                "arriving_at": "2024-06-21T12:51:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "1900",
+                "marketing_carrier_flight_number": "1900",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT2H5M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "BNA",
+                  "icao_code": "KBNA",
+                  "city_name": "Nashville",
+                  "iata_country_code": "US",
+                  "iata_code": "BNA",
+                  "latitude": 36.125408,
+                  "longitude": -86.677785,
+                  "city": null,
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "Nashville International Airport",
+                  "id": "arp_bna_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "ORL",
+                  "icao_code": "KMCO",
+                  "city_name": "Orlando",
+                  "iata_country_code": "US",
+                  "iata_code": "MCO",
+                  "latitude": 28.43026,
+                  "longitude": -81.308493,
+                  "city": {
+                    "iata_city_code": "ORL",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "ORL",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Orlando",
+                    "id": "cit_orl_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Orlando International Airport",
+                  "id": "arp_mco_us"
+                },
+                "id": "seg_0000AiimmSN3BEV26yEydn"
+              }
+            ],
+            "duration": "PT6H11M",
+            "destination": {
+              "airports": null,
+              "iata_city_code": "BNA",
+              "icao_code": "KBNA",
+              "city_name": "Nashville",
+              "iata_country_code": "US",
+              "iata_code": "BNA",
+              "latitude": 36.125408,
+              "longitude": -86.677785,
+              "city": null,
+              "time_zone": "America/Chicago",
+              "type": "airport",
+              "name": "Nashville International Airport",
+              "id": "arp_bna_us"
+            },
+            "origin": {
+              "airports": null,
+              "iata_city_code": "NYC",
+              "icao_code": "KEWR",
+              "city_name": "Newark",
+              "iata_country_code": "US",
+              "iata_code": "EWR",
+              "latitude": 40.691016,
+              "longitude": -74.171581,
+              "city": {
+                "iata_city_code": "NYC",
+                "icao_code": null,
+                "city_name": null,
+                "iata_country_code": "US",
+                "iata_code": "NYC",
+                "latitude": null,
+                "longitude": null,
+                "time_zone": null,
+                "type": "city",
+                "name": "New York",
+                "id": "cit_nyc_us"
+              },
+              "time_zone": "America/New_York",
+              "type": "airport",
+              "name": "Newark Liberty International Airport",
+              "id": "arp_ewr_us"
+            },
+            "id": "sli_0000AiimmSN3BEV26yEydo"
+          }
+        ],
+        "passengers": [
+          {
+            "fare_type": null,
+            "loyalty_programme_accounts": [],
+            "family_name": null,
+            "given_name": null,
+            "age": null,
+            "type": "adult",
+            "id": "pas_0000Aiimm6efv1WelGJk38"
+          }
+        ],
+        "conditions": {
+          "refund_before_departure": {
+            "penalty_currency": null,
+            "penalty_amount": null,
+            "allowed": false
+          },
+          "change_before_departure": {
+            "penalty_currency": "USD",
+            "penalty_amount": "0.00",
+            "allowed": true
+          }
+        },
+        "updated_at": "2024-06-08T15:09:07.510677Z",
+        "expires_at": "2024-06-08T15:24:07.295432Z",
+        "partial": false,
+        "owner": {
+          "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+          "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+          "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+          "iata_code": "NK",
+          "name": "Spirit Airlines",
+          "id": "arl_00009VME7DDSWSIAygCT2J"
+        },
+        "id": "off_0000AiimmSN3BEV26yEydq"
+      },
+      {
+        "total_emissions_kg": "103",
+        "allowed_passenger_identity_document_types": [
+          "passport",
+          "tax_id",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "payment_requirements": {
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null,
+          "requires_instant_payment": true
+        },
+        "supported_passenger_identity_document_types": [],
+        "passenger_identity_documents_required": false,
+        "tax_currency": "GBP",
+        "base_currency": "GBP",
+        "base_amount": "185.03",
+        "private_fares": [],
+        "tax_amount": "55.57",
+        "total_currency": "GBP",
+        "created_at": "2024-06-08T15:09:07.510677Z",
+        "live_mode": false,
+        "total_amount": "240.60",
+        "slices": [
+          {
+            "comparison_key": "AkJDvQ==",
+            "ngs_shelf": 1,
+            "destination_type": "airport",
+            "origin_type": "airport",
+            "fare_brand_name": "Base Fare",
+            "conditions": {
+              "priority_check_in": null,
+              "priority_boarding": null,
+              "advance_seat_selection": null,
+              "change_before_departure": {
+                "penalty_currency": "USD",
+                "penalty_amount": "0.00",
+                "allowed": true
+              }
+            },
+            "segments": [
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T06:15:00",
+                "arriving_at": "2024-06-21T09:09:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "1250",
+                "marketing_carrier_flight_number": "1250",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT2H54M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "ORL",
+                  "icao_code": "KMCO",
+                  "city_name": "Orlando",
+                  "iata_country_code": "US",
+                  "iata_code": "MCO",
+                  "latitude": 28.43026,
+                  "longitude": -81.308493,
+                  "city": {
+                    "iata_city_code": "ORL",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "ORL",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Orlando",
+                    "id": "cit_orl_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Orlando International Airport",
+                  "id": "arp_mco_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "NYC",
+                  "icao_code": "KEWR",
+                  "city_name": "Newark",
+                  "iata_country_code": "US",
+                  "iata_code": "EWR",
+                  "latitude": 40.691016,
+                  "longitude": -74.171581,
+                  "city": {
+                    "iata_city_code": "NYC",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "NYC",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "New York",
+                    "id": "cit_nyc_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Newark Liberty International Airport",
+                  "id": "arp_ewr_us"
+                },
+                "id": "seg_0000AiimmSN3BEV26yEydt"
+              },
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T11:46:00",
+                "arriving_at": "2024-06-21T12:51:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "1900",
+                "marketing_carrier_flight_number": "1900",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT2H5M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "BNA",
+                  "icao_code": "KBNA",
+                  "city_name": "Nashville",
+                  "iata_country_code": "US",
+                  "iata_code": "BNA",
+                  "latitude": 36.125408,
+                  "longitude": -86.677785,
+                  "city": null,
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "Nashville International Airport",
+                  "id": "arp_bna_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "ORL",
+                  "icao_code": "KMCO",
+                  "city_name": "Orlando",
+                  "iata_country_code": "US",
+                  "iata_code": "MCO",
+                  "latitude": 28.43026,
+                  "longitude": -81.308493,
+                  "city": {
+                    "iata_city_code": "ORL",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "ORL",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Orlando",
+                    "id": "cit_orl_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Orlando International Airport",
+                  "id": "arp_mco_us"
+                },
+                "id": "seg_0000AiimmSN3BEV26yEydu"
+              }
+            ],
+            "duration": "PT7H36M",
+            "destination": {
+              "airports": null,
+              "iata_city_code": "BNA",
+              "icao_code": "KBNA",
+              "city_name": "Nashville",
+              "iata_country_code": "US",
+              "iata_code": "BNA",
+              "latitude": 36.125408,
+              "longitude": -86.677785,
+              "city": null,
+              "time_zone": "America/Chicago",
+              "type": "airport",
+              "name": "Nashville International Airport",
+              "id": "arp_bna_us"
+            },
+            "origin": {
+              "airports": null,
+              "iata_city_code": "NYC",
+              "icao_code": "KEWR",
+              "city_name": "Newark",
+              "iata_country_code": "US",
+              "iata_code": "EWR",
+              "latitude": 40.691016,
+              "longitude": -74.171581,
+              "city": {
+                "iata_city_code": "NYC",
+                "icao_code": null,
+                "city_name": null,
+                "iata_country_code": "US",
+                "iata_code": "NYC",
+                "latitude": null,
+                "longitude": null,
+                "time_zone": null,
+                "type": "city",
+                "name": "New York",
+                "id": "cit_nyc_us"
+              },
+              "time_zone": "America/New_York",
+              "type": "airport",
+              "name": "Newark Liberty International Airport",
+              "id": "arp_ewr_us"
+            },
+            "id": "sli_0000AiimmSN3BEV26yEydv"
+          }
+        ],
+        "passengers": [
+          {
+            "fare_type": null,
+            "loyalty_programme_accounts": [],
+            "family_name": null,
+            "given_name": null,
+            "age": null,
+            "type": "adult",
+            "id": "pas_0000Aiimm6efv1WelGJk38"
+          }
+        ],
+        "conditions": {
+          "refund_before_departure": {
+            "penalty_currency": null,
+            "penalty_amount": null,
+            "allowed": false
+          },
+          "change_before_departure": {
+            "penalty_currency": "USD",
+            "penalty_amount": "0.00",
+            "allowed": true
+          }
+        },
+        "updated_at": "2024-06-08T15:09:07.510677Z",
+        "expires_at": "2024-06-08T15:24:07.295432Z",
+        "partial": false,
+        "owner": {
+          "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+          "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+          "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+          "iata_code": "NK",
+          "name": "Spirit Airlines",
+          "id": "arl_00009VME7DDSWSIAygCT2J"
+        },
+        "id": "off_0000AiimmSN3BEV26yEydx"
+      },
+      {
+        "total_emissions_kg": "103",
+        "allowed_passenger_identity_document_types": [
+          "passport",
+          "tax_id",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "payment_requirements": {
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null,
+          "requires_instant_payment": true
+        },
+        "supported_passenger_identity_document_types": [],
+        "passenger_identity_documents_required": false,
+        "tax_currency": "GBP",
+        "base_currency": "GBP",
+        "base_amount": "185.03",
+        "private_fares": [],
+        "tax_amount": "55.57",
+        "total_currency": "GBP",
+        "created_at": "2024-06-08T15:09:07.510677Z",
+        "live_mode": false,
+        "total_amount": "240.60",
+        "slices": [
+          {
+            "comparison_key": "ATgXoQ==",
+            "ngs_shelf": 1,
+            "destination_type": "airport",
+            "origin_type": "airport",
+            "fare_brand_name": "Base Fare",
+            "conditions": {
+              "priority_check_in": null,
+              "priority_boarding": null,
+              "advance_seat_selection": null,
+              "change_before_departure": {
+                "penalty_currency": "USD",
+                "penalty_amount": "0.00",
+                "allowed": true
+              }
+            },
+            "segments": [
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T06:15:00",
+                "arriving_at": "2024-06-21T09:09:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "1250",
+                "marketing_carrier_flight_number": "1250",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT2H54M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "ORL",
+                  "icao_code": "KMCO",
+                  "city_name": "Orlando",
+                  "iata_country_code": "US",
+                  "iata_code": "MCO",
+                  "latitude": 28.43026,
+                  "longitude": -81.308493,
+                  "city": {
+                    "iata_city_code": "ORL",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "ORL",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Orlando",
+                    "id": "cit_orl_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Orlando International Airport",
+                  "id": "arp_mco_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "NYC",
+                  "icao_code": "KEWR",
+                  "city_name": "Newark",
+                  "iata_country_code": "US",
+                  "iata_code": "EWR",
+                  "latitude": 40.691016,
+                  "longitude": -74.171581,
+                  "city": {
+                    "iata_city_code": "NYC",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "NYC",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "New York",
+                    "id": "cit_nyc_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Newark Liberty International Airport",
+                  "id": "arp_ewr_us"
+                },
+                "id": "seg_0000AiimmSN3BEV26yEye0"
+              },
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": null,
+                "departing_at": "2024-06-21T10:10:00",
+                "arriving_at": "2024-06-21T11:16:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+                  "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+                  "iata_code": "NK",
+                  "name": "Spirit Airlines",
+                  "id": "arl_00009VME7DDSWSIAygCT2J"
+                },
+                "operating_carrier_flight_number": "3170",
+                "marketing_carrier_flight_number": "3170",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": null,
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "HNR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT2H6M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "BNA",
+                  "icao_code": "KBNA",
+                  "city_name": "Nashville",
+                  "iata_country_code": "US",
+                  "iata_code": "BNA",
+                  "latitude": 36.125408,
+                  "longitude": -86.677785,
+                  "city": null,
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "Nashville International Airport",
+                  "id": "arp_bna_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "ORL",
+                  "icao_code": "KMCO",
+                  "city_name": "Orlando",
+                  "iata_country_code": "US",
+                  "iata_code": "MCO",
+                  "latitude": 28.43026,
+                  "longitude": -81.308493,
+                  "city": {
+                    "iata_city_code": "ORL",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "ORL",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Orlando",
+                    "id": "cit_orl_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Orlando International Airport",
+                  "id": "arp_mco_us"
+                },
+                "id": "seg_0000AiimmSN3BEV26yEye1"
+              }
+            ],
+            "duration": "PT6H1M",
+            "destination": {
+              "airports": null,
+              "iata_city_code": "BNA",
+              "icao_code": "KBNA",
+              "city_name": "Nashville",
+              "iata_country_code": "US",
+              "iata_code": "BNA",
+              "latitude": 36.125408,
+              "longitude": -86.677785,
+              "city": null,
+              "time_zone": "America/Chicago",
+              "type": "airport",
+              "name": "Nashville International Airport",
+              "id": "arp_bna_us"
+            },
+            "origin": {
+              "airports": null,
+              "iata_city_code": "NYC",
+              "icao_code": "KEWR",
+              "city_name": "Newark",
+              "iata_country_code": "US",
+              "iata_code": "EWR",
+              "latitude": 40.691016,
+              "longitude": -74.171581,
+              "city": {
+                "iata_city_code": "NYC",
+                "icao_code": null,
+                "city_name": null,
+                "iata_country_code": "US",
+                "iata_code": "NYC",
+                "latitude": null,
+                "longitude": null,
+                "time_zone": null,
+                "type": "city",
+                "name": "New York",
+                "id": "cit_nyc_us"
+              },
+              "time_zone": "America/New_York",
+              "type": "airport",
+              "name": "Newark Liberty International Airport",
+              "id": "arp_ewr_us"
+            },
+            "id": "sli_0000AiimmSN3BEV26yEye2"
+          }
+        ],
+        "passengers": [
+          {
+            "fare_type": null,
+            "loyalty_programme_accounts": [],
+            "family_name": null,
+            "given_name": null,
+            "age": null,
+            "type": "adult",
+            "id": "pas_0000Aiimm6efv1WelGJk38"
+          }
+        ],
+        "conditions": {
+          "refund_before_departure": {
+            "penalty_currency": null,
+            "penalty_amount": null,
+            "allowed": false
+          },
+          "change_before_departure": {
+            "penalty_currency": "USD",
+            "penalty_amount": "0.00",
+            "allowed": true
+          }
+        },
+        "updated_at": "2024-06-08T15:09:07.510677Z",
+        "expires_at": "2024-06-08T15:24:07.295432Z",
+        "partial": false,
+        "owner": {
+          "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/NK.svg",
+          "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/NK.svg",
+          "conditions_of_carriage_url": "https://content.spirit.com/Shared/en-us/Documents/Contract_of_Carriage.pdf",
+          "iata_code": "NK",
+          "name": "Spirit Airlines",
+          "id": "arl_00009VME7DDSWSIAygCT2J"
+        },
+        "id": "off_0000AiimmSN3BEV26yEye4"
+      },
+      {
+        "total_emissions_kg": "427",
+        "allowed_passenger_identity_document_types": [
+          "passport",
+          "tax_id",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "payment_requirements": {
+          "price_guarantee_expires_at": null,
+          "payment_required_by": "2024-06-09T15:09:04.908416Z",
+          "requires_instant_payment": false
+        },
+        "supported_passenger_identity_document_types": [
+          "passport",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "passenger_identity_documents_required": false,
+        "tax_currency": "GBP",
+        "base_currency": "GBP",
+        "base_amount": "572.03",
+        "private_fares": [],
+        "tax_amount": "66.21",
+        "total_currency": "GBP",
+        "created_at": "2024-06-08T15:09:04.909928Z",
+        "live_mode": false,
+        "total_amount": "638.24",
+        "slices": [
+          {
+            "comparison_key": "AsLbAQ==",
+            "ngs_shelf": 2,
+            "destination_type": "airport",
+            "origin_type": "airport",
+            "fare_brand_name": "Main",
+            "conditions": {
+              "priority_check_in": null,
+              "priority_boarding": null,
+              "advance_seat_selection": null,
+              "change_before_departure": null
+            },
+            "segments": [
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": {
+                  "iata_code": "7M9",
+                  "name": "Boeing 737 MAX 9 / BBJ MAX 9",
+                  "id": "arc_00009oBdrPis4D1mAnkllc"
+                },
+                "departing_at": "2024-06-21T07:30:00",
+                "arriving_at": "2024-06-21T10:33:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AS.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AS.svg",
+                  "conditions_of_carriage_url": "https://www.alaskaair.com/content/legal/contract-of-carriage/rule-1",
+                  "iata_code": "AS",
+                  "name": "Alaska Airlines",
+                  "id": "arl_00009VME7DAch01WpssCcN"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AS.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AS.svg",
+                  "conditions_of_carriage_url": "https://www.alaskaair.com/content/legal/contract-of-carriage/rule-1",
+                  "iata_code": "AS",
+                  "name": "Alaska Airlines",
+                  "id": "arl_00009VME7DAch01WpssCcN"
+                },
+                "operating_carrier_flight_number": "299",
+                "marketing_carrier_flight_number": "299",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": {
+                        "wifi": {
+                          "cost": "paid",
+                          "available": true
+                        },
+                        "seat": {
+                          "pitch": "31",
+                          "legroom": "standard",
+                          "type": "standard"
+                        },
+                        "power": {
+                          "available": true
+                        }
+                      },
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [
+                      {
+                        "quantity": 1,
+                        "type": "carry_on"
+                      }
+                    ],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "VH3OAVMN",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT6H3M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "SEA",
+                  "icao_code": "KSEA",
+                  "city_name": "Seattle",
+                  "iata_country_code": "US",
+                  "iata_code": "SEA",
+                  "latitude": 47.449625,
+                  "longitude": -122.308907,
+                  "city": {
+                    "iata_city_code": "SEA",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "SEA",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Seattle",
+                    "id": "cit_sea_us"
+                  },
+                  "time_zone": "America/Los_Angeles",
+                  "type": "airport",
+                  "name": "Seattle-Tacoma International Airport",
+                  "id": "arp_sea_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "NYC",
+                  "icao_code": "KEWR",
+                  "city_name": "Newark",
+                  "iata_country_code": "US",
+                  "iata_code": "EWR",
+                  "latitude": 40.691016,
+                  "longitude": -74.171581,
+                  "city": {
+                    "iata_city_code": "NYC",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "NYC",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "New York",
+                    "id": "cit_nyc_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Newark Liberty International Airport",
+                  "id": "arp_ewr_us"
+                },
+                "id": "seg_0000AiimmDUIW0Nrx6W3LZ"
+              },
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": {
+                  "iata_code": "73J",
+                  "name": "Boeing 737-900 (winglets)/BBJ3",
+                  "id": "arc_00009VMF8AhBTmADP77oj8"
+                },
+                "departing_at": "2024-06-21T12:20:00",
+                "arriving_at": "2024-06-21T18:26:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AS.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AS.svg",
+                  "conditions_of_carriage_url": "https://www.alaskaair.com/content/legal/contract-of-carriage/rule-1",
+                  "iata_code": "AS",
+                  "name": "Alaska Airlines",
+                  "id": "arl_00009VME7DAch01WpssCcN"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AS.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AS.svg",
+                  "conditions_of_carriage_url": "https://www.alaskaair.com/content/legal/contract-of-carriage/rule-1",
+                  "iata_code": "AS",
+                  "name": "Alaska Airlines",
+                  "id": "arl_00009VME7DAch01WpssCcN"
+                },
+                "operating_carrier_flight_number": "410",
+                "marketing_carrier_flight_number": "410",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": {
+                        "wifi": {
+                          "cost": "paid",
+                          "available": true
+                        },
+                        "seat": {
+                          "pitch": "31",
+                          "legroom": "standard",
+                          "type": "standard"
+                        },
+                        "power": {
+                          "available": true
+                        }
+                      },
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [
+                      {
+                        "quantity": 1,
+                        "type": "carry_on"
+                      }
+                    ],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "SH7OAKMN",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT4H6M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "CHI",
+                  "icao_code": "KORD",
+                  "city_name": "Chicago",
+                  "iata_country_code": "US",
+                  "iata_code": "ORD",
+                  "latitude": 41.976381,
+                  "longitude": -87.90606,
+                  "city": {
+                    "iata_city_code": "CHI",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "CHI",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Chicago",
+                    "id": "cit_chi_us"
+                  },
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "O'Hare International Airport",
+                  "id": "arp_ord_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "SEA",
+                  "icao_code": "KSEA",
+                  "city_name": "Seattle",
+                  "iata_country_code": "US",
+                  "iata_code": "SEA",
+                  "latitude": 47.449625,
+                  "longitude": -122.308907,
+                  "city": {
+                    "iata_city_code": "SEA",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "SEA",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Seattle",
+                    "id": "cit_sea_us"
+                  },
+                  "time_zone": "America/Los_Angeles",
+                  "type": "airport",
+                  "name": "Seattle-Tacoma International Airport",
+                  "id": "arp_sea_us"
+                },
+                "id": "seg_0000AiimmDV0TMx1zIqcS0"
+              },
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": {
+                  "iata_code": "CR7",
+                  "name": "Canadair (Bombardier) Regional Jet 700 and Challenger 870",
+                  "id": "arc_00009VMF8AhtR8jNRJSNpe"
+                },
+                "departing_at": "2024-06-21T20:26:00",
+                "arriving_at": "2024-06-21T22:04:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AA.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AA.svg",
+                  "conditions_of_carriage_url": "https://www.aa.com/i18n/customer-service/support/conditions-of-carriage.jsp",
+                  "iata_code": "AA",
+                  "name": "American Airlines",
+                  "id": "arl_00009VME7DAGiJjwomhv32"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AS.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AS.svg",
+                  "conditions_of_carriage_url": "https://www.alaskaair.com/content/legal/contract-of-carriage/rule-1",
+                  "iata_code": "AS",
+                  "name": "Alaska Airlines",
+                  "id": "arl_00009VME7DAch01WpssCcN"
+                },
+                "operating_carrier_flight_number": null,
+                "marketing_carrier_flight_number": "6156",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": {
+                        "wifi": {
+                          "cost": "paid",
+                          "available": true
+                        },
+                        "seat": {
+                          "pitch": "31",
+                          "legroom": "standard",
+                          "type": "standard"
+                        },
+                        "power": {
+                          "available": true
+                        }
+                      },
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [
+                      {
+                        "quantity": 1,
+                        "type": "carry_on"
+                      }
+                    ],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "SH7OAKMN",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT1H38M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "BNA",
+                  "icao_code": "KBNA",
+                  "city_name": "Nashville",
+                  "iata_country_code": "US",
+                  "iata_code": "BNA",
+                  "latitude": 36.125408,
+                  "longitude": -86.677785,
+                  "city": null,
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "Nashville International Airport",
+                  "id": "arp_bna_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "CHI",
+                  "icao_code": "KORD",
+                  "city_name": "Chicago",
+                  "iata_country_code": "US",
+                  "iata_code": "ORD",
+                  "latitude": 41.976381,
+                  "longitude": -87.90606,
+                  "city": {
+                    "iata_city_code": "CHI",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "CHI",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Chicago",
+                    "id": "cit_chi_us"
+                  },
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "O'Hare International Airport",
+                  "id": "arp_ord_us"
+                },
+                "id": "seg_0000AiimmDV0TMx1zIqcS1"
+              }
+            ],
+            "duration": "PT15H34M",
+            "destination": {
+              "airports": null,
+              "iata_city_code": "BNA",
+              "icao_code": "KBNA",
+              "city_name": "Nashville",
+              "iata_country_code": "US",
+              "iata_code": "BNA",
+              "latitude": 36.125408,
+              "longitude": -86.677785,
+              "city": null,
+              "time_zone": "America/Chicago",
+              "type": "airport",
+              "name": "Nashville International Airport",
+              "id": "arp_bna_us"
+            },
+            "origin": {
+              "airports": null,
+              "iata_city_code": "NYC",
+              "icao_code": "KEWR",
+              "city_name": "Newark",
+              "iata_country_code": "US",
+              "iata_code": "EWR",
+              "latitude": 40.691016,
+              "longitude": -74.171581,
+              "city": {
+                "iata_city_code": "NYC",
+                "icao_code": null,
+                "city_name": null,
+                "iata_country_code": "US",
+                "iata_code": "NYC",
+                "latitude": null,
+                "longitude": null,
+                "time_zone": null,
+                "type": "city",
+                "name": "New York",
+                "id": "cit_nyc_us"
+              },
+              "time_zone": "America/New_York",
+              "type": "airport",
+              "name": "Newark Liberty International Airport",
+              "id": "arp_ewr_us"
+            },
+            "id": "sli_0000AiimmDV0TMx1zIqcS2"
+          }
+        ],
+        "passengers": [
+          {
+            "fare_type": null,
+            "loyalty_programme_accounts": [],
+            "family_name": null,
+            "given_name": null,
+            "age": null,
+            "type": "adult",
+            "id": "pas_0000Aiimm6efv1WelGJk38"
+          }
+        ],
+        "conditions": {
+          "refund_before_departure": null,
+          "change_before_departure": null
+        },
+        "updated_at": "2024-06-08T15:09:04.909928Z",
+        "expires_at": "2024-06-08T16:09:04.908475Z",
+        "partial": false,
+        "owner": {
+          "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AS.svg",
+          "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AS.svg",
+          "conditions_of_carriage_url": "https://www.alaskaair.com/content/legal/contract-of-carriage/rule-1",
+          "iata_code": "AS",
+          "name": "Alaska Airlines",
+          "id": "arl_00009VME7DAch01WpssCcN"
+        },
+        "id": "off_0000AiimmDV0TMx1zIqcS4"
+      },
+      {
+        "total_emissions_kg": "427",
+        "allowed_passenger_identity_document_types": [
+          "passport",
+          "tax_id",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "payment_requirements": {
+          "price_guarantee_expires_at": null,
+          "payment_required_by": "2024-06-09T15:09:04.909245Z",
+          "requires_instant_payment": false
+        },
+        "supported_passenger_identity_document_types": [
+          "passport",
+          "known_traveler_number",
+          "passenger_redress_number"
+        ],
+        "passenger_identity_documents_required": false,
+        "tax_currency": "GBP",
+        "base_currency": "GBP",
+        "base_amount": "1099.39",
+        "private_fares": [],
+        "tax_amount": "105.76",
+        "total_currency": "GBP",
+        "created_at": "2024-06-08T15:09:04.909928Z",
+        "live_mode": false,
+        "total_amount": "1205.15",
+        "slices": [
+          {
+            "comparison_key": "AsLbAQ==",
+            "ngs_shelf": 2,
+            "destination_type": "airport",
+            "origin_type": "airport",
+            "fare_brand_name": "REFUNDable Main",
+            "conditions": {
+              "priority_check_in": null,
+              "priority_boarding": null,
+              "advance_seat_selection": null,
+              "change_before_departure": null
+            },
+            "segments": [
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": {
+                  "iata_code": "7M9",
+                  "name": "Boeing 737 MAX 9 / BBJ MAX 9",
+                  "id": "arc_00009oBdrPis4D1mAnkllc"
+                },
+                "departing_at": "2024-06-21T07:30:00",
+                "arriving_at": "2024-06-21T10:33:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AS.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AS.svg",
+                  "conditions_of_carriage_url": "https://www.alaskaair.com/content/legal/contract-of-carriage/rule-1",
+                  "iata_code": "AS",
+                  "name": "Alaska Airlines",
+                  "id": "arl_00009VME7DAch01WpssCcN"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AS.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AS.svg",
+                  "conditions_of_carriage_url": "https://www.alaskaair.com/content/legal/contract-of-carriage/rule-1",
+                  "iata_code": "AS",
+                  "name": "Alaska Airlines",
+                  "id": "arl_00009VME7DAch01WpssCcN"
+                },
+                "operating_carrier_flight_number": "299",
+                "marketing_carrier_flight_number": "299",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": {
+                        "wifi": {
+                          "cost": "paid",
+                          "available": true
+                        },
+                        "seat": {
+                          "pitch": "31",
+                          "legroom": "standard",
+                          "type": "standard"
+                        },
+                        "power": {
+                          "available": true
+                        }
+                      },
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [
+                      {
+                        "quantity": 1,
+                        "type": "carry_on"
+                      }
+                    ],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "VH3OAVMR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT6H3M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "SEA",
+                  "icao_code": "KSEA",
+                  "city_name": "Seattle",
+                  "iata_country_code": "US",
+                  "iata_code": "SEA",
+                  "latitude": 47.449625,
+                  "longitude": -122.308907,
+                  "city": {
+                    "iata_city_code": "SEA",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "SEA",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Seattle",
+                    "id": "cit_sea_us"
+                  },
+                  "time_zone": "America/Los_Angeles",
+                  "type": "airport",
+                  "name": "Seattle-Tacoma International Airport",
+                  "id": "arp_sea_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "NYC",
+                  "icao_code": "KEWR",
+                  "city_name": "Newark",
+                  "iata_country_code": "US",
+                  "iata_code": "EWR",
+                  "latitude": 40.691016,
+                  "longitude": -74.171581,
+                  "city": {
+                    "iata_city_code": "NYC",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "NYC",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "New York",
+                    "id": "cit_nyc_us"
+                  },
+                  "time_zone": "America/New_York",
+                  "type": "airport",
+                  "name": "Newark Liberty International Airport",
+                  "id": "arp_ewr_us"
+                },
+                "id": "seg_0000AiimmDVMS3Ec0P0u0I"
+              },
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": {
+                  "iata_code": "73J",
+                  "name": "Boeing 737-900 (winglets)/BBJ3",
+                  "id": "arc_00009VMF8AhBTmADP77oj8"
+                },
+                "departing_at": "2024-06-21T12:20:00",
+                "arriving_at": "2024-06-21T18:26:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AS.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AS.svg",
+                  "conditions_of_carriage_url": "https://www.alaskaair.com/content/legal/contract-of-carriage/rule-1",
+                  "iata_code": "AS",
+                  "name": "Alaska Airlines",
+                  "id": "arl_00009VME7DAch01WpssCcN"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AS.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AS.svg",
+                  "conditions_of_carriage_url": "https://www.alaskaair.com/content/legal/contract-of-carriage/rule-1",
+                  "iata_code": "AS",
+                  "name": "Alaska Airlines",
+                  "id": "arl_00009VME7DAch01WpssCcN"
+                },
+                "operating_carrier_flight_number": "410",
+                "marketing_carrier_flight_number": "410",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": {
+                        "wifi": {
+                          "cost": "paid",
+                          "available": true
+                        },
+                        "seat": {
+                          "pitch": "31",
+                          "legroom": "standard",
+                          "type": "standard"
+                        },
+                        "power": {
+                          "available": true
+                        }
+                      },
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [
+                      {
+                        "quantity": 1,
+                        "type": "carry_on"
+                      }
+                    ],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "YH0OAKMR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT4H6M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "CHI",
+                  "icao_code": "KORD",
+                  "city_name": "Chicago",
+                  "iata_country_code": "US",
+                  "iata_code": "ORD",
+                  "latitude": 41.976381,
+                  "longitude": -87.90606,
+                  "city": {
+                    "iata_city_code": "CHI",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "CHI",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Chicago",
+                    "id": "cit_chi_us"
+                  },
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "O'Hare International Airport",
+                  "id": "arp_ord_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "SEA",
+                  "icao_code": "KSEA",
+                  "city_name": "Seattle",
+                  "iata_country_code": "US",
+                  "iata_code": "SEA",
+                  "latitude": 47.449625,
+                  "longitude": -122.308907,
+                  "city": {
+                    "iata_city_code": "SEA",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "SEA",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Seattle",
+                    "id": "cit_sea_us"
+                  },
+                  "time_zone": "America/Los_Angeles",
+                  "type": "airport",
+                  "name": "Seattle-Tacoma International Airport",
+                  "id": "arp_sea_us"
+                },
+                "id": "seg_0000AiimmDVMS3Ec0P0u0J"
+              },
+              {
+                "origin_terminal": null,
+                "destination_terminal": null,
+                "aircraft": {
+                  "iata_code": "CR7",
+                  "name": "Canadair (Bombardier) Regional Jet 700 and Challenger 870",
+                  "id": "arc_00009VMF8AhtR8jNRJSNpe"
+                },
+                "departing_at": "2024-06-21T20:26:00",
+                "arriving_at": "2024-06-21T22:04:00",
+                "stops": [],
+                "operating_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AA.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AA.svg",
+                  "conditions_of_carriage_url": "https://www.aa.com/i18n/customer-service/support/conditions-of-carriage.jsp",
+                  "iata_code": "AA",
+                  "name": "American Airlines",
+                  "id": "arl_00009VME7DAGiJjwomhv32"
+                },
+                "marketing_carrier": {
+                  "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AS.svg",
+                  "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AS.svg",
+                  "conditions_of_carriage_url": "https://www.alaskaair.com/content/legal/contract-of-carriage/rule-1",
+                  "iata_code": "AS",
+                  "name": "Alaska Airlines",
+                  "id": "arl_00009VME7DAch01WpssCcN"
+                },
+                "operating_carrier_flight_number": null,
+                "marketing_carrier_flight_number": "6156",
+                "distance": null,
+                "passengers": [
+                  {
+                    "cabin": {
+                      "amenities": {
+                        "wifi": {
+                          "cost": "paid",
+                          "available": true
+                        },
+                        "seat": {
+                          "pitch": "31",
+                          "legroom": "standard",
+                          "type": "standard"
+                        },
+                        "power": {
+                          "available": true
+                        }
+                      },
+                      "marketing_name": "Economy",
+                      "name": "economy"
+                    },
+                    "baggages": [
+                      {
+                        "quantity": 1,
+                        "type": "carry_on"
+                      }
+                    ],
+                    "cabin_class_marketing_name": "Economy",
+                    "passenger_id": "pas_0000Aiimm6efv1WelGJk38",
+                    "fare_basis_code": "YH0OAKMR",
+                    "cabin_class": "economy"
+                  }
+                ],
+                "duration": "PT1H38M",
+                "destination": {
+                  "airports": null,
+                  "iata_city_code": "BNA",
+                  "icao_code": "KBNA",
+                  "city_name": "Nashville",
+                  "iata_country_code": "US",
+                  "iata_code": "BNA",
+                  "latitude": 36.125408,
+                  "longitude": -86.677785,
+                  "city": null,
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "Nashville International Airport",
+                  "id": "arp_bna_us"
+                },
+                "origin": {
+                  "airports": null,
+                  "iata_city_code": "CHI",
+                  "icao_code": "KORD",
+                  "city_name": "Chicago",
+                  "iata_country_code": "US",
+                  "iata_code": "ORD",
+                  "latitude": 41.976381,
+                  "longitude": -87.90606,
+                  "city": {
+                    "iata_city_code": "CHI",
+                    "icao_code": null,
+                    "city_name": null,
+                    "iata_country_code": "US",
+                    "iata_code": "CHI",
+                    "latitude": null,
+                    "longitude": null,
+                    "time_zone": null,
+                    "type": "city",
+                    "name": "Chicago",
+                    "id": "cit_chi_us"
+                  },
+                  "time_zone": "America/Chicago",
+                  "type": "airport",
+                  "name": "O'Hare International Airport",
+                  "id": "arp_ord_us"
+                },
+                "id": "seg_0000AiimmDVMS3Ec0P0u0K"
+              }
+            ],
+            "duration": "PT15H34M",
+            "destination": {
+              "airports": null,
+              "iata_city_code": "BNA",
+              "icao_code": "KBNA",
+              "city_name": "Nashville",
+              "iata_country_code": "US",
+              "iata_code": "BNA",
+              "latitude": 36.125408,
+              "longitude": -86.677785,
+              "city": null,
+              "time_zone": "America/Chicago",
+              "type": "airport",
+              "name": "Nashville International Airport",
+              "id": "arp_bna_us"
+            },
+            "origin": {
+              "airports": null,
+              "iata_city_code": "NYC",
+              "icao_code": "KEWR",
+              "city_name": "Newark",
+              "iata_country_code": "US",
+              "iata_code": "EWR",
+              "latitude": 40.691016,
+              "longitude": -74.171581,
+              "city": {
+                "iata_city_code": "NYC",
+                "icao_code": null,
+                "city_name": null,
+                "iata_country_code": "US",
+                "iata_code": "NYC",
+                "latitude": null,
+                "longitude": null,
+                "time_zone": null,
+                "type": "city",
+                "name": "New York",
+                "id": "cit_nyc_us"
+              },
+              "time_zone": "America/New_York",
+              "type": "airport",
+              "name": "Newark Liberty International Airport",
+              "id": "arp_ewr_us"
+            },
+            "id": "sli_0000AiimmDVMS3Ec0P0u0L"
+          }
+        ],
+        "passengers": [
+          {
+            "fare_type": null,
+            "loyalty_programme_accounts": [],
+            "family_name": null,
+            "given_name": null,
+            "age": null,
+            "type": "adult",
+            "id": "pas_0000Aiimm6efv1WelGJk38"
+          }
+        ],
+        "conditions": {
+          "refund_before_departure": null,
+          "change_before_departure": null
+        },
+        "updated_at": "2024-06-08T15:09:04.909928Z",
+        "expires_at": "2024-06-08T16:09:04.909308Z",
+        "partial": false,
+        "owner": {
+          "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/AS.svg",
+          "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/AS.svg",
+          "conditions_of_carriage_url": "https://www.alaskaair.com/content/legal/contract-of-carriage/rule-1",
+          "iata_code": "AS",
+          "name": "Alaska Airlines",
+          "id": "arl_00009VME7DAch01WpssCcN"
+        },
+        "id": "off_0000AiimmDVMS3Ec0P0u0N"
+      }
+    ],
+    "created_at": "2024-06-08T15:09:03.719351Z",
+    "cabin_class": "economy",
+    "live_mode": false,
+    "slices": [
+      {
+        "destination_type": "airport",
+        "origin_type": "airport",
+        "departure_date": "2024-06-21",
+        "destination": {
+          "airports": null,
+          "iata_city_code": "BNA",
+          "icao_code": "KBNA",
+          "city_name": "Nashville",
+          "iata_country_code": "US",
+          "iata_code": "BNA",
+          "latitude": 36.125408,
+          "longitude": -86.677785,
+          "city": null,
+          "time_zone": "America/Chicago",
+          "type": "airport",
+          "name": "Nashville International Airport",
+          "id": "arp_bna_us"
+        },
+        "origin": {
+          "airports": null,
+          "iata_city_code": "NYC",
+          "icao_code": "KEWR",
+          "city_name": "Newark",
+          "iata_country_code": "US",
+          "iata_code": "EWR",
+          "latitude": 40.691016,
+          "longitude": -74.171581,
+          "city": {
+            "iata_city_code": "NYC",
+            "icao_code": null,
+            "city_name": null,
+            "iata_country_code": "US",
+            "iata_code": "NYC",
+            "latitude": null,
+            "longitude": null,
+            "time_zone": null,
+            "type": "city",
+            "name": "New York",
+            "id": "cit_nyc_us"
+          },
+          "time_zone": "America/New_York",
+          "type": "airport",
+          "name": "Newark Liberty International Airport",
+          "id": "arp_ewr_us"
+        }
+      }
+    ],
+    "passengers": [
+      {
+        "fare_type": null,
+        "loyalty_programme_accounts": [],
+        "family_name": null,
+        "given_name": null,
+        "age": null,
+        "type": "adult",
+        "id": "pas_0000Aiimm6efv1WelGJk38"
+      }
+    ],
+    "client_key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTc5NDU3NDcsImxpdmVfbW9kZSI6ZmFsc2UsIm9yZ2FuaXNhdGlvbl9pZCI6Im9yZ18wMDAwQWlnYTlSM29JU09BOERsWjJXIn0.S0UcreSp8dTA_zF1BH2zOgDxHmPrt6iiaxWfWdK4hgA",
+    "id": "orq_0000Aiimm6efv1WelGJk36"
+  }
+}
