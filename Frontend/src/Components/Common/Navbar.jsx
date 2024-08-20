@@ -39,42 +39,42 @@ const Navbar = () => {
         open={open}
         onOpenChange={toggleOpen}
         content={
-          <div className="flex flex-col text-left py-6 bg-white rounded-lg text-lg font-medium">
-            <div className="text-base font-normal mx-6 raleway">
-              Select Currency
+          <div className="flex flex-col text-center py-6 bg-white rounded-lg text-lg font-medium">
+            <div className="text-base font-normal mx-2 raleway">
+              {/* Select Currency */}
             </div>
-            <hr className="mt-2 mb-5 mx-5" />
+            {/* <hr className="mt-2 mb-5 mx-5" /> */}
             <a
               onClick={() => {
                 changeCurrency("USD");
               }}
-              className="flex flex-row-reverse justify-between px-3 hover:text-white hover:bg-blue-500 hover:font-bold"
+              className="px-7 hover:text-white hover:bg-blue-500 hover:font-bold"
             >
-              USD <span>($)</span>
+              USD
             </a>
             <a
               onClick={() => {
                 changeCurrency("CAD");
               }}
-              className="flex flex-row-reverse justify-between px-3 hover:text-white hover:bg-blue-500 hover:font-bold"
+              className="px-7 hover:text-white hover:bg-blue-500 hover:font-bold"
             >
-              CAD <span>(C$)</span>
+              CAD
             </a>
             <a
               onClick={() => {
                 changeCurrency("GBP");
               }}
-              className="flex flex-row-reverse justify-between px-3 hover:text-white hover:bg-blue-500 hover:font-bold"
+              className="px-7 hover:text-white hover:bg-blue-500 hover:font-bold"
             >
-              GBP <span>(£)</span>
+              GBP
             </a>
             <a
               onClick={() => {
                 changeCurrency("EUR");
               }}
-              className="flex flex-row-reverse justify-between px-3 hover:text-white hover:bg-blue-500 hover:font-bold"
+              className="px-7 hover:text-white hover:bg-blue-500 hover:font-bold"
             >
-              EUR <span>(&#8364;)</span>
+              EUR
             </a>
           </div>
         }
@@ -144,7 +144,7 @@ const Navbar = () => {
       <Link to="/" className="pb-2 px-2 basis-44 flex-shrink-[2]">
         <img src={logo} alt="" className="object-contain inline" />
       </Link>
-      <div className="nav-buttons flex flex-row justify-end gap-2 sm:gap-4 items-center flex-grow">
+      <div className="nav-buttons flex flex-row justify-end gap-8 items-center flex-grow">
         <Currency />
         {user ? (
           <Dropdown
