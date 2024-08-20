@@ -65,7 +65,7 @@ const payment = async (req, res) => {
         const response = await Markup.find({});
         const markup = parseFloat(response[0].markup);
         const dufflePayment = parseFloat(payment);
-        const pay = (((dufflePayment + markup) * fxRate * fxMarkup) / 1-duffleRate).toFixed(2);
+       const pay = (((dufflePayment + (dufflePayment * markup / 100)) * fxRate * fxMarkup) / 1-duffleRate).toFixed(2);
         // const pay = (parseFloat(payment) + 32).toFixed(2)
         console.log(pay);
         try {
@@ -98,7 +98,7 @@ const payment_confirm = async (req, res) => {
 }
 
 const order = async (req, res) => {
-    const { payment, passenger, offerId } = req.body
+      const { payment, passenger, offerId,metadata } = req.body
     console.log("Payment: ", payment)
     console.log("Passenger: ", passenger);
     console.log("OfferID: ", offerId);
@@ -112,6 +112,7 @@ const order = async (req, res) => {
                     "amount": `${payment?.amount}`
                 }
             ],
+             metadata: {...metadata},
             selected_offers: [offerId],
             passengers: [
                 // {
