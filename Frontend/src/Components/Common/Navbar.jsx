@@ -171,7 +171,7 @@ const Navbar = () => {
               // bg="var(--primary-500)"
               sx={{
                 backgroundColor: "var(--primary-500)",
-                fontSize: 10,
+                fontSize: 12,
                 padding: 1,
               }}
               onClick={() => navigate("login")}

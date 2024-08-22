@@ -79,14 +79,20 @@ h2 {
 }
 
 h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
   font-family: "Raleway", serif;
 }
 
-span {
-  font-family: "Quicksand", serif;
+h4 {
+  font-size: 1.50rem;
+  font-weight: 600;
+  font-family: "Raleway", serif;
 }
 
-.main-heading {
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
   font-family: "Raleway", serif;
 }
 
@@ -100,6 +106,14 @@ p {
   font-family: "Quicksand", sans-serif;
   font-size: 1.125em;
   color: var(--stroke-tb);
+}
+
+span {
+  font-family: "Quicksand", serif;
+}
+
+.main-heading {
+  font-family: "Raleway", serif;
 }
 
 button:hover {

@@ -290,6 +290,11 @@ button.multiCityBtn {
     font-weight: 600;
 }
 
+.admin-settings-nav a:hover {
+    background-color: var(--primary-300);
+    color: #ffffff;
+}
+
 @media (min-width: 768px) {
     .md\:card-30 {
         width: 30%;

@@ -1,76 +1,64 @@
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../context/UserContext";
 import { APIS, useAPI } from "../api/config";
-import { Button } from "antd";
-
-const FormGroup = ({ labelText = "", input, children }) => {
-  const { type, placeholder, name, id, value, onChange } = input;
-  return (
-    <div className="form-group-admin grid grid-cols-3 items-center justify-center">
-      <label htmlFor={name} className="justify-self-start">
-        {labelText}:
-      </label>
-      <input
-        className="border rounded-3xl p-1 pl-4 justify-self-center"
-        type={type}
-        name={name}
-        id={id}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-      />
-      <div className="justify-self-end">{children}</div>
-    </div>
-  );
-};
+import { Link, NavLink, Outlet } from "react-router-dom";
 
 export default function AdminSettings() {
   const [user, setUser] = useContext(UserContext);
-  const { token } = user.data;
-  const [getMarkup, markupLoading] = useAPI(APIS.getMarkup);
-  const [updateMarkup, updLoading] = useAPI(APIS.updateMarkup);
-  const [markup, setMarkup] = useState("");
 
-  const saveValues = () => {
-    updateMarkup({ token: token, body: { markup: markup } }).then((res) => {
-      console.log(res);
-    });
-  };
+  const NavLinks = [
+    {
+      text: "Add Markup",
+      link: "add-markup",
+    },
+    {
+      text: "Edit Privacy Policy",
+      link: "edit-privacy-policy",
+    },
+    {
+      text: "Edit Cancellation",
+      link: "edit-cancellation-policy",
+    },
+    {
+      text: "Edit Contact Us",
+      link: "edit-contact-us",
+    },
+    {
+      text: "Edit About Us",
+      link: "edit-about-us",
+    },
+  ];
 
-  useEffect(() => {
-    getMarkup(token).then((res) => setMarkup(res.data[0].markup));
-  }, []);
   return (
-    <div className="my-10 mx-5">
-      <div className="flex flex-col gap-10">
-        <div className="w-1/3 md:w-1/6 font-semibold text-3xl border-dashed border-b-4 border-blue-600 pb-2">
-          Settings
+    <div className="my-10 mx-5 p-4">
+      <div className="flex flex-col md:flex-row gap-10">
+        <div className="w-full md:w-auto flex flex-col gap-5 flex-grow">
+          <div className="font-semibold text-3xl border-dashed border-b-4 border-blue-600 pb-2">
+            Settings
+          </div>
+          <div className="admin-settings-nav flex flex-col gap-1 w-full shadow-md rounded-md p-4">
+            {NavLinks.map((item, i) => {
+              return (
+                <NavLink
+                  key={i}
+                  to={item.link}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "bg-blue-600 rounded-sm text-white font-semibold pl-5"
+                      : "pl-5"
+                  }
+                >
+                  {item.text}
+                </NavLink>
+              );
+            })}
+          </div>
         </div>
-        <div className="flex flex-col gap-5 mx-auto md:w-2/5 p-10 shadow-lg">
-          <FormGroup
-            labelText="Flight Markup"
-            input={{
-              type: "text",
-              name: "markup",
-              id: "markup",
-              placeholder: "",
-              value: `${markup}`,
-              onChange: (e) => {
-                setMarkup(e.target.value);
-              },
-            }}
-          >
-            (GBP)
-          </FormGroup>
-          <div className="self-end">
-            <Button
-              type="primary"
-              className="font-semibold text-lg"
-              onClick={saveValues}
-              disabled={updLoading || markupLoading}
-            >
-              Save
-            </Button>
+        <div className="md:w-2/3 admin-settings-content">
+          <div className="flex flex-row">
+            <div className="mx-auto p-10 shadow-lg">
+              <Outlet />
+            </div>
           </div>
         </div>
       </div>

@@ -50,6 +50,13 @@ import { HotelProvider } from "./context/HoteContext";
 import Checkout_temp from "./Pages/checkout_temp/Checkout_temp";
 import CheckoutRender from "./Pages/CheckoutRender/CheckoutRender";
 import AdminSettings from "./Pages/AdminSettings";
+import AddMarkup from "./Pages/AddMarkup";
+import {
+  EditPrivacy,
+  EditCancellation,
+  EditContact,
+  EditAbout,
+} from "./Pages/Editor/EditorChanges";
 
 const footer_pages = [
   {
@@ -160,7 +167,19 @@ const App = () => {
                   />
                 </Route>
                 {localStorage.getItem("admin") && (
-                  <Route path="admin-settings" element={<AdminSettings />} />
+                  <Route path="admin-settings/" element={<AdminSettings />}>
+                    <Route path="add-markup" element={<AddMarkup />} />
+                    <Route
+                      path="edit-privacy-policy"
+                      element={<EditPrivacy />}
+                    />
+                    <Route
+                      path="edit-cancellation-policy"
+                      element={<EditCancellation />}
+                    />
+                    <Route path="edit-contact-us" element={<EditContact />} />
+                    <Route path="edit-about-us" element={<EditAbout />} />
+                  </Route>
                 )}
               </>
             ) : (
