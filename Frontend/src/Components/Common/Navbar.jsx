@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useEffect, useState, useContext } from "react";
 // import logo from "../../assets/img/navbar/ST-Logo.jpeg";
+// Updated Code
 import logo from "../../assets/img/logos/FlightSavior.png";
 import nav_1 from "../../assets/img/navbar/nav-1.png";
 import nav_2 from "../../assets/img/navbar/nav-2.png";
