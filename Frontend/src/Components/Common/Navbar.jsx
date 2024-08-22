@@ -176,7 +176,7 @@ const Navbar = () => {
               }}
               onClick={() => navigate("login")}
             >
-              Login
+              Nabeel
             </Button>
           </>
         )}
