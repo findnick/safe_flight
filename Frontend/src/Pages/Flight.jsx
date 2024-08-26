@@ -13,6 +13,8 @@ import card_4 from "../assets/img/other-cards/flight-card-4.jpg";
 import { FlightForm, SearchForm } from "../Components/Common/SearchForm";
 import demoAirline from "../assets/img/flight/demo-airline-icon.png";
 import TopFlights from "../Components/UnCommon/TopFlights";
+import { APIS, useAPI } from "../api/config";
+import { useEffect, useState } from "react";
 
 const Flight = () => {
   const cards = [
@@ -141,6 +143,15 @@ const Flight = () => {
     },
   ];
 
+  const [getContent, contentLoading] = useAPI(APIS.fetchContent);
+  const [content, setContent] = useState("");
+
+  useEffect(() => {
+    getContent().then((res) => {
+      if (res?.data) setContent(res.data[0].home);
+    });
+  }, []);
+
   return (
     <>
       {/* <Navbar /> */}
@@ -159,7 +170,8 @@ const Flight = () => {
         img={card_4}
         btnText="Book now"
         heading="Lorem ipsum dolor sit amet consectetur ac quis sed."
-        para="Lorem ipsum dolor sit amet consectetur. Nisl ultrices et eleifend proin quisque feugiat."
+        // para="Lorem ipsum dolor sit amet consectetur. Nisl ultrices et eleifend proin quisque feugiat."
+        para={!contentLoading && content}
       />
       <Questions questions={questions} />
       {/* <Footer /> */}

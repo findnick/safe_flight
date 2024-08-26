@@ -76,6 +76,17 @@ const APIS = {
   fetchHotels: (body) => {
     return baseModule.post("hotels", body);
   },
+  fetchContent: () => {
+    return baseModule.get("content");
+  },
+  postContent: (req) => {
+    const { body, token } = req;
+    return baseModule.post("content/addContent", body, {
+      headers: {
+        "X-Auth-Token": token,
+      },
+    });
+  },
 };
 
 export default APIS;

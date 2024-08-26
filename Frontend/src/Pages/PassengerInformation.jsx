@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { APIS, useAPI } from "../api/config";
 import Swal from "sweetalert2";
+import moment from "moment";
 
 const PassengerForm = ({ title, id }) => {
   const [countries, setCountries] = useState([]);
@@ -151,15 +152,11 @@ const PassengerForm = ({ title, id }) => {
                   { label: "--", value: "empty" },
                   {
                     label: "Male",
-                    value: "Male",
+                    value: "m",
                   },
                   {
                     label: "Female",
-                    value: "Female",
-                  },
-                  {
-                    label: "Other",
-                    value: "Other",
+                    value: "f",
                   },
                 ]}
               />
@@ -190,7 +187,7 @@ const PassengerForm = ({ title, id }) => {
           </Form.Item>
         </div>
       </Form.Item>
-      <Form.Item name={`${id}-line-4`} style={{ minHeight: "4rem" }}>
+      {/* <Form.Item name={`${id}-line-4`} style={{ minHeight: "4rem" }}>
         <div className="flex flex-row gap-3 flex-wrap">
           <Form.Item
             label="Passport Number"
@@ -229,7 +226,7 @@ const PassengerForm = ({ title, id }) => {
             </Form.Item>
           </Form.Item>
         </div>
-      </Form.Item>
+      </Form.Item> */}
     </>
     // {/* <Form.Item name={`${id}-line_butt-n`}>
     //     <Button type="primary" htmlType="submit" className="h-10" block>
@@ -250,6 +247,7 @@ export default function PassengerInformation({
   const [offer, offerLoading] = useAPI(APIS.offerData);
   const [createOrder, orderLoading] = useAPI(APIS.createOrder);
   const [passengers, setPassengers] = useState([]);
+  const [child, setChild] = useState([]);
   const navigate = useNavigate();
   const [paymentObj, setPaymentObj] = useState({
     currency: "GBP",
@@ -268,6 +266,12 @@ export default function PassengerInformation({
         });
       // console.log(arr);
       setPassengers(arr);
+      const childArr = res.data.passengers
+        .filter((item) => item.type !== "adult")
+        .map((item) => {
+          return { id: item.id };
+        });
+      setChild(childArr);
     });
   }, []);
 
@@ -284,25 +288,30 @@ export default function PassengerInformation({
       return {
         phone_number: values["contact"],
         email: values["email"],
-        born_on: dateStr,
+        born_on: moment(dateStr, "YYYY-M-DD").format("YYYY-MM-DD"),
         title: values[`${id}-title`],
         gender: values[`${id}-gender`],
         family_name: values[`${id}-family-name`],
-        given_name: values[`${id}-dob-given-name`],
+        given_name: values[`${id}-given-name`],
         id: id,
       };
     });
+    console.log(passengerDetails);
     setPassengers(passengerDetails);
     const orderDetails = {
       payment: paymentObj,
-      passenger: passengers,
+      passenger: [...passengerDetails, ...child],
       offerId: offer_id,
+      metadata: {},
     };
     // console.log(orderDetails);
     onSubmit(orderDetails);
     document.getElementById("passengerSubmitBtn").disabled = true;
     document.getElementById("passengerSubmitBtn").style.background = "grey";
     document.getElementById("passengerSubmitBtn").style.color = "white";
+    document.getElementById(
+      "passengerSubmitBtn"
+    ).innerHTML = `Submitted<span class="text-green-600">!</span>`;
   };
 
   return (

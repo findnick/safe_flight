@@ -27,6 +27,10 @@ export default function AdminSettings() {
       text: "Edit About Us",
       link: "edit-about-us",
     },
+    {
+      text: "Edit Home Banner",
+      link: "edit-home-section",
+    },
   ];
 
   return (

@@ -5,7 +5,10 @@ import ListItem from "@tiptap/extension-list-item";
 import TextStyle from "@tiptap/extension-text-style";
 import { EditorProvider, useCurrentEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import React, { useEffect } from "react";
+import { Button } from "antd";
+import React, { useContext, useEffect, useState } from "react";
+import { APIS, useAPI } from "../../api/config";
+import { UserContext } from "../../context/UserContext";
 
 const MenuBar = () => {
   const { editor } = useCurrentEditor();
@@ -222,15 +225,42 @@ const content = `
 </blockquote>
 `;
 
-export default ({ userContent }) => {
+export default ({ userContent = "", type = "" }) => {
+  const [user, setUser] = useContext(UserContext);
+  const { token } = user.data;
+  const [html, setHtml] = useState(userContent);
+  const [addContent, saveLoading] = useAPI(APIS.postContent);
+
   useEffect(() => {
-    console.log(userContent);
-  }, []);
+    console.log(html);
+  }, [html]);
+
+  const saveContent = async () => {
+    let body = {};
+    body[type] = html.toString();
+    const res = await addContent({ body: body, token: token });
+    console.log(res);
+  };
+
   return (
-    <EditorProvider
-      slotBefore={<MenuBar />}
-      extensions={extensions}
-      content={userContent}
-    ></EditorProvider>
+    <div className="flex flex-col gap-3">
+      <EditorProvider
+        slotBefore={<MenuBar />}
+        extensions={extensions}
+        content={userContent}
+        onUpdate={(element) => {
+          const { editor } = element;
+          setHtml(editor.getHTML());
+        }}
+      ></EditorProvider>
+      <Button
+        type="primary"
+        className="font-semibold"
+        onClick={saveContent}
+        disabled={saveLoading}
+      >
+        Save
+      </Button>
+    </div>
   );
 };

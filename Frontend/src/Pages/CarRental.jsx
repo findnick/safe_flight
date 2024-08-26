@@ -15,6 +15,8 @@ import main_3 from "../assets/img/car-rental/car-main-3.jpg";
 // import DynamicForm from "./../Components/Common/DynamicForm";
 import { CarRentalForm, SearchForm } from "../Components/Common/SearchForm";
 import TopCarRentals from "../Components/UnCommon/TopCarRentals";
+import { APIS, useAPI } from "../api/config";
+import { useEffect, useState } from "react";
 
 const CarRental = () => {
   const cards = [
@@ -81,6 +83,16 @@ const CarRental = () => {
       cost: "70",
     },
   ];
+
+  const [getContent, contentLoading] = useAPI(APIS.fetchContent);
+  const [content, setContent] = useState("");
+
+  useEffect(() => {
+    getContent().then((res) => {
+      if (res?.data) setContent(res.data[0].home);
+    });
+  }, []);
+
   return (
     <>
       {/* <Navbar /> */}
@@ -99,7 +111,7 @@ const CarRental = () => {
         img={card_4}
         btnText="Book now"
         heading="Lorem ipsum dolor sit amet consectetur ac quis sed."
-        para="Lorem ipsum dolor sit amet consectetur. Nisl ultrices et eleifend proin quisque feugiat."
+        para={!contentLoading && content}
       />
       <Questions questions={questions} />
       {/* <Footer /> */}

@@ -421,7 +421,7 @@ function FlightForm({
   return (
     <>
       <div className="form-header flex flex-col-reverse gap-1 sm:gap-0 sm:flex-row justify-between sm:items-center mb-2 sm:mb-0">
-        <h3 className="ml-3 mt-4 sm:mt-0">Where are you flying?</h3>
+        <h4 className="ml-3 mt-4 sm:mt-0">Where are you flying?</h4>
         <div className="trip-options flex flex-col sm:flex-row sm:items-center gap-4 mr-3">
           <img height={15} width={15} src={trip} alt="" />
           <div className="radio-group flex items-center justify-around sm:gap-2">
@@ -1398,13 +1398,13 @@ function SearchForm({ flight = "none", hotel = "none", carRental = "none" }) {
       <TabContent id="Hotel" display={hotel}>
         <HotelProvider>
           <HotelForm>
-            <h3 className="ml-3">Where do you like to stay?</h3>
+            <h4 className="ml-3">Where do you like to stay?</h4>
           </HotelForm>
         </HotelProvider>
       </TabContent>
       <TabContent id="CarRental" display={carRental}>
         <CarRentalForm>
-          <h3 className="ml-3">Where do you want to go?</h3>
+          <h4 className="ml-3">Where do you want to go?</h4>
         </CarRentalForm>
       </TabContent>
     </div>

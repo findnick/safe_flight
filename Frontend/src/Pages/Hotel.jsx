@@ -15,6 +15,8 @@ import main_1 from "../assets/img/hotel/hotel-img-1.jpg";
 import main_2 from "../assets/img/hotel/hotel-img-2.jpg";
 import main_3 from "../assets/img/header-images/header-img-2.jpg";
 import TopHotels from "../Components/UnCommon/TopHotels";
+import { APIS, useAPI } from "../api/config";
+import { useEffect, useState } from "react";
 
 const Hotel = () => {
   const cards = [
@@ -92,6 +94,15 @@ const Hotel = () => {
     },
   ];
 
+  const [getContent, contentLoading] = useAPI(APIS.fetchContent);
+  const [content, setContent] = useState("");
+
+  useEffect(() => {
+    getContent().then((res) => {
+      if (res?.data) setContent(res.data[0].home);
+    });
+  }, []);
+
   return (
     <>
       {/* <Navbar /> */}
@@ -110,7 +121,7 @@ const Hotel = () => {
         img={card_4}
         btnText="Book now"
         heading="Lorem ipsum dolor sit amet consectetur ac quis sed."
-        para="Lorem ipsum dolor sit amet consectetur. Nisl ultrices et eleifend proin quisque feugiat."
+        para={!contentLoading && content}
       />
       <Questions questions={questions} />
       {/* <Footer /> */}

@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useEffect, useState, useContext } from "react";
 // import logo from "../../assets/img/navbar/ST-Logo.jpeg";
-// Updated Code
 import logo from "../../assets/img/logos/FlightSavior.png";
 import nav_1 from "../../assets/img/navbar/nav-1.png";
 import nav_2 from "../../assets/img/navbar/nav-2.png";
@@ -13,9 +12,10 @@ import { UserContext } from "../../context/UserContext";
 import { Dropdown, Popover, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-
+import { HiOutlineUserCircle } from "react-icons/hi";
 import { Button } from "@mui/material";
 import { CurrencyContext } from "../../context/CurrencyContext";
+import { FaAngleDown } from "react-icons/fa";
 
 const Navbar = () => {
   const [user, setUserData, getUserData] = useContext(UserContext);
@@ -80,7 +80,10 @@ const Navbar = () => {
           </div>
         }
       >
-        <div href="" className="flex gap-1 font-semibold cursor-pointer">
+        <div
+          href=""
+          className="flex gap-1 font-semibold quicksand cursor-pointer"
+        >
           <img src={world} alt="" />
           {currency}
         </div>
@@ -152,12 +155,14 @@ const Navbar = () => {
             menu={{
               items,
             }}
-            className="cursor-pointer"
+            className="cursor-pointer flex"
           >
             <a onClick={(e) => e.preventDefault()}>
               <Space>
-                {localStorage.getItem("admin") ? <>Admin</> : <>User</>}
-                <DownOutlined />
+                {/* {localStorage.getItem("admin") ? <>Admin</> : <>User</>} */}
+                <HiOutlineUserCircle size={25} />
+                {/* <DownOutlined size={"12px"} /> */}
+                <FaAngleDown className="font-thin" />
               </Space>
             </a>
           </Dropdown>
@@ -172,8 +177,9 @@ const Navbar = () => {
               // bg="var(--primary-500)"
               sx={{
                 backgroundColor: "var(--primary-500)",
-                fontSize: 12,
-                padding: 1,
+                fontSize: "13px",
+                padding: "4px",
+                fontWeight: 600,
               }}
               onClick={() => navigate("login")}
             >

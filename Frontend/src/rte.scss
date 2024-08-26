@@ -15,6 +15,14 @@
         margin-bottom: 0.25em;
       }
     }
+
+    ol li {
+      list-style-type: decimal;
+    }
+
+    ul li {
+      list-style-type: circle;
+    }
   
     /* Heading styles */
     h1, 

@@ -56,6 +56,7 @@ import {
   EditCancellation,
   EditContact,
   EditAbout,
+  EditHome,
 } from "./Pages/Editor/EditorChanges";
 
 const footer_pages = [
@@ -168,6 +169,10 @@ const App = () => {
                 </Route>
                 {localStorage.getItem("admin") && (
                   <Route path="admin-settings/" element={<AdminSettings />}>
+                    <Route
+                      index
+                      element={<p>You can configure your settings here</p>}
+                    />
                     <Route path="add-markup" element={<AddMarkup />} />
                     <Route
                       path="edit-privacy-policy"
@@ -179,6 +184,7 @@ const App = () => {
                     />
                     <Route path="edit-contact-us" element={<EditContact />} />
                     <Route path="edit-about-us" element={<EditAbout />} />
+                    <Route path="edit-home-section" element={<EditHome />} />
                   </Route>
                 )}
               </>

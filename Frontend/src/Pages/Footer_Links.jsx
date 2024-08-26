@@ -3,6 +3,33 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useEffect, useState } from "react";
+import { APIS, useAPI } from "../api/config";
+import { CircularProgress } from "@mui/material";
+
+const Content = ({ type = "", setLoading }) => {
+  const [getContent, contentLoading] = useAPI(APIS.fetchContent);
+  const [content, setContent] = useState("");
+
+  useEffect(() => {
+    getContent().then((res) => {
+      const data = res.data[0];
+      // console.log(data[type]);
+      setContent(`${data[type]}`);
+    });
+  }, []);
+
+  useEffect(() => setLoading(contentLoading), [contentLoading]);
+  useEffect(() => console.log(content), [content]);
+
+  return (
+    !contentLoading && (
+      <div
+        className="tiptap border-none flex flex-col"
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
+    )
+  );
+};
 
 function Section({ heading, children }) {
   return (
@@ -16,9 +43,12 @@ function Section({ heading, children }) {
 }
 
 function ContactUs() {
+  const [loading, setLoading] = useState();
   return (
     <Section heading="Contact Us">
-      Got a question that needs answering? Worry not! Our customer support team
+      {loading && <CircularProgress />}
+      <Content type="contactUs" setLoading={setLoading} />
+      {/* Got a question that needs answering? Worry not! Our customer support team
       is always ready to answer all your queries. All your booking related
       queries, other feedback, comments, requests for technical support and
       other communications relating to the Website should be directed to:{" "}
@@ -30,7 +60,7 @@ function ContactUs() {
       </a>{" "}
       and one of our proficient customer support representatives will get back
       to you with a solution at the earliest. Do not provide any Credit/Debit
-      Card details or bank information in your email.
+      Card details or bank information in your email. */}
     </Section>
   );
 }
@@ -171,9 +201,12 @@ function Airlines() {
 }
 
 function AboutUs() {
+  const [loading, setLoading] = useState();
   return (
     <Section heading={"About Us"}>
-      <div className="flex flex-col gap-12">
+      {loading && <CircularProgress />}
+      <Content type="aboutUs" setLoading={setLoading} />
+      {/* <div className="flex flex-col gap-12">
         <div>
           The company and culture of FlightSavior are a match for our product.
           Flight and hotel bookings are made to provide a delightful experience,
@@ -208,7 +241,7 @@ function AboutUs() {
             millions of vacationers.
           </div>
         </div>
-      </div>
+      </div> */}
     </Section>
   );
 }
@@ -239,6 +272,7 @@ function ToS() {
   );
 }
 function Privacy() {
+  const [loading, setLoading] = useState();
   const PrivacySection = ({ children, heading = "" }) => {
     return (
       <div className="privacy-section flex flex-col gap-5">
@@ -252,7 +286,13 @@ function Privacy() {
       <div className="mx-auto font-bold text-5xl capitalize">
         Privacy Policy
       </div>
-      <PrivacySection heading="Introduction">
+      {loading && (
+        <div className="self-center">
+          <CircularProgress />
+        </div>
+      )}
+      <Content type="privacy" setLoading={setLoading} />
+      {/* <PrivacySection heading="Introduction">
         This website is operated by Flight Network Ltd which is part of the
         Etraveli Group. The companies within the Etraveli Group handle a variety
         of personal data, such as names, email addresses and other travel
@@ -406,7 +446,7 @@ function Privacy() {
         data that helps us optimize purchases of advertisements. We as
         advertisers cannot identify a single user using this data. You can turn
         of the use of cookies in your browser settings.
-      </PrivacySection>
+      </PrivacySection> */}
     </div>
   );
 }
@@ -486,9 +526,12 @@ function Safety() {
   );
 }
 function Cancellation() {
+  const [loading, setLoading] = useState();
   return (
     <Section heading={"Cancellation"}>
-      <div className="flex flex-col gap-7 text-base">
+      {loading && <CircularProgress />}
+      <Content type="cancellation" setLoading={setLoading} />
+      {/* <div className="flex flex-col gap-7 text-base">
         FlightSavior recommends that you take out cancellation protection when
         you book travel.
         <br />
@@ -548,7 +591,7 @@ function Cancellation() {
         to travel. The maximum amount payable in the event of cancellation
         against cancellation protection is 2739 USD per person and/or 5478 USD
         per trip
-      </div>
+      </div> */}
     </Section>
   );
 }

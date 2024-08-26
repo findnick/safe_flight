@@ -4,9 +4,13 @@ import APIS from ".";
 
 //vercel api link:
 // https://cwbackend-5hrgqvyba-awais-zubairs-projects.vercel.app
+// my forwarded server port link
+// https://sxtrqp1x-8080.inc1.devtunnels.ms/api
+// website domain-host link:
+// http://flightsavior.com:8080/api/
 
 const baseModule = axios.create({
-  baseURL: "http://flightsavior.com:8080/api/",
+  baseURL: "https://sxtrqp1x-8080.inc1.devtunnels.ms/api/",
 });
 
 const useAPI = (api) => {

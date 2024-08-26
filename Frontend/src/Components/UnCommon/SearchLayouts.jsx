@@ -300,7 +300,7 @@ export const ShowFlights = ({ resBox, uniqueName, showPrice = true }) => {
                 src={resBox?.owner ? resBox.owner.logo_symbol_url : resBox.img}
                 alt=""
                 className="object-contain"
-                style={{ height: "5rem" }}
+                style={{ height: "5rem", width: "7rem" }}
               />
             </div>
             <div className="flex-grow grid grid-cols-3 sm:px-3 items-center">

@@ -1,47 +1,44 @@
+import { useEffect, useState } from "react";
+import { APIS, useAPI } from "../../api/config";
 import RichTextEditor from "../../Components/UnCommon/RichTextEditor";
 
 const EditPrivacy = () => {
-  return (
-    <>
-      <RichTextEditor
-        userContent={`<h2> This is Privacy Policy </h2>
-        <p>Write something on the way... </p>`}
-      />
-    </>
-  );
+  return <Content type="privacy" />;
 };
 
 const EditCancellation = () => {
-  return (
-    <>
-      <RichTextEditor
-        userContent={`<h2> This is Cancellation Policy </h2>
-        <p>Write something on the way... </p>`}
-      />
-    </>
-  );
+  return <Content type="cancellation" />;
 };
 
 const EditContact = () => {
-  return (
-    <>
-      <RichTextEditor
-        userContent={`<h2> This is Contact Us </h2>
-        <p>Write something on the way... </p>`}
-      />
-    </>
-  );
+  return <Content type="contactUs" />;
 };
 
 const EditAbout = () => {
+  return <Content type="aboutUs" />;
+};
+
+const EditHome = () => {
+  return <Content type="home" />;
+};
+
+const Content = ({ type = "" }) => {
+  const [getContent, contentLoading] = useAPI(APIS.fetchContent);
+  const [content, setContent] = useState("");
+
+  useEffect(() => {
+    getContent().then((res) => {
+      const data = res.data[0];
+      // console.log(data[type]);
+      setContent(`${data[type]}`);
+    });
+  }, []);
+
+  useEffect(() => console.log(content), [content]);
+
   return (
-    <>
-      <RichTextEditor
-        userContent={`<h2> This is About Us </h2>
-        <p>Write something on the way... </p>`}
-      />
-    </>
+    !contentLoading && <RichTextEditor userContent={content} type={type} />
   );
 };
 
-export { EditPrivacy, EditCancellation, EditContact, EditAbout };
+export { EditPrivacy, EditCancellation, EditContact, EditAbout, EditHome };

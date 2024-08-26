@@ -88,6 +88,7 @@ export default function Checkout() {
   const location = useLocation();
   const paymentObj = JSON.parse(location.state.payment);
   const { amount, currency } = paymentObj;
+  const [curr, _, convert] = useContext(CurrencyContext);
   const [getOffer, offerLoading] = useAPI(APIS.offerData);
   const [getPayment, paymentLoading] = useAPI(APIS.confirmPayment);
   const [createOrder, orderLoading] = useAPI(APIS.createOrder);
@@ -96,6 +97,7 @@ export default function Checkout() {
   const [base, setBase] = useState(0.0);
   const [tax, setTax] = useState(0.0);
   const [markup, setMarkup] = useState(0.0);
+  const [amountPayable, setAmountPayable] = useState("");
   const [orderDetails, setOrderDetails] = useState([]);
   const [arrivingAddress, setArrivingAddress] = useState("");
   const [departingAddress, setDepartingAddress] = useState("");
@@ -120,11 +122,27 @@ export default function Checkout() {
     });
   };
 
+  const setMetadata = async (data) => {
+    return new Promise((resolve, reject) => {
+      orderDetails.metadata = data;
+      setOrderDetails(orderDetails);
+      resolve(orderDetails);
+    });
+  };
+
   const confirmPayment = async () => {
-    const res = await getPayment({ id: pit });
-    console.log(res);
-    console.log(orderDetails);
+    if (orderDetails.payment.amount == "") {
+      orderDetails.payment.amount = amountPayable;
+      setOrderDetails(orderDetails);
+    }
     try {
+      const pay = await getPayment({ id: pit });
+      const metadata = await setMetadata({
+        // offer: offer,
+        payment_intent: pit,
+      });
+      console.log(pay);
+      console.log(metadata);
       const res = await createOrder(orderDetails);
       console.log(res);
     } catch (err) {
@@ -151,13 +169,16 @@ export default function Checkout() {
       .catch((err) => console.error(err));
   }, []);
 
+  useEffect(() => console.log(orderDetails), [orderDetails]);
+
   useEffect(() => {
     console.log(paymentObj);
-    // console.log(offer);
+    console.log(offer);
     if (!isEmpty(offer)) {
       setBase(parseFloat(offer.base_amount));
       setTax(parseFloat(offer.tax_amount));
       setMarkup(parseFloat(amount) - (base + tax));
+      setAmountPayable(offer.total_amount);
 
       let departingCity = offer.slices[0].origin.city_name;
       axios
@@ -185,13 +206,13 @@ export default function Checkout() {
     }
   }, [offer]);
 
-  // useEffect(() => {
-  //   if (!isEmpty(offer)) {
-  //     setBase(convert(offer.base_amount));
-  //     setTax(convert(offer.tax_amount));
-  //     setMarkup(convert(32));
-  //   }
-  // }, [currency]);
+  useEffect(() => {
+    if (!isEmpty(offer)) {
+      setBase(convert(offer.base_amount));
+      setTax(convert(offer.tax_amount));
+      setMarkup(convert(parseFloat(amount) - (base + tax)));
+    }
+  }, [currency]);
 
   return (
     <>
@@ -220,7 +241,7 @@ export default function Checkout() {
                   <ShowFlights resBox={offer} showPrice={false} />
                   <PassengerInformation
                     offer_id={offer_id}
-                    amount={amount}
+                    amount={amountPayable}
                     onSubmit={(orderDetails) => {
                       setOrderDetails(orderDetails);
                     }}
@@ -338,40 +359,42 @@ export default function Checkout() {
                       <div className="flex flex-row justify-between">
                         <div className="heading">Base Amount: </div>
                         <div className="display-cost">
-                          {base.toFixed(2)}{" "}
+                          {convert(base).toFixed(2)}{" "}
                           <span className="text-sm primary-500">
                             {" "}
-                            ({currency}){" "}
+                            ({curr}){" "}
                           </span>
                         </div>
                       </div>
                       <div className="flex flex-row justify-between">
                         <div className="heading">Fare Tax: </div>
                         <div className="display-cost">
-                          {tax.toFixed(2)}{" "}
+                          {convert(tax).toFixed(2)}{" "}
                           <span className="text-sm primary-500">
                             {" "}
-                            ({currency}){" "}
+                            ({curr}){" "}
                           </span>
                         </div>
                       </div>
                       <div className="flex flex-row justify-between">
                         <div className="heading">Mark Up & Other Charges: </div>
                         <div className="display-cost">
-                          {markup.toFixed(2)}{" "}
+                          {convert(parseFloat(amount) - (base + tax)).toFixed(
+                            2
+                          )}{" "}
                           <span className="text-sm primary-500">
                             {" "}
-                            ({currency}){" "}
+                            ({curr}){" "}
                           </span>
                         </div>
                       </div>
                       <div className="flex flex-row justify-between border-t-2 pt-2 font-medium">
                         <div className="heading">Total: </div>
                         <div className="display-cost">
-                          {parseFloat(amount).toFixed(2)}{" "}
+                          {convert(amount).toFixed(2)}{" "}
                           <span className="text-sm primary-500">
                             {" "}
-                            ({currency}){" "}
+                            ({curr}){" "}
                           </span>
                         </div>
                       </div>
