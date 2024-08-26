@@ -10,7 +10,7 @@ import APIS from ".";
 // http://flightsavior.com:8080/api/
 
 const baseModule = axios.create({
-  baseURL: "https://sxtrqp1x-8080.inc1.devtunnels.ms/api/",
+  baseURL: "http://flightsavior.com:8080/api/",
 });
 
 const useAPI = (api) => {
