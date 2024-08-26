@@ -28,9 +28,12 @@ const listOffers = async (req, res) => {
             passengers,
             cabin_class,
         })
-        console.log(offerRequest?.data);
-        console.log(slices, passengers, cabin_class);
-        console.log(req.body);
+        console.log(offerRequest?.data.offers[0]);
+        if (offerRequest?.data) {
+            offerRequest.data.offers = offerRequest.data.offers.filter((offer) => offer.owner.iata_code !== 'ZZ');
+        }
+        // console.log(slices, passengers, cabin_class);
+        // console.log(req.body);
         return res.status(200).json(offerRequest?.data)
     } catch (error) {
         console.log(error);
@@ -65,7 +68,7 @@ const payment = async (req, res) => {
         const response = await Markup.find({});
         const markup = parseFloat(response[0].markup);
         const dufflePayment = parseFloat(payment);
-       const pay = (((dufflePayment + (dufflePayment * markup / 100)) * fxRate * fxMarkup) / 1-duffleRate).toFixed(2);
+        const pay = (((dufflePayment + (dufflePayment * markup / 100)) * fxRate * fxMarkup) / 1 - duffleRate).toFixed(2);
         // const pay = (parseFloat(payment) + 32).toFixed(2)
         console.log(pay);
         try {
@@ -98,12 +101,14 @@ const payment_confirm = async (req, res) => {
 }
 
 const order = async (req, res) => {
-      const { payment, passenger, offerId,metadata } = req.body
+    const { payment, passenger, offerId, metadata } = req.body
+    // const { payment_intent } = metadata;
     console.log("Payment: ", payment)
     console.log("Passenger: ", passenger);
     console.log("OfferID: ", offerId);
+    console.log("Metadata: ", metadata);
     try {
-        const offerRequest = await duffel.orders.create({
+        const reqData = {
             type: "instant",
             payments: [
                 {
@@ -112,8 +117,8 @@ const order = async (req, res) => {
                     "amount": `${payment?.amount}`
                 }
             ],
-             metadata: {...metadata},
             selected_offers: [offerId],
+            metadata: metadata,
             passengers: [
                 // {
                 //     phone_number: `${passenger?.phone_number}`,
@@ -126,9 +131,10 @@ const order = async (req, res) => {
                 //     id: passenger?.id
 
                 // }
-                passenger
+                ...passenger
             ]
-        })
+        };
+        const offerRequest = await duffel.orders.create(reqData)
         const token = req.header('x-auth-token');
         if (token) {
             const decoded = jwt.verify(token, process.env.JWTSECRET);
@@ -163,6 +169,8 @@ const order = async (req, res) => {
     } catch (error) {
         console.log(error);
         return res.status(400).json(error)
+    } finally {
+        console.log(reqData);
     }
 }
 

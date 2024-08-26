@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
 import flightRoutes from './Routes/flights.js'
 import hotelRoutes from './Routes/hotels.js'
 import user from './Routes/user.js'
+import content from './Routes/content.js'
 
 // FLIGHTS
 app.use('/api/flights', flightRoutes)
@@ -29,9 +30,12 @@ app.use('/api/hotels', hotelRoutes)
 // User Registration
 app.use('/api/user', user);
 
+// Content Management
+app.use('/api/content', content);
 
-app.get('/',(req,res)=>{
-    res.status(200).json({msg:'Hello world'})
+
+app.get('/', (req, res) => {
+    res.status(200).json({ msg: 'Hello world' })
 });
 
 
