@@ -168,7 +168,7 @@ const Flight = () => {
       <TopFlights main={main} />
       <General
         img={card_4}
-        btnText="Start Your Journey"
+        btnText="Book Now"
         heading="Explore the Unseen"
         // para="Lorem ipsum dolor sit amet consectetur. Nisl ultrices et eleifend proin quisque feugiat."
         para={!contentLoading && content}
