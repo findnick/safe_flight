@@ -48,7 +48,7 @@ const Flight = () => {
     {
       question: "Can I cancel or change my booking?",
       answer:
-        "Yes, you can cancel or change your booking. Please visit the "Manage Booking" section of our website, enter your booking details, and follow the instructions. Note that cancellation and change fees may apply depending on the airline's policy.",
+        "Yes, you can cancel or change your booking. Please visit the Manage Booking section of our website, enter your booking details, and follow the instructions. Note that cancellation and change fees may apply depending on the airline's policy.",
     },
     {
       question: "What payment methods are accepted?",
@@ -58,7 +58,7 @@ const Flight = () => {
     {
       question: "How do I know if my booking is confirmed?",
       answer:
-        "Once your booking is complete, you will receive a confirmation email with your booking reference number. You can also check the status of your booking in the "Manage Booking" section of our website.",
+        "Once your booking is complete, you will receive a confirmation email with your booking reference number. You can also check the status of your booking in the Manage Booking section of our website.",
     },
   ];
 
