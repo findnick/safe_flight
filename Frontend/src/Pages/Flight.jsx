@@ -19,46 +19,46 @@ import { useEffect, useState } from "react";
 const Flight = () => {
   const cards = [
     {
-      heading: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet consectetur.",
+      heading: "Start Your Journey",
+      text: "Fly to your dream destination with ease and comfort.",
       img: card_1,
     },
     {
-      heading: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet consectetur.",
+      heading: "Discover Serenity",
+      text: "Explore the tranquil beauty of nature’s finest lakes.",
       img: card_2,
     },
     {
-      heading: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet consectetur.",
+      heading: "Adventure Awaits",
+      text: "Embark on a journey to the world's most breathtaking peaks.",
       img: card_3,
     },
     {
-      heading: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet consectetur.",
+      heading: "Road to Freedom",
+      text: "Hit the open road and discover the wonders of the wild west.",
       img: card_4,
     },
   ];
   const questions = [
     {
-      question: "Lorem ipsum dolor sit amet consectetur?",
+      question: "How do I book a flight?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. In arcu gravida ut libero donec maecenas. Viverra volutpat nulla nisi tortor tortor elementum. Magna in semper egestas et ut nunc a posuere. Vulputate vitae placerat dui porttitor interdum condimentum morbi id magna in semper egestas et ut libero donec maecenas.",
+        "To book a flight, simply enter your departure and destination cities, select your travel dates, and choose from the available flights. Follow the prompts to complete your booking and payment.",
     },
     {
-      question: "Lorem ipsum dolor sit amet consectetur?",
+      question: "Can I cancel or change my booking?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. In arcu gravida ut libero donec maecenas. Viverra volutpat nulla nisi tortor tortor elementum. Magna in semper egestas et ut nunc a posuere. Vulputate vitae placerat dui porttitor interdum condimentum morbi id magna in semper egestas et ut libero donec maecenas.",
+        "Yes, you can cancel or change your booking. Please visit the "Manage Booking" section of our website, enter your booking details, and follow the instructions. Note that cancellation and change fees may apply depending on the airline's policy.",
     },
     {
-      question: "Lorem ipsum dolor sit amet consectetur?",
+      question: "What payment methods are accepted?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. In arcu gravida ut libero donec maecenas. Viverra volutpat nulla nisi tortor tortor elementum. Magna in semper egestas et ut nunc a posuere. Vulputate vitae placerat dui porttitor interdum condimentum morbi id magna in semper egestas et ut libero donec maecenas.",
+        "We accept all major credit and debit cards, including Visa, MasterCard, and American Express. You can also use PayPal for secure and convenient payment.",
     },
     {
-      question: "Lorem ipsum dolor sit amet consectetur?",
+      question: "How do I know if my booking is confirmed?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. In arcu gravida ut libero donec maecenas. Viverra volutpat nulla nisi tortor tortor elementum. Magna in semper egestas et ut nunc a posuere. Vulputate vitae placerat dui porttitor interdum condimentum morbi id magna in semper egestas et ut libero donec maecenas.",
+        "Once your booking is complete, you will receive a confirmation email with your booking reference number. You can also check the status of your booking in the "Manage Booking" section of our website.",
     },
   ];
 
@@ -168,8 +168,8 @@ const Flight = () => {
       <TopFlights main={main} />
       <General
         img={card_4}
-        btnText="Book now"
-        heading="Lorem ipsum dolor sit amet consectetur ac quis sed."
+        btnText="Start Your Journey"
+        heading="Explore the Unseen"
         // para="Lorem ipsum dolor sit amet consectetur. Nisl ultrices et eleifend proin quisque feugiat."
         para={!contentLoading && content}
       />
