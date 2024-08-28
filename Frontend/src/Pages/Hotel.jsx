@@ -119,7 +119,7 @@ const Hotel = () => {
       <TopHotels main={main} />
       <General
         img={card_4}
-        btnText="Start Your Journey"
+        btnText="Book Now"
         heading="Explore the Unseen"
         para={!contentLoading && content}
       />
