@@ -21,46 +21,46 @@ import { useEffect, useState } from "react";
 const Hotel = () => {
   const cards = [
     {
-      heading: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet consectetur.",
+      heading: "Start Your Journey",
+      text: "Fly to your dream destination with ease and comfort.",
       img: card_1,
     },
     {
-      heading: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet consectetur.",
+      heading: "Discover Serenity",
+      text: "Explore the tranquil beauty of nature’s finest lakes.",
       img: card_2,
     },
     {
-      heading: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet consectetur.",
+      heading: "Adventure Awaits",
+      text: "Embark on a journey to the world's most breathtaking peaks.",
       img: card_3,
     },
     {
-      heading: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet consectetur.",
+      heading: "Road to Freedom",
+      text: "Hit the open road and discover the wonders of the wild west.",
       img: card_4,
     },
   ];
   const questions = [
     {
-      question: "Lorem ipsum dolor sit amet consectetur?",
+      question: "How do I book a hotel room?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. In arcu gravida ut libero donec maecenas. Viverra volutpat nulla nisi tortor tortor elementum. Magna in semper egestas et ut nunc a posuere. Vulputate vitae placerat dui porttitor interdum condimentum morbi id magna in semper egestas et ut libero donec maecenas.",
+        "To book a hotel room, enter your destination, select your travel dates, and choose from the available hotels. Follow the prompts to complete your booking and payment.",
     },
     {
-      question: "Lorem ipsum dolor sit amet consectetur?",
+      question: "Can I cancel or modify my hotel reservation?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. In arcu gravida ut libero donec maecenas. Viverra volutpat nulla nisi tortor tortor elementum. Magna in semper egestas et ut nunc a posuere. Vulputate vitae placerat dui porttitor interdum condimentum morbi id magna in semper egestas et ut libero donec maecenas.",
+        "Yes, you can cancel or modify your reservation. Please check the cancellation policy of the hotel before booking. To make changes, go to the Manage Booking section of our website.",
     },
     {
-      question: "Lorem ipsum dolor sit amet consectetur?",
+      question: "What payment methods are accepted for hotel bookings?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. In arcu gravida ut libero donec maecenas. Viverra volutpat nulla nisi tortor tortor elementum. Magna in semper egestas et ut nunc a posuere. Vulputate vitae placerat dui porttitor interdum condimentum morbi id magna in semper egestas et ut libero donec maecenas.",
+        "We accept all major credit and debit cards, including Visa, MasterCard, and American Express. Some hotels may also accept PayPal or other forms of payment.",
     },
     {
-      question: "Lorem ipsum dolor sit amet consectetur?",
+      question: "Will I receive a booking confirmation?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. In arcu gravida ut libero donec maecenas. Viverra volutpat nulla nisi tortor tortor elementum. Magna in semper egestas et ut nunc a posuere. Vulputate vitae placerat dui porttitor interdum condimentum morbi id magna in semper egestas et ut libero donec maecenas.",
+        "Yes, after completing your booking, you will receive a confirmation email with your reservation details. You can also view your booking in the Manage Booking section of our website.",
     },
   ];
 
@@ -119,8 +119,8 @@ const Hotel = () => {
       <TopHotels main={main} />
       <General
         img={card_4}
-        btnText="Book now"
-        heading="Lorem ipsum dolor sit amet consectetur ac quis sed."
+        btnText="Book Now"
+        heading="Explore the Unseen"
         para={!contentLoading && content}
       />
       <Questions questions={questions} />
