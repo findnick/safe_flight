@@ -108,14 +108,16 @@ const order = async (req, res) => {
     "---------------------------------METADATA---------------------------------"
   );
   console.log("Metadata: ", metadata);
-  console.log(passenger);
   const someData = {
     departureTime: offer_data?.slices[0]?.segments[0]?.departing_at,
-    arrivalTime: offer_data?.slices.at(-1)?.segments.at(-1)?.departing_at,
+    arrivalTime: offer_data?.slices.at(-1)?.segments.at(-1)?.arriving_at,
     flightName: offer_data?.owner?.name,
+    destinationCity: offer_data?.slices.at(-1)?.destination?.city_name,
+    originCity: offer_data?.slices[0]?.origin?.city_name,
     destinationIataCode: offer_data?.slices.at(-1)?.destination?.iata_city_code,
-    originIataCode: offer_data?.slices[0]?.origin?.iata_cty_code,
+    originIataCode: offer_data?.slices[0]?.origin?.iata_city_code,
   };
+  console.log(someData);
   try {
     const reqData = {
       type: "instant",
