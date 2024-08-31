@@ -15,6 +15,10 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    flightData: {
+        type: Object,
+        required: true
+    },
     created_at: {
         type: Date,
         default: Date.now()
