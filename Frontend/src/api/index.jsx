@@ -83,6 +83,17 @@ const APIS = {
       },
     });
   },
+  getSingleUser: ({ token, id }) => {
+    return baseModule.post(
+      `user/finduser`,
+      { id },
+      {
+        headers: {
+          "X-Auth-Token": token,
+        },
+      }
+    );
+  },
   deleteUser: (req) => {
     return baseModule.delete(`user/deleteuser`, {
       headers: {

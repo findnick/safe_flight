@@ -169,7 +169,11 @@ const App = () => {
                   />
                 </Route>
                 {localStorage.getItem("admin") && (
-                  <Route path="admin-settings/" element={<AdminSettings />}>
+                  <Route
+                    path="admin-settings/"
+                    element={<AdminSettings />}
+                    key="adminPath"
+                  >
                     <Route
                       index
                       element={<p>You can configure your settings here</p>}

@@ -113,9 +113,9 @@ const Navbar = () => {
               setUserData();
               localStorage.removeItem("admin");
               localStorage.removeItem("email");
-              if (location.pathname.includes("/user")) {
+              if (location.pathname.includes("user")) {
                 navigate("/");
-              } else navigate(location.pathname);
+              }
             }}
           >
             Log Out

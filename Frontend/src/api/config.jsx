@@ -3,18 +3,19 @@ import axios from "axios";
 import APIS from ".";
 
 //vercel api link:
-// https://cwbackend-5hrgqvyba-awais-zubairs-projects.vercel.app
+const VERCEL_LINK =
+  "https://cwbackend-5hrgqvyba-awais-zubairs-projects.vercel.app";
 // my forwarded server port link
-// https://sxtrqp1x-8080.inc1.devtunnels.ms/api
+const NABEEL_FORWARD_PORT = "https://sxtrqp1x-8080.inc1.devtunnels.ms/api";
 // website domain-host link:
-// http://flightsavior.com:8080/api
+const HOST_LINK = "http://flightsavior.com:8080/api";
 // awais testing link:
-// https://tj6h9ng2-8080.inc1.devtunnels.ms/api
+const AWAIS_FORWARD_PORT = "https://tj6h9ng2-8080.inc1.devtunnels.ms/api";
 // local link:
-// http://localhost:8080/api
+const LOCAL_LINK = "http://localhost:8080/api";
 
 const baseModule = axios.create({
-  baseURL: "http://flightsavior.com:8080/api",
+  baseURL: HOST_LINK,
 });
 
 const useAPI = (api) => {

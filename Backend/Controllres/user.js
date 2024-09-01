@@ -117,9 +117,9 @@ const getAllUserData = async (req, res) => {
 };
 
 const getSpecificUserData = async (req, res) => {
-  const { name } = req.body;
+  const { id } = req.body;
   try {
-    const response = await User.findOne({ name: name });
+    const response = await User.findOne({ _id: id });
     console.log(response);
     return res.status(200).json(response);
   } catch (error) {
@@ -193,6 +193,7 @@ const allUserHoteldata = async (req, res) => {
     return res.status(400).json(error);
   }
 };
+
 
 export {
   register,

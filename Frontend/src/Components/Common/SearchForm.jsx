@@ -954,27 +954,31 @@ function FlightForm({
 }
 
 function HotelForm({
-  children,
+  destText = "",
   adultCount = [{ type: "adult" }],
   childCount = [],
   roomCount = 1,
+  checkin_date = "",
+  checkout_date = "",
+  long = 0.0,
+  lat = 0.0,
 }) {
   const navigate = useNavigate();
-  const [dest, setDest] = useState();
-  const [checkin, setCheckin] = useState("");
-  const [checkout, setCheckout] = useState("");
+  const [dest, setDest] = useState(destText);
+  const [checkin, setCheckin] = useState(checkin_date);
+  const [checkout, setCheckout] = useState(checkout_date);
   const [roomsGuest, setRoomsGuest] = useState("1 Room, 2 Guest");
   const { data, setData } = useContext(HotelContext);
   const [adults, setAdults] = useState(adultCount);
   const [child, setChild] = useState(childCount);
-  const [rooms, setRooms] = useState(1);
+  const [rooms, setRooms] = useState(roomCount);
   const [open, setOpen] = useState(false);
   const [hotelLoading, setHotelLoading] = useState(false);
   const [getPlaces, placesLoading] = useAPI(APIS.hotelSearch);
   const [destSuggestionBox, setDestSuggestionBox] = useState("hidden");
   const [destSuggestions, setDestSuggestions] = useState([]);
-  const [destLong, setDestLong] = useState(0.0);
-  const [destLat, setDestLat] = useState(0.0);
+  const [destLong, setDestLong] = useState(long);
+  const [destLat, setDestLat] = useState(lat);
   let hotelObject = {
     rooms: rooms,
     location: {
@@ -987,6 +991,17 @@ function HotelForm({
     check_out_date: checkout,
     check_in_date: checkin,
     guests: adults,
+  };
+
+  let hotelFormData = {
+    destText: dest,
+    adultCount: adults,
+    childCount: child,
+    roomCount: rooms,
+    checkin_date: checkin,
+    checkout_date: checkout,
+    long: destLong,
+    lat: destLat,
   };
 
   const hotelSuggestions = async (search) => {
@@ -1006,7 +1021,9 @@ function HotelForm({
 
   const showHotels = () => {
     console.log(hotelObject);
-    navigate("/search/hotels", { state: { hotelData: hotelObject } });
+    navigate("/search/hotels", {
+      state: { hotelData: hotelObject, formData: hotelFormData },
+    });
   };
 
   useEffect(() => {
@@ -1015,7 +1032,7 @@ function HotelForm({
 
   return (
     <>
-      {children}
+      <h4 className="ml-3">Where do you like to stay?</h4>
       <FormContainer id="hotelForm">
         <FormGroup className="relative">
           <FormGroupLabel htmlFor="destination">
@@ -1108,6 +1125,7 @@ function HotelForm({
               padding: "1rem",
               border: "1px solid gray",
             }}
+            value={checkin}
             onChange={(e) => {
               setCheckin(e.target.value);
             }}
@@ -1125,6 +1143,7 @@ function HotelForm({
               padding: "1rem",
               border: "1px solid gray",
             }}
+            value={checkout}
             onChange={(e) => {
               setCheckout(e.target.value);
             }}
@@ -1402,9 +1421,7 @@ function SearchForm({ flight = "none", hotel = "none", carRental = "none" }) {
       </TabContent>
       <TabContent id="Hotel" display={hotel}>
         <HotelProvider>
-          <HotelForm>
-            <h4 className="ml-3">Where do you like to stay?</h4>
-          </HotelForm>
+          <HotelForm />
         </HotelProvider>
       </TabContent>
       <TabContent id="CarRental" display={carRental}>

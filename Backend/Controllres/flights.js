@@ -40,7 +40,7 @@ const listOffers = async (req, res) => {
     console.log(error);
     console.log(slices, passengers, cabin_class);
     console.log(req.body);
-    return res.status(400).json({ error: error.message });
+    return res.status(400).json(error);
   }
 };
 

@@ -1,21 +1,22 @@
 import { Avatar, Button } from "antd";
 import moment from "moment";
 import { useContext, useEffect, useState } from "react";
-import { FaMoneyBill, FaUser, FaClock, FaDoorOpen } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import { GoDash } from "react-icons/go";
 import { UserContext } from "../context/UserContext";
 import { APIS, useAPI } from "../api/config";
 import { CircularProgress } from "@mui/material";
-import { MdAirlines } from "react-icons/md";
-import { LuHotel } from "react-icons/lu";
 
 export default function AdminBookings() {
-  const [user, setUser, getUser] = useContext(UserContext);
+  const [user, ,] = useContext(UserContext);
   const { token } = user.data;
   const [getFlightData, flightDataLoading] = useAPI(APIS.getAllFlightData);
   const [getHotelData, hotelDataLoading] = useAPI(APIS.getAllHotelData);
-  const [flightData, setFlightData] = useState({});
-  const [hotelData, setHotelData] = useState({});
+  const [getUser, userLoading] = useAPI(APIS.getSingleUser);
+  const [flightData, setFlightData] = useState([]);
+  const [hotelData, setHotelData] = useState([]);
+  const [emails, setEmails] = useState({}); // Store user emails
+  const [hotelEmails, setHotelEmails] = useState({});
   const [activeBook, setActiveBook] = useState(["user-tab-active", "", ""]);
   const [activeBookTab, setActiveBookTab] = useState([
     "block",
@@ -38,7 +39,6 @@ export default function AdminBookings() {
       combinedArray.sort((a, b) => {
         return a.created_at.localeCompare(b.created_at);
       });
-      // console.log(combinedArray);
       setFlightData(combinedArray);
     });
 
@@ -47,10 +47,37 @@ export default function AdminBookings() {
       combinedArray.sort((a, b) => {
         return a.created_at.localeCompare(b.created_at);
       });
-      console.log(combinedArray);
       setHotelData(combinedArray);
     });
   }, []);
+
+  useEffect(() => {
+    // Fetch missing emails for flight data
+    flightData.forEach((item) => {
+      if (!item.email && !emails[item.userId]) {
+        getUser({ token: token, id: item.userId }).then((res) => {
+          setEmails((prevEmails) => ({
+            ...prevEmails,
+            [item.userId]: res?.data?.email || "john.doe@gmail.com",
+          }));
+        });
+      }
+    });
+  }, [flightData]);
+
+  useEffect(() => {
+    // Fetch missing emails for flight data
+    hotelData.forEach((item) => {
+      if (!item.email && !hotelEmails[item.userId]) {
+        getUser({ token: token, id: item.userId }).then((res) => {
+          setHotelEmails((prevEmails) => ({
+            ...prevEmails,
+            [item.userId]: res?.data?.email || "john.doe@gmail.com",
+          }));
+        });
+      }
+    });
+  }, [hotelData]);
 
   return (
     <>
@@ -90,7 +117,9 @@ export default function AdminBookings() {
             const data = item?.flightData || item?.orderData;
             const departure = moment(data.departureTime).format("Do MMM, YY");
             const arrival = moment(data.arrivalTime).format("Do MMM, YY");
-            // console.log(item);
+            const email =
+              item.email || emails[item.userId] || "john.doe@gmail.com";
+
             return (
               <div
                 key={i}
@@ -135,42 +164,20 @@ export default function AdminBookings() {
                       </Avatar>
                       <div className="flex flex-col">
                         <div className="text-sm font-bold text-100">Email</div>
-                        <div className="text-base font-bold">
-                          {item?.email || "john.doe@gmail.com"}
-                        </div>
+                        <div className="text-base font-bold">{email}</div>
                       </div>
                     </div>
-                    {/* <div className="flex flex-row items-center gap-3">
-                      <Avatar
-                        shape="circle"
-                        style={{
-                          background: "var(--primary-100)",
-                          color: "var(--primary-500)",
-                        }}
-                        size="large"
-                      >
-                        <MdAirlines size={25} />
-                      </Avatar>
-                      <div className="flex flex-col w-6">
-                        <div className="text-sm font-bold text-100">
-                          Airline
-                        </div>
-                        <div className="text-base font-bold text-wrap">
-                          {data.flightName}
-                        </div>
-                      </div>
-                    </div> */}
                   </div>
                 </div>
                 <div className=" ml-2 mr-4 mb-2 lg:mb-0 self-stretch lg:self-center">
-                  <Button
+                  {/* <Button
                     type="primary"
                     htmlType="button"
                     className="h-12 font-bold"
                     block
                   >
                     Resend Ticket
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             );
@@ -188,6 +195,8 @@ export default function AdminBookings() {
             const data = item?.hotelData || item?.orderData;
             const checkin = moment(data.check_in_date).format("Do MMM, YY");
             const checkout = moment(data.check_out_date).format("Do MMM, YY");
+            const email =
+              item.email || emails[item.userId] || "john.doe@gmail.com";
 
             return (
               <div
@@ -216,64 +225,38 @@ export default function AdminBookings() {
                       <div className="text-xl font-bold">{checkout}</div>
                     </div>
                   </div>
-                  <div
-                    className="vl mx-6 hidden md:block"
-                    style={{ height: "4rem" }}
-                  ></div>
-                  <div className="flex flex-row items-start gap-5">
-                    <div className="flex flex-row items-center gap-2">
-                      <Avatar
-                        shape="square"
-                        style={{
-                          background: "var(--primary-100)",
-                          color: "var(--primary-500)",
-                        }}
-                        size="large"
-                      >
-                        <LuHotel size={25} />
-                      </Avatar>
-                      <div className="flex flex-col">
-                        <div className="text-sm font-bold text-100">Hotel</div>
-                        <div className="text-base font-bold text-wrap">
-                          {data.accommodation.name}
-                        </div>
-                      </div>
-                    </div>
-                    {/* <div className="flex flex-row items-center gap-2">
-                      <Avatar
-                        shape="square"
-                        style={{
-                          background: "var(--primary-100)",
-                          color: "var(--primary-500)",
-                        }}
-                        size="large"
-                      >
-                        <FaClock size={25} />
-                      </Avatar>
-                      <div className="flex flex-col">
-                        <div className="text-sm font-bold text-100">
-                          Check-out Time
-                        </div>
-                        <div className="text-base font-bold">11:30pm</div>
-                      </div>
-                    </div> */}
-                  </div>
                 </div>
-                <div className="mr-4">
-                  <Button
-                    type="primary"
-                    htmlType="button"
-                    className="h-12 font-bold"
+                <div className="flex flex-row items-center gap-2">
+                  <Avatar
+                    shape="circle"
+                    style={{
+                      background: "var(--primary-100)",
+                      color: "var(--primary-500)",
+                    }}
+                    size="large"
                   >
-                    Resend Confirmation
-                  </Button>
+                    <FaUser size={25} />
+                  </Avatar>
+                  <div className="flex flex-col">
+                    <div className="text-sm font-bold text-100">Email</div>
+                    <div className="text-base font-bold">{email}</div>
+                  </div>
+                  <div className=" ml-2 mr-4 mb-2 lg:mb-0 self-stretch lg:self-center">
+                    {/* <Button
+                      type="primary"
+                      htmlType="button"
+                      className="h-12 font-bold"
+                      block
+                    >
+                      Resend Ticket
+                    </Button> */}
+                  </div>
                 </div>
               </div>
             );
           })
         )}
       </div>
-      <div className={`${activeBookTab[2]}`}>cars</div>
     </>
   );
 }

@@ -29,6 +29,7 @@ import moment from "moment";
 import { HotelContext, HotelProvider } from "../context/HoteContext";
 import axios from "axios";
 import searching from "freegeolocate";
+import Swal from "sweetalert2";
 
 const LineSeparator = () => {
   return (
@@ -52,7 +53,7 @@ const CustomFilterTimeComponent = ({
   handleDepart,
   terminals,
 }) => {
-  console.log(terminals[0]);
+  // console.log(terminals[0]);
   return (
     <>
       <Box>
@@ -327,8 +328,18 @@ const SearchFlight = () => {
       // console.log(flightData);
 
       const res = await getOffers(flightData);
-      // console.log(res);
-      if (res.data?.offers) {
+      console.log(res);
+      if (res?.response?.status === 400) {
+        let errors = res.response.data.errors;
+        Swal.fire({
+          title: errors[0].title,
+          text: errors[0].message,
+          icon: "error",
+          showConfirmButton: false,
+          timer: 8000,
+        });
+      }
+      if (res?.data?.offers.length > 0) {
         console.log(res.data.offers);
         setOffers(res.data.offers);
         const temp_offer = res.data.offers[0].slices;
@@ -360,6 +371,8 @@ const SearchFlight = () => {
           temp_offer[0].origin,
           temp_offer.at(-1).destination,
         ]);
+      } else {
+        setOffers([]);
       }
     } catch (err) {
       console.error(err);
@@ -436,8 +449,9 @@ const SearchFlight = () => {
   };
 
   useEffect(() => {
+    console.log("Location changed,");
     getFlights(JSON.parse(flights));
-  }, [flights]);
+  }, [location]);
 
   useEffect(() => console.log(displayOffers), [displayOffers]);
 
@@ -450,6 +464,7 @@ const SearchFlight = () => {
           .filter(filterByDepartureTime)
           .filter(filterByArrivalTime)
       );
+    else setDisplayOffers([]);
   }, [offers]);
 
   useEffect(() => {
@@ -523,15 +538,19 @@ const SearchFlight = () => {
       <Section className="text-xl font-normal" style={{ padding: "1rem" }}>
         {!loading && (
           <>
-            From <span className="font-bold">{departingAddress}</span> to{" "}
-            <span className="font-bold">{arrivingAddress}</span> -{" "}
-            <span className="text-100 font-medium">
-              {moment(formData.fromDate).format("ddd, MMMM Do")}
-              {formData.toDate && (
-                <> to {moment(formData.toDate).format("ddd, MMMM Do")}</>
-              )}
-              , {moment().format("YYYY")}
-            </span>
+            {offers.length > 0 && (
+              <>
+                From <span className="font-bold">{departingAddress}</span> to{" "}
+                <span className="font-bold">{arrivingAddress}</span> -{" "}
+                <span className="text-100 font-medium">
+                  {moment(formData.fromDate).format("ddd, MMMM Do")}
+                  {formData.toDate && (
+                    <> to {moment(formData.toDate).format("ddd, MMMM Do")}</>
+                  )}
+                  , {moment().format("YYYY")}
+                </span>
+              </>
+            )}
           </>
         )}
       </Section>
@@ -582,6 +601,7 @@ const SearchHotel = () => {
   const location = useLocation();
   const [hotelData, sethotelData] = useState();
   const hotelObject = location?.state?.hotelData;
+  const { formData } = location.state;
   const [gettingHotels, hotelLoading] = useAPI(APIS.fetchHotels);
 
   const fetchHotels = async () => {
@@ -596,7 +616,8 @@ const SearchHotel = () => {
 
   useEffect(() => {
     fetchHotels().then((res) => sethotelData(res?.data));
-  }, []);
+    console.log(formData);
+  }, [location]);
 
   const checkBox = [
     {
@@ -688,12 +709,21 @@ const SearchHotel = () => {
       <Section>
         <ShadowBox>
           <HotelProvider>
-            <HotelForm />
+            <HotelForm
+              destText={formData.destText}
+              adultCount={formData.adultCount}
+              checkin_date={formData.checkin_date}
+              checkout_date={formData.checkout_date}
+              childCount={formData.childCount}
+              lat={formData.lat}
+              long={formData.long}
+              roomCount={formData.roomCount}
+            />
           </HotelProvider>
         </ShadowBox>
       </Section>
       <Section className="flex flex-col md:flex-row">
-        <FilterCorner>
+        <FilterCorner style={{ display: "none" }}>
           <Filter uniqueName="hotel-slider" heading="Price">
             <FilterSlider min={190} max={3200} symbol="C$" dist={100} />
           </Filter>
@@ -706,7 +736,7 @@ const SearchHotel = () => {
             <FilterRadio list={checkBox} uniqueName="hotel-checkbox" />
           </Filter>
         </FilterCorner>
-        <ResultContainer>
+        <ResultContainer className="flex flex-col justify-stretch w-full flex-grow px-4 overflow-x-hidden">
           <ResultNumbers
             uniqueName="hotel-search-results"
             items={hotelData && hotelData.results}

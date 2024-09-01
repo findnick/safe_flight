@@ -42,9 +42,12 @@ const ShadowBox = ({ children }) => {
   return <div className="bg-white p-4 shadow-lg rounded-2xl">{children}</div>;
 };
 
-const FilterCorner = ({ children }) => {
+const FilterCorner = ({ children, style }) => {
   return (
-    <div className="flex flex-col items-center justify-start flex-shrink basis-1/3 p-4 shadow-2xl rounded-lg bg-white">
+    <div
+      className="flex flex-col items-center justify-start flex-shrink basis-1/3 p-4 shadow-2xl rounded-lg bg-white"
+      style={style}
+    >
       <div className="font-semibold text-xl mb-5 text-left self-stretch ml-9">
         Filters
       </div>
@@ -158,12 +161,11 @@ const FilterCheckbox = ({ list, uniqueName }) => {
   );
 };
 
-const ResultContainer = ({ children }) => {
-  return (
-    <div className="flex flex-col justify-start basis-2/3 px-4 overflow-x-hidden">
-      {children}
-    </div>
-  );
+const ResultContainer = ({
+  children,
+  className = "flex flex-col justify-start basis-2/3 px-4 overflow-x-hidden",
+}) => {
+  return <div className={className}>{children}</div>;
 };
 
 const ResultCount = ({ showing, total, type }) => {
@@ -492,13 +494,17 @@ const ShowHotels = ({ results, resBox, uniqueName }) => {
   const net = resBox?.price - resBox?.price * (resBox.discount / 100);
 
   return (
-    <Accordion className="bg-transparent">
-      <ResultBox padding="p-0" justify="justify-start">
+    <Accordion className="bg-transparent rounded-full overflow-hidden border-none shadow-none">
+      <ResultBox
+        padding="p-0"
+        justify="justify-start"
+        uniqueClassname="overflow-visible"
+      >
         <AccordionSummary
           expandIcon={<></>}
           aria-controls="panel1-content"
           id="panel1-header"
-          className="rounded-full"
+          className="rounded-full flex-grow overflow-hidden"
         >
           <img
             src={resBox?.accommodation?.photos[0]?.url}
@@ -802,7 +808,7 @@ const Tabs = ({ tabItems, uniqueName, type }) => {
                 {item.heading}
               </div>
               <div className="result-numbers-item-sub font-normal text-sm">
-                {type == "flight" ? item.sub : item.places + " places"}
+                {type == "flight" ? item.sub : ""}
               </div>
             </div>
           );
@@ -856,7 +862,7 @@ const ResultNumbers = ({
         </ResultBox>
       )}
       {loading || results === undefined ? (
-        <div className="mx-auto mt-8">
+        <div className="mx-auto mt-8 h-40">
           <CircularProgress />
         </div>
       ) : (

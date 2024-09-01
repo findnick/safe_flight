@@ -33,7 +33,7 @@ routes.patch("/updateuser", auth, updatePersonalInfo);
 routes.delete("/deleteaccount", auth, deleteAccount);
 
 // Admin Related Functionalities
-routes.get("/finduser", admin, getSpecificUserData);
+routes.post("/finduser", admin, getSpecificUserData);
 routes.delete("/deleteuser", admin, deleteUserData);
 routes.get("/allusers", admin, getAllUserData);
 routes.put("/updatemarkup", admin, updateMarkup);
