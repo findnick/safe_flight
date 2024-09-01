@@ -7,14 +7,14 @@ import APIS from ".";
 // my forwarded server port link
 // https://sxtrqp1x-8080.inc1.devtunnels.ms/api
 // website domain-host link:
-// http://flightsavior.com:8080/api/
+// http://flightsavior.com:8080/api
 // awais testing link:
 // https://tj6h9ng2-8080.inc1.devtunnels.ms/api
 // local link:
 // http://localhost:8080/api
 
 const baseModule = axios.create({
-  baseURL: "http://flightsavior.com:8080/api/",
+  baseURL: "http://flightsavior.com:8080/api",
 });
 
 const useAPI = (api) => {
