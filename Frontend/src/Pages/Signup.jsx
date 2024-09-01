@@ -97,7 +97,7 @@ function SignUp(props) {
         console.log(res);
         if (res?.data?.token) {
           setUser({ token: res.data.token });
-          return navigate("/");
+          return navigate("/user");
         } else {
           console.log(res);
           // console.log(Object.keys(res));
