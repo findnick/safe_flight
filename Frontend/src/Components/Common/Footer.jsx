@@ -15,8 +15,9 @@ const Footer = () => {
             <img src={footerImg} alt="" />
           </div>
           <div className="footer-para md:pr-10 font-normal text-lg">
-            Lorem ipsum dolor sit amet consectetur. Ut orci diam dignissim amet
-            quam odio sed ac. Facilisis velit enim egestas tortor a et nam.
+            Discover seamless travel with flightsavior.com, where we offer tailored hotel and flight 
+            bookings to match your unique journey. Whether for leisure or business, our goal 
+            is to make your travel experience smooth and unforgettable.
           </div>
           <div className="footer-social flex flex-row gap-6 items-center">
             <a
