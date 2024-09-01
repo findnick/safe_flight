@@ -72,7 +72,7 @@ export default function Login() {
             localStorage.setItem("admin", "admin@gmail.com");
           else localStorage.setItem("email", data.get("email"));
           setUser({ token: res.data.token });
-          return navigate("/");
+          return navigate("/user");
         } else {
           Swal.fire({
             title: "Wrong Credentials",
