@@ -1,16 +1,28 @@
 import { Avatar, Button } from "antd";
 import moment from "moment";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaMoneyBill, FaUser, FaClock, FaDoorOpen } from "react-icons/fa";
 import { GoDash } from "react-icons/go";
+import { UserContext } from "../context/UserContext";
+import { APIS, useAPI } from "../api/config";
+import { CircularProgress } from "@mui/material";
+import { MdAirlines } from "react-icons/md";
+import { LuHotel } from "react-icons/lu";
 
 export default function AdminBookings() {
+  const [user, setUser, getUser] = useContext(UserContext);
+  const { token } = user.data;
+  const [getFlightData, flightDataLoading] = useAPI(APIS.getAllFlightData);
+  const [getHotelData, hotelDataLoading] = useAPI(APIS.getAllHotelData);
+  const [flightData, setFlightData] = useState({});
+  const [hotelData, setHotelData] = useState({});
   const [activeBook, setActiveBook] = useState(["user-tab-active", "", ""]);
   const [activeBookTab, setActiveBookTab] = useState([
     "block",
     "hidden",
     "hidden",
   ]);
+
   const changeActive = (i) => {
     const tabTemp = ["", "", ""];
     tabTemp[i] = "user-tab-active";
@@ -19,6 +31,27 @@ export default function AdminBookings() {
     setActiveBook(tabTemp);
     setActiveBookTab(contentTemp);
   };
+
+  useEffect(() => {
+    getFlightData(token).then((res) => {
+      let combinedArray = res.data.guestOrders.concat(res.data.userOrders);
+      combinedArray.sort((a, b) => {
+        return a.created_at.localeCompare(b.created_at);
+      });
+      // console.log(combinedArray);
+      setFlightData(combinedArray);
+    });
+
+    getHotelData(token).then((res) => {
+      let combinedArray = res.data.guestOrders.concat(res.data.userOrders);
+      combinedArray.sort((a, b) => {
+        return a.created_at.localeCompare(b.created_at);
+      });
+      console.log(combinedArray);
+      setHotelData(combinedArray);
+    });
+  }, []);
+
   return (
     <>
       <div className="text-2xl font-bold">Users Booking List</div>
@@ -46,149 +79,199 @@ export default function AdminBookings() {
           </div>
         </div>
       </div>
-      <div className={`${activeBookTab[0]}`}>
-        <div className="flex flex-row items-center justify-between flex-wrap bg-white rounded-lg shadow-md p-3">
-          <div className="flex flex-row items-center gap-4">
-            <div className="lg:p-3 lg:m-6 lg:flex-shrink-0 border border-gray-200 rounded-lg">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdK6WoVNm8_fi5IGy60Zn0nStftwFN8A4mpF1Z7ZP6uNaogDtz84xOntrGkUWJ5zKYO7c&usqp=CAU"
-                alt=""
-                className="object-contain"
-                style={{ width: "5rem" }}
-              />
-            </div>
-            <div className="flex flex-col gap-3">
-              <div className="flex flex-row items-center">
-                <div className="text-xl text-100">Newark (EWR)</div>
-                <div className="px-3">
-                  <GoDash size={25} />
-                </div>
-                <div className="text-xl text-100">Nashville (BNA)</div>
-              </div>
-              <div className="text-xl font-bold text-center">
-                {moment("12-06-24", "DD-MM-YY").format("Do MMMM, YYYY")}
-              </div>
-            </div>
-            <div className="vl mx-6" style={{ height: "4rem" }}></div>
-            <div className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-5">
-              <div className="flex flex-row items-center gap-3">
-                <Avatar
-                  shape="circle"
-                  style={{
-                    background: "var(--primary-100)",
-                    color: "var(--primary-500)",
-                  }}
-                  size="large"
-                >
-                  <FaUser size={25} />
-                </Avatar>
-                <div className="flex flex-col">
-                  <div className="text-sm font-bold text-100">Email</div>
-                  <div className="text-base font-bold">john.doe@gmail.com</div>
-                </div>
-              </div>
-              <div className="flex flex-row items-center gap-3">
-                <Avatar
-                  shape="circle"
-                  style={{
-                    background: "var(--primary-100)",
-                    color: "var(--primary-500)",
-                  }}
-                  size="large"
-                >
-                  <FaMoneyBill size={25} />
-                </Avatar>
-                <div className="flex flex-col">
-                  <div className="text-sm font-bold text-100">Amount</div>
-                  <div className="text-base font-bold">
-                    532.90 <span className="primary-500">GBP</span>
+      <div
+        className={`${activeBookTab[0]} flex flex-col justify-center items-stretch gap-8`}
+      >
+        {flightDataLoading ? (
+          <CircularProgress className="self-center" />
+        ) : (
+          flightData.length > 0 &&
+          flightData.map((item, i) => {
+            const data = item?.flightData || item?.orderData;
+            const departure = moment(data.departureTime).format("Do MMM, YY");
+            const arrival = moment(data.arrivalTime).format("Do MMM, YY");
+            // console.log(item);
+            return (
+              <div
+                key={i}
+                className="flex flex-row items-center justify-between flex-wrap bg-white rounded-lg shadow-md p-3"
+              >
+                <div className="flex flex-col md:flex-row items-center gap-4">
+                  <div className="flex justify-center lg:p-3 m-6 lg:flex-shrink-0 md:border border-gray-200 rounded-lg">
+                    <img
+                      src={data.image}
+                      alt=""
+                      className="w-1/2 md:w-20 object-contain"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-3">
+                    <div className="flex flex-row items-center">
+                      <div className="text-xl text-100">
+                        {data.originCity} ({data.originIataCode})
+                      </div>
+                      <div className="px-3">
+                        <GoDash size={25} />
+                      </div>
+                      <div className="text-xl text-100">
+                        {data.destinationCity} ({data.destinationIataCode})
+                      </div>
+                    </div>
+                    <div className="text-xl font-bold text-center">
+                      {arrival}
+                    </div>
+                  </div>
+                  <div className="vl mx-6" style={{ height: "4rem" }}></div>
+                  <div className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-5">
+                    <div className="flex flex-row items-center gap-3">
+                      <Avatar
+                        shape="circle"
+                        style={{
+                          background: "var(--primary-100)",
+                          color: "var(--primary-500)",
+                        }}
+                        size="large"
+                      >
+                        <FaUser size={25} />
+                      </Avatar>
+                      <div className="flex flex-col">
+                        <div className="text-sm font-bold text-100">Email</div>
+                        <div className="text-base font-bold">
+                          {item?.email || "john.doe@gmail.com"}
+                        </div>
+                      </div>
+                    </div>
+                    {/* <div className="flex flex-row items-center gap-3">
+                      <Avatar
+                        shape="circle"
+                        style={{
+                          background: "var(--primary-100)",
+                          color: "var(--primary-500)",
+                        }}
+                        size="large"
+                      >
+                        <MdAirlines size={25} />
+                      </Avatar>
+                      <div className="flex flex-col w-6">
+                        <div className="text-sm font-bold text-100">
+                          Airline
+                        </div>
+                        <div className="text-base font-bold text-wrap">
+                          {data.flightName}
+                        </div>
+                      </div>
+                    </div> */}
                   </div>
                 </div>
+                <div className=" ml-2 mr-4 mb-2 lg:mb-0 self-stretch lg:self-center">
+                  <Button
+                    type="primary"
+                    htmlType="button"
+                    className="h-12 font-bold"
+                    block
+                  >
+                    Resend Ticket
+                  </Button>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className=" ml-2 mr-4 mb-2 lg:mb-0 self-stretch lg:self-center">
-            <Button
-              type="primary"
-              htmlType="button"
-              className="h-12 font-bold"
-              block
-            >
-              Resend Ticket
-            </Button>
-          </div>
-        </div>
+            );
+          })
+        )}
       </div>
-      <div className={`${activeBookTab[1]}`}>
-        <div className="flex flex-row items-center justify-between bg-white rounded-lg shadow-md">
-          <div className="flex flex-row items-center gap-4">
-            <div className="lg:p-3 lg:m-6 lg:flex-shrink-0 border border-gray-200 rounded-lg">
-              <img
-                src="https://marketplace.canva.com/EAE0d_FW6ZA/1/0/1600w/canva-retro-vector-gold-frames-luxury-decorative-logo-template-uDFt-cAE2ug.jpg"
-                alt=""
-                className="object-contain"
-                style={{ width: "5rem", height: "5rem" }}
-              />
-            </div>
-            <div className="flex flex-row items-center gap-3">
-              <div className="flex flex-col">
-                <div className="text-xl text-100">Check-in</div>
-                <div className="text-xl font-bold">August 6, 2024</div>
-              </div>
-              <div className="px-3">
-                <GoDash size={25} />
-              </div>
-              <div className="flex flex-col">
-                <div className="text-xl text-100">Check-out</div>
-                <div className="text-xl font-bold">August 13, 2024</div>
-              </div>
-            </div>
-            <div className="vl mx-6" style={{ height: "4rem" }}></div>
-            <div className="flex flex-row items-start gap-5">
-              <div className="flex flex-row items-center gap-2">
-                <Avatar
-                  shape="square"
-                  style={{
-                    background: "var(--primary-100)",
-                    color: "var(--primary-500)",
-                  }}
-                  size="large"
-                >
-                  <FaClock size={25} />
-                </Avatar>
-                <div className="flex flex-col">
-                  <div className="text-sm font-bold text-100">
-                    Check-in Time
+      <div
+        className={`${activeBookTab[1]} flex flex-col justify-center items-stretch gap-8`}
+      >
+        {hotelDataLoading ? (
+          <CircularProgress className="self-center" />
+        ) : (
+          hotelData.length > 0 &&
+          hotelData.map((item, i) => {
+            const data = item?.hotelData || item?.orderData;
+            const checkin = moment(data.check_in_date).format("Do MMM, YY");
+            const checkout = moment(data.check_out_date).format("Do MMM, YY");
+
+            return (
+              <div
+                key={i}
+                className="flex flex-row items-center justify-between bg-white rounded-lg shadow-md"
+              >
+                <div className="flex flex-row items-center gap-4">
+                  <div className="lg:p-3 lg:m-6 lg:flex-shrink-0 border border-gray-200 rounded-lg">
+                    <img
+                      src={data?.accommodation?.photos[0]?.url}
+                      alt=""
+                      className="object-contain"
+                      style={{ width: "5rem", height: "5rem" }}
+                    />
                   </div>
-                  <div className="text-base font-bold">12:30pm</div>
+                  <div className="flex flex-row items-center gap-3">
+                    <div className="flex flex-col">
+                      <div className="text-xl text-100">Check-in</div>
+                      <div className="text-xl font-bold">{checkin}</div>
+                    </div>
+                    <div className="px-3">
+                      <GoDash size={25} />
+                    </div>
+                    <div className="flex flex-col">
+                      <div className="text-xl text-100">Check-out</div>
+                      <div className="text-xl font-bold">{checkout}</div>
+                    </div>
+                  </div>
+                  <div
+                    className="vl mx-6 hidden md:block"
+                    style={{ height: "4rem" }}
+                  ></div>
+                  <div className="flex flex-row items-start gap-5">
+                    <div className="flex flex-row items-center gap-2">
+                      <Avatar
+                        shape="square"
+                        style={{
+                          background: "var(--primary-100)",
+                          color: "var(--primary-500)",
+                        }}
+                        size="large"
+                      >
+                        <LuHotel size={25} />
+                      </Avatar>
+                      <div className="flex flex-col">
+                        <div className="text-sm font-bold text-100">Hotel</div>
+                        <div className="text-base font-bold text-wrap">
+                          {data.accommodation.name}
+                        </div>
+                      </div>
+                    </div>
+                    {/* <div className="flex flex-row items-center gap-2">
+                      <Avatar
+                        shape="square"
+                        style={{
+                          background: "var(--primary-100)",
+                          color: "var(--primary-500)",
+                        }}
+                        size="large"
+                      >
+                        <FaClock size={25} />
+                      </Avatar>
+                      <div className="flex flex-col">
+                        <div className="text-sm font-bold text-100">
+                          Check-out Time
+                        </div>
+                        <div className="text-base font-bold">11:30pm</div>
+                      </div>
+                    </div> */}
+                  </div>
+                </div>
+                <div className="mr-4">
+                  <Button
+                    type="primary"
+                    htmlType="button"
+                    className="h-12 font-bold"
+                  >
+                    Resend Confirmation
+                  </Button>
                 </div>
               </div>
-              <div className="flex flex-row items-center gap-2">
-                <Avatar
-                  shape="square"
-                  style={{
-                    background: "var(--primary-100)",
-                    color: "var(--primary-500)",
-                  }}
-                  size="large"
-                >
-                  <FaClock size={25} />
-                </Avatar>
-                <div className="flex flex-col">
-                  <div className="text-sm font-bold text-100">
-                    Check-out Time
-                  </div>
-                  <div className="text-base font-bold">11:30pm</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="mr-4">
-            <Button type="primary" htmlType="button" className="h-12 font-bold">
-              Resend Confirmation
-            </Button>
-          </div>
-        </div>
+            );
+          })
+        )}
       </div>
       <div className={`${activeBookTab[2]}`}>cars</div>
     </>

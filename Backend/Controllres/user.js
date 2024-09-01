@@ -1,6 +1,7 @@
 import User from "../models/User.js";
 import Order from "../models/Order.js";
 import Guest from "../models/Guest.js";
+import Hotel from "../models/Hotel.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import nodemailer from "nodemailer";
@@ -154,9 +155,9 @@ const deleteAccount = async (req, res) => {
 const userFlightdata = async (req, res) => {
   try {
     const { id } = req.user;
-    const response = await Order.findOne({ userId: id });
+    const response = await Order.find({ userId: id });
     console.log(response);
-    return response.status(200).json(response);
+    return res.status(200).json(response);
   } catch (error) {
     console.log(error);
     return res.status(400).json(error);
@@ -165,10 +166,29 @@ const userFlightdata = async (req, res) => {
 
 const allUserFlightdata = async (req, res) => {
   try {
-    const userOrders = await Order.find();
+    const data = await Order.find();
+    const userOrders = data.filter((dt) => {
+      if (dt?.orderType == "flight") {
+        return dt;
+      }
+    });
     const guestOrders = await Guest.find();
-    const response = { ...userOrders, ...guestOrders };
-    return res.status(200).json(response);
+    return res.status(200).json({ userOrders, guestOrders });
+  } catch (error) {
+    return res.status(400).json(error);
+  }
+};
+
+const allUserHoteldata = async (req, res) => {
+  try {
+    const data = await Order.find();
+    const userOrders = data.filter((dt) => {
+      if (dt?.orderType == "hotel") {
+        return dt;
+      }
+    });
+    const guestOrders = await Hotel.find();
+    return res.status(200).json({ userOrders, guestOrders });
   } catch (error) {
     return res.status(400).json(error);
   }
@@ -185,4 +205,5 @@ export {
   deleteAccount,
   userFlightdata,
   allUserFlightdata,
+  allUserHoteldata,
 };

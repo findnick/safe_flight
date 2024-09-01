@@ -58,6 +58,7 @@ import {
   EditAbout,
   EditHome,
 } from "./Pages/Editor/EditorChanges";
+import AddHotelMarkup from "./Pages/AddHotelMarkup";
 
 const footer_pages = [
   {
@@ -174,6 +175,10 @@ const App = () => {
                       element={<p>You can configure your settings here</p>}
                     />
                     <Route path="add-markup" element={<AddMarkup />} />
+                    <Route
+                      path="add-hotel-markup"
+                      element={<AddHotelMarkup />}
+                    />
                     <Route
                       path="edit-privacy-policy"
                       element={<EditPrivacy />}

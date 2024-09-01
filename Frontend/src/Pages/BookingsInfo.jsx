@@ -1,11 +1,23 @@
 import { Avatar, Button } from "antd";
-import { useState } from "react";
-import { FaClock, FaDoorOpen } from "react-icons/fa";
+import { useContext, useEffect, useState } from "react";
+import { FaMoneyBill, FaUser, FaClock, FaDoorOpen } from "react-icons/fa";
 import { GoDash } from "react-icons/go";
 import { IoCalendarSharp } from "react-icons/io5";
 import { MdAirlineSeatReclineExtra, MdSensorDoor } from "react-icons/md";
+import { LuHotel } from "react-icons/lu";
+import { APIS, useAPI } from "../api/config";
+import { UserContext } from "../context/UserContext";
+import { CircularProgress } from "@mui/material";
+import moment from "moment";
 
 export default function BookingsInfo() {
+  const [user, setUser, _] = useContext(UserContext);
+  const { token } = user.data;
+  const [getBookingData, bookingDataLoading] = useAPI(APIS.getUserFlightData);
+  const [getUser, userLoading] = useAPI(APIS.getUserData);
+  const [flightData, setFlightData] = useState();
+  const [hotelData, setHotelData] = useState();
+  const [userData, setUserData] = useState({});
   const [activeBook, setActiveBook] = useState(["user-tab-active", "", ""]);
   const [activeBookTab, setActiveBookTab] = useState([
     "block",
@@ -20,6 +32,23 @@ export default function BookingsInfo() {
     setActiveBook(tabTemp);
     setActiveBookTab(contentTemp);
   };
+
+  useEffect(() => {
+    getBookingData(token).then((res) => {
+      setFlightData(res.data.filter((data) => data.orderType == "flight"));
+      setHotelData(res.data.filter((data) => data.orderType == "hotel"));
+    });
+    getUser(token)
+      .then((res) => {
+        setUserData(res?.data);
+        console.log(res?.data);
+      })
+      .catch((res) => console.log(res));
+  }, []);
+
+  useEffect(() => console.log(flightData), [flightData]);
+  useEffect(() => console.log(hotelData), [hotelData]);
+
   return (
     <>
       <div className="text-2xl font-bold">Bookings</div>
@@ -47,201 +76,154 @@ export default function BookingsInfo() {
           </div>
         </div>
       </div>
-      <div className={`${activeBookTab[0]}`}>
-        <div className="flex flex-row items-center justify-between bg-white rounded-lg shadow-md">
-          <div className="flex flex-row items-center gap-4">
-            <div className="p-3 m-6 border border-gray-200 rounded-lg">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdK6WoVNm8_fi5IGy60Zn0nStftwFN8A4mpF1Z7ZP6uNaogDtz84xOntrGkUWJ5zKYO7c&usqp=CAU"
-                alt=""
-                className="object-contain"
-                style={{ width: "5rem", height: "5rem" }}
-              />
-            </div>
-            <div className="flex flex-row items-center gap-3">
-              <div className="flex flex-col">
-                <div className="text-xl text-100">Newark (EWR)</div>
-                <div className="text-xl font-bold">12:00 pm</div>
-              </div>
-              <div className="px-3">
-                <GoDash size={25} />
-              </div>
-              <div className="flex flex-col">
-                <div className="text-xl text-100">Nashville (BNA)</div>
-                <div className="text-xl font-bold">6:00pm</div>
-              </div>
-            </div>
-            <div className="vl mx-6" style={{ height: "4rem" }}></div>
-            <div className="flex flex-row items-center gap-5">
-              <div className="flex flex-col gap-3">
-                <div className="flex flex-row items-center gap-2">
-                  <Avatar
-                    shape="square"
-                    style={{
-                      background: "var(--primary-100)",
-                      color: "var(--primary-500)",
-                    }}
-                    size="large"
-                  >
-                    <IoCalendarSharp size={25} />
-                  </Avatar>
-                  <div className="flex flex-col">
-                    <div className="text-sm font-bold text-100">Date</div>
-                    <div className="text-base font-bold">12-06-24</div>
+      <div
+        className={`${activeBookTab[0]} flex flex-col justify-center items-stretch gap-8`}
+      >
+        {bookingDataLoading ? (
+          <CircularProgress className="self-center" />
+        ) : (
+          flightData?.length > 0 &&
+          flightData.map((item, i) => {
+            const data = item?.orderData;
+            const departure = moment(data.departureTime).format("Do MMM, YY");
+            const arrival = moment(data.arrivalTime).format("Do MMM, YY");
+            // console.log(item);
+            return (
+              <div
+                key={i}
+                className="flex flex-row items-center justify-stretch flex-wrap bg-white rounded-lg shadow-md p-3"
+              >
+                <div className="flex flex-col md:flex-row items-center flex-grow justify-evenly gap-4">
+                  <div className="flex justify-center lg:p-3 m-6 lg:flex-shrink-0 md:border border-gray-200 rounded-lg">
+                    <img
+                      src={data.image}
+                      alt=""
+                      className="w-1/2 md:w-20 object-contain"
+                    />
                   </div>
-                </div>
-                <div className="flex flex-row items-center gap-2">
-                  <Avatar
-                    shape="square"
-                    style={{
-                      background: "var(--primary-100)",
-                      color: "var(--primary-500)",
-                    }}
-                    size="large"
-                  >
-                    <FaClock size={25} />
-                  </Avatar>
-                  <div className="flex flex-col">
-                    <div className="text-sm font-bold text-100">
-                      Flight Time
+                  <div className="flex flex-col gap-3">
+                    <div className="flex flex-row justify-center items-center text-center">
+                      <div className="text-xl text-100">
+                        {data.originCity} ({data.originIataCode})
+                      </div>
+                      <div className="px-3">
+                        <GoDash size={25} />
+                      </div>
+                      <div className="text-xl text-100">
+                        {data.destinationCity} ({data.destinationIataCode})
+                      </div>
                     </div>
-                    <div className="text-base font-bold">12:00pm</div>
+                    <div className="text-xl font-bold text-center">
+                      {arrival}
+                    </div>
+                  </div>
+                  <div
+                    className="vl mx-6 hidden md:block"
+                    style={{ height: "4rem" }}
+                  ></div>
+                  <div className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-5">
+                    <div className="flex flex-row items-center gap-3">
+                      <Avatar
+                        shape="circle"
+                        style={{
+                          background: "var(--primary-100)",
+                          color: "var(--primary-500)",
+                        }}
+                        size="large"
+                      >
+                        <FaUser size={25} />
+                      </Avatar>
+                      <div className="flex flex-col">
+                        <div className="text-sm font-bold text-100">Email</div>
+                        <div className="text-base font-bold">
+                          {item?.email || userData?.email}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col gap-3">
-                <div className="flex flex-row items-center gap-2">
-                  <Avatar
-                    shape="square"
-                    style={{
-                      background: "var(--primary-100)",
-                      color: "var(--primary-500)",
-                    }}
-                    size="large"
-                  >
-                    <MdSensorDoor size={25} />
-                  </Avatar>
-                  <div className="flex flex-col">
-                    <div className="text-sm font-bold text-100">Gate</div>
-                    <div className="text-base font-bold">A12</div>
-                  </div>
-                </div>
-                <div className="flex flex-row items-center gap-2">
-                  <Avatar
-                    shape="square"
-                    style={{
-                      background: "var(--primary-100)",
-                      color: "var(--primary-500)",
-                    }}
-                    size="large"
-                  >
-                    <MdAirlineSeatReclineExtra size={25} />
-                  </Avatar>
-                  <div className="flex flex-col">
-                    <div className="text-sm font-bold text-100">Seat</div>
-                    <div className="text-base font-bold">18</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="mr-4">
-            <Button type="primary" htmlType="button" className="h-12 font-bold">
-              Download Ticket
-            </Button>
-          </div>
-        </div>
+            );
+          })
+        )}
       </div>
-      <div className={`${activeBookTab[1]}`}>
-        <div className="flex flex-row items-center justify-between bg-white rounded-lg shadow-md">
-          <div className="flex flex-row items-center gap-4">
-            <div className="p-3 m-6 border border-gray-200 rounded-lg">
-              <img
-                src="https://marketplace.canva.com/EAE0d_FW6ZA/1/0/1600w/canva-retro-vector-gold-frames-luxury-decorative-logo-template-uDFt-cAE2ug.jpg"
-                alt=""
-                className="object-contain"
-                style={{ width: "5rem", height: "5rem" }}
-              />
-            </div>
-            <div className="flex flex-row items-center gap-3">
-              <div className="flex flex-col">
-                <div className="text-xl text-100">Check-in</div>
-                <div className="text-xl font-bold">August 6, 2024</div>
-              </div>
-              <div className="px-3">
-                <GoDash size={25} />
-              </div>
-              <div className="flex flex-col">
-                <div className="text-xl text-100">Check-out</div>
-                <div className="text-xl font-bold">August 13, 2024</div>
-              </div>
-            </div>
-            <div className="vl mx-6" style={{ height: "4rem" }}></div>
-            <div className="flex flex-row items-start gap-5">
-              <div className="flex flex-col gap-3">
-                <div className="flex flex-row items-center gap-2">
-                  <Avatar
-                    shape="square"
-                    style={{
-                      background: "var(--primary-100)",
-                      color: "var(--primary-500)",
-                    }}
-                    size="large"
-                  >
-                    <FaClock size={25} />
-                  </Avatar>
-                  <div className="flex flex-col">
-                    <div className="text-sm font-bold text-100">
-                      Check-in Time
+      <div
+        className={`${activeBookTab[1]} flex flex-col justify-center items-stretch gap-8`}
+      >
+        {bookingDataLoading ? (
+          <CircularProgress className="self-center" />
+        ) : (
+          hotelData?.length > 0 &&
+          hotelData.map((item, i) => {
+            const data = item?.orderData;
+            const checkin = moment(data.check_in_date).format("Do MMM, YY");
+            const checkout = moment(data.check_out_date).format("Do MMM, YY");
+
+            return (
+              <div
+                key={i}
+                className="flex flex-row items-center justify-stretch flex-wrap bg-white rounded-lg shadow-md p-3"
+              >
+                <div className="flex flex-col md:flex-row items-center flex-grow justify-evenly gap-4">
+                  <div className="lg:p-3 lg:m-6 lg:flex-shrink-0 border border-gray-200 rounded-lg">
+                    <img
+                      src={data?.accommodation?.photos[0]?.url}
+                      alt=""
+                      className="object-contain"
+                      style={{ width: "5rem", height: "5rem" }}
+                    />
+                  </div>
+                  <div className="flex flex-row items-center gap-3">
+                    <div className="flex flex-col">
+                      <div className="text-xl text-100">Check-in</div>
+                      <div className="text-xl font-bold">{checkin}</div>
                     </div>
-                    <div className="text-base font-bold">12:30pm</div>
-                  </div>
-                </div>
-                <div className="flex flex-row items-center gap-2">
-                  <Avatar
-                    shape="square"
-                    style={{
-                      background: "var(--primary-100)",
-                      color: "var(--primary-500)",
-                    }}
-                    size="large"
-                  >
-                    <FaClock size={25} />
-                  </Avatar>
-                  <div className="flex flex-col">
-                    <div className="text-sm font-bold text-100">
-                      Check-out Time
+                    <div className="px-3">
+                      <GoDash size={25} />
                     </div>
-                    <div className="text-base font-bold">11:30pm</div>
+                    <div className="flex flex-col">
+                      <div className="text-xl text-100">Check-out</div>
+                      <div className="text-xl font-bold">{checkout}</div>
+                    </div>
+                  </div>
+                  <div
+                    className="vl mx-6 hidden md:block"
+                    style={{ height: "4rem" }}
+                  ></div>
+                  <div className="flex flex-row items-start gap-5">
+                    <div className="flex flex-col md:flex-row items-center gap-2">
+                      <Avatar
+                        shape="square"
+                        style={{
+                          background: "var(--primary-100)",
+                          color: "var(--primary-500)",
+                        }}
+                        size="large"
+                      >
+                        <LuHotel size={25} />
+                      </Avatar>
+                      <div className="flex flex-col items-center">
+                        <div className="text-sm font-bold text-100">Hotel</div>
+                        <div className="text-base font-bold text-wrap">
+                          {data.accommodation.name}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="flex flex-col gap-3">
-                <div className="flex flex-row items-center gap-2">
-                  <Avatar
-                    shape="square"
-                    style={{
-                      background: "var(--primary-100)",
-                      color: "var(--primary-500)",
-                    }}
-                    size="large"
+                {/* <div className="mr-4">
+                  <Button
+                    type="primary"
+                    htmlType="button"
+                    className="h-12 font-bold"
                   >
-                    <FaDoorOpen size={25} />
-                  </Avatar>
-                  <div className="flex flex-col">
-                    <div className="text-sm font-bold text-100">Room no.</div>
-                    <div className="text-base font-bold">On Arrival</div>
-                  </div>
-                </div>
+                    Resend Confirmation
+                  </Button>
+                </div> */}
               </div>
-            </div>
-          </div>
-          <div className="mr-4">
-            <Button type="primary" htmlType="button" className="h-12 font-bold">
-              Download Ticket
-            </Button>
-          </div>
-        </div>
+            );
+          })
+        )}
       </div>
       <div className={`${activeBookTab[2]}`}>cars</div>
     </>

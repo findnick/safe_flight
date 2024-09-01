@@ -112,6 +112,7 @@ const order = async (req, res) => {
     departureTime: offer_data?.slices[0]?.segments[0]?.departing_at,
     arrivalTime: offer_data?.slices.at(-1)?.segments.at(-1)?.arriving_at,
     flightName: offer_data?.owner?.name,
+    image: offer_data?.owner?.logo_symbol_url,
     destinationCity: offer_data?.slices.at(-1)?.destination?.city_name,
     originCity: offer_data?.slices[0]?.origin?.city_name,
     destinationIataCode: offer_data?.slices.at(-1)?.destination?.iata_city_code,
@@ -151,14 +152,18 @@ const order = async (req, res) => {
       const { id } = decoded.user;
       const user = await User.findOne({ _id: id });
       if (user) {
-        const ordId = offerRequest?.data?.id;
+        // const ordId = offerRequest?.data?.id;
         try {
-          const order = new Order({ orderId: ordId, userId: id, someData });
+          const order = new Order({
+            orderId: "0923x214def92abc921056197",
+            userId: id,
+            orderData: someData,
+            orderType: "flight",
+          });
           await order.save();
-          return res.status(200).json(offerRequest);
+          console.log("User Record Successfully Stored");
         } catch (error) {
-          console.log("Error to save record");
-          return res.status(400).json(error);
+          console.log("Error to save record. ", error);
         }
       }
     } else {
@@ -183,6 +188,7 @@ const order = async (req, res) => {
         pass: "iccj tbvg xzlg xckt",
       },
     });
+    console.log("Image: ", someData?.image);
     const mailOptions = {
       from: "kickart11@gmail.com",
       // to: `awaiszubair512@gmail.com`,
@@ -192,8 +198,8 @@ const order = async (req, res) => {
         `${passenger[0]?.given_name} ${passenger[0]?.family_name}`,
         someData?.departureTime,
         someData.arrivalTime,
-        someData.data,
-        someData?.flightName
+        someData?.flightName,
+        someData?.image
       ),
     };
     transporter.sendMail(mailOptions, (error, info) => {
@@ -211,6 +217,8 @@ const order = async (req, res) => {
     // console.log(reqData);
   }
 };
+
+// -----------List Order------------------------------
 
 const listOrder = async (req, res) => {
   const { orderId } = req.body;

@@ -1,15 +1,35 @@
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../context/UserContext";
 import { APIS, useAPI } from "../api/config";
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export default function AdminSettings() {
+  const navigate = useNavigate();
   const [user, setUser] = useContext(UserContext);
+  const [getUser, userLoading] = useAPI(APIS.getUserData);
+  const { token } = user.data;
+
+  const redirect = (res) => {
+    Swal.fire(res.response.data.msg, "", "error");
+    setUser();
+    navigate("/");
+  };
+
+  useEffect(() => {
+    getUser(token)
+      .then((res) => res?.data || redirect(res))
+      .catch((res) => console.log(res));
+  }, []);
 
   const NavLinks = [
     {
       text: "Add Markup",
       link: "add-markup",
+    },
+    {
+      text: "Add Hotel Markup",
+      link: "add-hotel-markup",
     },
     {
       text: "Edit Privacy Policy",

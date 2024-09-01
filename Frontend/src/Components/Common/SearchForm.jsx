@@ -17,6 +17,7 @@ import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { HotelContext, HotelProvider } from "../../context/HoteContext";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 const today = dayjs();
 
@@ -130,7 +131,6 @@ const FromInput = ({ id = 1, setter, value = null }) => {
             setFromSuggestionBox("block");
             try {
               const res = await getCities({ city: ele.target.value });
-              console.log(res);
               setFromSuggestions(res.data);
             } catch (err) {
               console.error(err);
@@ -301,6 +301,13 @@ function FlightForm({
   const [child, setChild] = useState(childCount);
   const [infantSeat, setInfantSeat] = useState([]);
   const [infantLap, setInfantLap] = useState([]);
+  const [fromSuggestionBox, setFromSuggestionBox] = useState("hidden");
+  const [fromDivEnter, setFromDivEnter] = useState(false);
+  const [fromSuggestions, setFromSuggestions] = useState([]);
+  const [toSuggestionBox, setToSuggestionBox] = useState("hidden");
+  const [toDivEnter, setToDivEnter] = useState(false);
+  const [toSuggestions, setToSuggestions] = useState([]);
+  const [open, setOpen] = useState(false);
   const formData = {
     isRoundTrip: isRoundTrip,
     isMultiCity: isMultiCity,
@@ -316,13 +323,6 @@ function FlightForm({
     adults: adults,
     child: child,
   };
-  const [fromSuggestionBox, setFromSuggestionBox] = useState("hidden");
-  const [fromDivEnter, setFromDivEnter] = useState(false);
-  const [fromSuggestions, setFromSuggestions] = useState([]);
-  const [toSuggestionBox, setToSuggestionBox] = useState("hidden");
-  const [toDivEnter, setToDivEnter] = useState(false);
-  const [toSuggestions, setToSuggestions] = useState([]);
-  const [open, setOpen] = useState(false);
 
   let data = {
     slices: [
@@ -368,7 +368,6 @@ function FlightForm({
   }, [multiCityForms]);
   useEffect(() => {
     if (isMultiCity) data.slices = [data.slices[0], ...multiCityObjects];
-    console.log(data);
   }, [multiCityObjects]);
 
   useEffect(() => {
@@ -382,10 +381,6 @@ function FlightForm({
       setToSuggestionBox("block");
     }
   }, [toSuggestions]);
-
-  useEffect(() => {
-    console.log(data);
-  }, [cabin, from, to, fromDate, toDate, adults, child, isRoundTrip]);
 
   const openDialog = (newOpen) => {
     setOpen(newOpen);
@@ -401,8 +396,6 @@ function FlightForm({
         departure_date: toDate,
       });
     else if (isMultiCity) data.slices = [data.slices[0], ...multiCityObjects];
-
-    console.log(data);
 
     try {
       // const res = await getOffers(data);
@@ -514,7 +507,6 @@ function FlightForm({
                 setFromSuggestionBox("block");
                 try {
                   const res = await getCities({ city: ele.target.value });
-                  console.log(res);
                   setFromSuggestions(res.data);
                 } catch (err) {
                   console.error(err);
@@ -961,18 +953,49 @@ function FlightForm({
   );
 }
 
-function HotelForm({ children }) {
+function HotelForm({
+  children,
+  adultCount = [{ type: "adult" }],
+  childCount = [],
+  roomCount = 1,
+}) {
   const navigate = useNavigate();
-  const [dest, setDest] = useState("");
+  const [dest, setDest] = useState();
   const [checkin, setCheckin] = useState("");
   const [checkout, setCheckout] = useState("");
   const [roomsGuest, setRoomsGuest] = useState("1 Room, 2 Guest");
   const { data, setData } = useContext(HotelContext);
-  const [adults, setAdults] = useState([]);
-  const [child, setChild] = useState([]);
-  const [rooms, setRooms] = useState([]);
+  const [adults, setAdults] = useState(adultCount);
+  const [child, setChild] = useState(childCount);
+  const [rooms, setRooms] = useState(1);
   const [open, setOpen] = useState(false);
   const [hotelLoading, setHotelLoading] = useState(false);
+  const [getPlaces, placesLoading] = useAPI(APIS.hotelSearch);
+  const [destSuggestionBox, setDestSuggestionBox] = useState("hidden");
+  const [destSuggestions, setDestSuggestions] = useState([]);
+  const [destLong, setDestLong] = useState(0.0);
+  const [destLat, setDestLat] = useState(0.0);
+  let hotelObject = {
+    rooms: rooms,
+    location: {
+      radius: 100,
+      geographic_coordinates: {
+        longitude: destLong,
+        latitude: destLat,
+      },
+    },
+    check_out_date: checkout,
+    check_in_date: checkin,
+    guests: adults,
+  };
+
+  const hotelSuggestions = async (search) => {
+    try {
+      return await getPlaces({ city: search });
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   const openDialog = (newOpen) => {
     setOpen(newOpen);
@@ -982,20 +1005,19 @@ function HotelForm({ children }) {
   };
 
   const showHotels = () => {
-    console.log("Destination: ", dest);
-    console.log("Checkin Date: ", checkin);
-    console.log("Checkout Date: ", checkout);
-    console.log("Rooms: ", roomsGuest);
-    navigate("/search/hotels", { state: { dest, checkin, checkout } });
+    console.log(hotelObject);
+    navigate("/search/hotels", { state: { hotelData: hotelObject } });
   };
+
   useEffect(() => {
-    console.log("Hotel Updated Value: ", data);
-  }, [data]);
+    if (destSuggestions.length > 0) setDestSuggestionBox("block");
+  }, [destSuggestions]);
+
   return (
     <>
       {children}
       <FormContainer id="hotelForm">
-        <FormGroup>
+        <FormGroup className="relative">
           <FormGroupLabel htmlFor="destination">
             <img height={15} width={15} src={location} alt="" /> Enter
             Destination
@@ -1003,16 +1025,76 @@ function HotelForm({ children }) {
           <input
             type="text"
             id="destination"
+            className="z-20"
             style={{
               padding: "1rem",
               border: "1px solid gray",
             }}
             name="destination"
             placeholder="Destination"
+            value={dest}
             onChange={(e) => {
               setDest(e.target.value);
+              hotelSuggestions(e.target.value).then((res) => {
+                if (res?.data)
+                  setDestSuggestions(
+                    res.data.filter((item) => item.type == "airport")
+                  );
+              });
             }}
           />
+          <div
+            id="fromSuggestions"
+            className={
+              destSuggestionBox +
+              " " +
+              "absolute bg-white p-5 top-20 w-full z-10 shadow-md rounded-b-md"
+            }
+            // onMouseEnter={() => setFromDivEnter(true)}
+            // onMouseLeave={() => setFromDivEnter(false)}
+          >
+            {placesLoading && (
+              <CircularProgress className="mx-auto text-center" size={20} />
+            )}
+            <ul className="overflow-y-scroll h-48">
+              {destSuggestions.map((suggestion, i) => {
+                const cca2 = suggestion.iata_country_code;
+                var country = [""];
+                axios
+                  .get(`https://restcountries.com/v3.1/alpha/${cca2}`)
+                  .then((res) => {
+                    country[0] = res.data[0].name.common;
+                  });
+                return (
+                  <li
+                    key={i}
+                    className="cursor-pointer mb-3"
+                    onClick={(e) => {
+                      setDestLong(suggestion.longitude);
+                      setDestLat(suggestion.latitude);
+                      setDest(
+                        `${
+                          suggestion.type == "airport"
+                            ? suggestion.city_name
+                            : suggestion.name
+                        }, ${country[0]} (${suggestion.iata_code})`
+                      );
+                      setDestSuggestionBox("hidden");
+                      // setFromText(
+                      //   `${suggestion.name}, ${suggestion.city_name} (${suggestion.iata_code})`
+                      // );
+                    }}
+                  >
+                    {`${
+                      suggestion.type == "airport"
+                        ? suggestion.city_name
+                        : suggestion.name
+                    }, ${country[0]} (${suggestion.iata_code})`}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </FormGroup>
         <FormGroup>
           <FormGroupLabel htmlFor="checkin">
@@ -1120,17 +1202,17 @@ function HotelForm({ children }) {
                   <div className="heading font-medium text-xl">Rooms</div>
                   <div className="numbers flex flex-row justify-end items-center">
                     <Button
-                      disabled={rooms.length <= 0}
+                      disabled={rooms <= 1}
                       onClick={() => {
-                        setRooms(rooms.length > 0 ? rooms.slice(0, -1) : rooms);
+                        setRooms(rooms > 1 ? rooms - 1 : rooms);
                       }}
                     >
                       <Remove className="bg-gray-200 text-gray-500 border-2 border-solid rounded-full" />
                     </Button>
-                    <div className="w-3/12 text-center">{rooms.length}</div>
+                    <div className="w-3/12 text-center">{rooms}</div>
                     <Button
                       onClick={() => {
-                        setRooms([...rooms, { age: 1 }]);
+                        setRooms(rooms + 1);
                       }}
                     >
                       <Add className="bg-primary-500 text-white border-2 border-solid rounded-full" />
@@ -1155,8 +1237,7 @@ function HotelForm({ children }) {
                 border: "1px solid gray",
               }}
             >
-              {adults.length} Adults, {child.length} Children, {rooms.length}{" "}
-              Rooms
+              {adults.length} Adults, {child.length} Children, {rooms} Rooms
             </div>
           </Popover>
         </FormGroup>
@@ -1169,19 +1250,7 @@ function HotelForm({ children }) {
             borderRadius: "1rem",
             textTransform: "capitalize",
           }}
-          // onClick={showHotels}
-          onClick={() => {
-            setHotelLoading(true);
-            setTimeout(() => {
-              Swal.fire({
-                titleText: "Duffle Error",
-                text: "Our Hotel Servers are down right now. Please try again later.",
-                icon: "error",
-                showConfirmButton: false,
-                timer: 6000,
-              }).then(() => setHotelLoading(false));
-            }, 8000);
-          }}
+          onClick={showHotels}
         >
           {hotelLoading ? (
             <CircularProgress
@@ -1328,70 +1397,6 @@ function SearchForm({ flight = "none", hotel = "none", carRental = "none" }) {
   };
   return (
     <div className="dynamic-container bg-white sm:bg-transparent rounded-2xl sm:border-none">
-      {/* <div className="tab bg-transparent flex justify-start">
-        <TabContainer>
-          <TabButton
-            area={flight == "block" ? "active" : ""}
-            onClick={(e) => {
-              openTab(e, "Flight");
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={16}
-              height={16}
-              fill="currentColor"
-              className="bi bi-airplane-fill"
-              viewBox="0 0 16 16"
-            >
-              <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849" />
-            </svg>{" "}
-            <span style={{ display: "block", marginLeft: "0.4rem" }}>
-              Flight
-            </span>
-          </TabButton>
-          <TabButton
-            area={hotel == "block" ? "active" : ""}
-            onClick={(e) => {
-              openTab(e, "Hotel");
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={16}
-              height={16}
-              fill="currentColor"
-              className="bi bi-building-fill"
-              viewBox="0 0 16 16"
-            >
-              <path d="M3 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V16h3a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm1 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5M4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5m2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5m2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5" />
-            </svg>{" "}
-            <span style={{ display: "block", marginLeft: "0.4rem" }}>
-              Hotel
-            </span>
-          </TabButton>
-          <TabButton
-            area={carRental == "block" ? "active" : ""}
-            onClick={(e) => {
-              openTab(e, "CarRental");
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={16}
-              height={16}
-              fill="currentColor"
-              className="bi bi-taxi-front-fill"
-              viewBox="0 0 16 16"
-            >
-              <path d="M6 1a1 1 0 0 0-1 1v1h-.181A2.5 2.5 0 0 0 2.52 4.515l-.792 1.848a.8.8 0 0 1-.38.404c-.5.25-.855.715-.965 1.262L.05 9.708a2.5 2.5 0 0 0-.049.49v.413c0 .814.39 1.543 1 1.997V14.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1.338c1.292.048 2.745.088 4 .088s2.708-.04 4-.088V14.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1.892c.61-.454 1-1.183 1-1.997v-.413q0-.248-.049-.49l-.335-1.68a1.8 1.8 0 0 0-.964-1.261.8.8 0 0 1-.381-.404l-.792-1.848A2.5 2.5 0 0 0 11.181 3H11V2a1 1 0 0 0-1-1zM4.309 4h7.382a.5.5 0 0 1 .447.276l.956 1.913a.51.51 0 0 1-.497.731c-.91-.073-3.35-.17-4.597-.17s-3.688.097-4.597.17a.51.51 0 0 1-.497-.731l.956-1.913A.5.5 0 0 1 4.309 4M4 10a1 1 0 1 1-2 0 1 1 0 0 1 2 0m10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-9 0a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1" />
-            </svg>{" "}
-            <span style={{ display: "block", marginLeft: "0.4rem" }}>
-              Car Rental
-            </span>
-          </TabButton>
-        </TabContainer>
-      </div> */}
       <TabContent id="Flight" display={flight}>
         <FlightForm />
       </TabContent>

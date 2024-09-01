@@ -1,6 +1,7 @@
 import { baseModule } from "./config";
 
 const APIS = {
+  // All Flight APIs
   listOffers: (body) => {
     return baseModule.post("flights/", body);
   },
@@ -13,33 +14,39 @@ const APIS = {
   cities: (body) => {
     return baseModule.post("flights/cities", body);
   },
-  createOrder: (body) => {
-    return baseModule.post("flights/order", body);
+  createOrder: ({ body = {}, headers = undefined }) => {
+    return baseModule.post("flights/order", body, { headers: headers });
   },
   offerData: (body) => {
     return baseModule.post("flights/getOffer", body);
   },
+  // All Hotel APIs
+  fetchHotels: (body) => {
+    return baseModule.post("hotels", body);
+  },
+  hotelSearch: (body) => {
+    return baseModule.post("hotels/hotelplaces", body);
+  },
+  hotelRates: (body) => {
+    return baseModule.post("hotels/rates", body);
+  },
+  hotelQuote: (body) => {
+    return baseModule.post("hotels/quote", body);
+  },
+  hotelPayment: (body) => {
+    return baseModule.post("hotels/hotelPaymentIntent", body);
+  },
+  createHotelBooking: ({ body = {}, headers = undefined }) => {
+    return baseModule.post("hotels/createBooking", body, { headers: headers });
+  },
+  // User Auth APIs
   register: (body) => {
     return baseModule.post("user/register", body);
   },
   login: (body) => {
     return baseModule.post("user/login", body);
   },
-  getAllUsers: (token) => {
-    return baseModule.get("user/allusers", {
-      headers: {
-        "X-auth-token": token,
-      },
-    });
-  },
-  deleteUser: (req) => {
-    return baseModule.delete(`user/deleteuser`, {
-      headers: {
-        "X-Auth-Token": req.token,
-      },
-      data: { id: req.id },
-    });
-  },
+  // Registered User Data APIs
   getUserData: (token) => {
     return baseModule.get("user/getuser", {
       headers: {
@@ -61,6 +68,43 @@ const APIS = {
       },
     });
   },
+  getUserFlightData: (token) => {
+    return baseModule.get("user/userflightdata", {
+      headers: {
+        "X-Auth-Token": token,
+      },
+    });
+  },
+  // Admin Action APIs
+  getAllUsers: (token) => {
+    return baseModule.get("user/allusers", {
+      headers: {
+        "X-auth-token": token,
+      },
+    });
+  },
+  deleteUser: (req) => {
+    return baseModule.delete(`user/deleteuser`, {
+      headers: {
+        "X-Auth-Token": req.token,
+      },
+      data: { id: req.id },
+    });
+  },
+  getAllFlightData: (token) => {
+    return baseModule.get("user/alluserflightdata", {
+      headers: {
+        "X-Auth-Token": token,
+      },
+    });
+  },
+  getAllHotelData: (token) => {
+    return baseModule.get("user/alluserhoteldata", {
+      headers: {
+        "X-Auth-Token": token,
+      },
+    });
+  },
   getMarkup: (token) => {
     return baseModule.get("user/getmarkup", {
       headers: { "X-Auth-Token": token },
@@ -72,9 +116,6 @@ const APIS = {
         "X-Auth-Token": req.token,
       },
     });
-  },
-  fetchHotels: (body) => {
-    return baseModule.post("hotels", body);
   },
   fetchContent: () => {
     return baseModule.get("content");

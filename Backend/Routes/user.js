@@ -18,6 +18,7 @@ import {
   deleteAccount,
   userFlightdata,
   allUserFlightdata,
+  allUserHoteldata,
 } from "../Controllres/user.js";
 import { updateMarkup, getMarkup } from "../Controllres/markup.js";
 
@@ -39,5 +40,6 @@ routes.put("/updatemarkup", admin, updateMarkup);
 routes.get("/getmarkup", admin, getMarkup);
 routes.get("/userflightdata", auth, userFlightdata);
 routes.get("/alluserflightdata", admin, allUserFlightdata);
+routes.get("/alluserhoteldata", admin, allUserHoteldata);
 
 export default routes;

@@ -28,6 +28,7 @@ import moment from "moment";
 import { GoDash } from "react-icons/go";
 import { useCurrency } from "../../hooks/useCurrency";
 import { CurrencyContext } from "../../context/CurrencyContext";
+import Swal from "sweetalert2";
 
 const Section = ({ children, className = "", style = {} }) => {
   return (
@@ -484,77 +485,201 @@ export const ShowFlights = ({ resBox, uniqueName, showPrice = true }) => {
 
 const ShowHotels = ({ results, resBox, uniqueName }) => {
   const navigate = useNavigate();
-  useEffect(() => {
-    console.log(resBox?.accommodation?.photos[0]?.url);
-  }, []);
+  const [getRates, ratesLoading] = useAPI(APIS.hotelRates);
+  const [createQuote, quoteRating] = useAPI(APIS.hotelQuote);
+  const [rates, setRates] = useState([]);
+  const [paymentIntent, intentLoading] = useAPI(APIS.hotelPayment);
   const net = resBox?.price - resBox?.price * (resBox.discount / 100);
+
   return (
-    <ResultBox padding="p-0" justify="justify-start">
-      <img
-        src={resBox?.accommodation?.photos[0]?.url}
-        alt=""
-        className="w-1/4 md:w-1/2 lg:w-72 lg:h-64"
-      />
-      <div className="flex-grow flex flex-col p-4 gap-4 justify-evenly">
-        <div className="flex flex-col gap-2">
-          <div className="hotel-heading font-semibold text-xl sm:text-3xl">
-            {resBox?.accommodation?.name}
-          </div>
-          {/* <div className="hotel-distance font-normal text-sm sm:text-base">
+    <Accordion className="bg-transparent">
+      <ResultBox padding="p-0" justify="justify-start">
+        <AccordionSummary
+          expandIcon={<></>}
+          aria-controls="panel1-content"
+          id="panel1-header"
+          className="rounded-full"
+        >
+          <img
+            src={resBox?.accommodation?.photos[0]?.url}
+            alt=""
+            className="w-1/4 md:w-1/2 lg:w-72 lg:h-64 object-cover"
+          />
+          <div className="flex-grow flex flex-col p-4 gap-4 justify-evenly">
+            <div className="flex flex-col gap-2">
+              <div className="hotel-heading font-semibold text-xl sm:text-3xl">
+                {resBox?.accommodation?.name}
+              </div>
+              {/* <div className="hotel-distance font-normal text-sm sm:text-base">
             {resBox?.dist}km from {resBox?.place}
           </div> */}
-          <div className="flex flex-row items-center gap-2">
-            <div className="rating font-semibold text-xs sm:text-sm flex flex-row flex-wrap gap-1 py-1 px-2 items-center">
-              {resBox?.accommodation?.rating}
-              <Star sx={{ fontSize: 16, mb: "2px" }} />
-            </div>
-            <div className="font-normal text-xs sm:text-sm">
-              ({resBox?.accommodation?.review_score} Reviews)
-            </div>
-          </div>
-          <div className="hotel-amenities flex flex-row gap-4">
-            {/* {resBox.accommodation?.amenities.map((val, i) => (
+              <div className="flex flex-row items-center gap-2">
+                <div className="rating font-semibold text-xs sm:text-sm flex flex-row flex-wrap gap-1 py-1 px-2 items-center">
+                  {resBox?.accommodation?.rating}
+                  <Star sx={{ fontSize: 16, mb: "2px" }} />
+                </div>
+                <div className="font-normal text-xs sm:text-sm">
+                  ({resBox?.accommodation?.review_score} Reviews)
+                </div>
+              </div>
+              <div className="hotel-amenities flex flex-row gap-4">
+                {/* {resBox.accommodation?.amenities.map((val, i) => (
               <span key={i} className="font-normal text-xs sm:text-sm">
                 {val}
               </span>
             ))} */}
-          </div>
-        </div>
-        <div className="flex flex-row md:flex-col lg:flex-row justify-between items-center md:items-stretch lg:items-center">
-          <div className="flex flex-col gap-1 flex-shrink">
-            <div className="flex flex-row items-center flex-wrap gap-1 sm:gap-3">
-              <div className="hotel-net-amount primary-500 font-semibold text-xl sm:text-3xl">
-                <span style={{ marginRight: "1rem" }}>GBP</span>
-                {resBox?.accommodation?.cheapest_rate_total_amount}
               </div>
-              {/* <div className="hotel-actual-amount font-normal text-sm sm:text-xl line-through text-100">
+            </div>
+            <div className="flex flex-row md:flex-col lg:flex-row justify-between items-center md:items-stretch lg:items-center">
+              <div className="flex flex-col gap-1 flex-shrink">
+                <div className="flex flex-row items-center flex-wrap gap-1 sm:gap-3">
+                  <div className="hotel-net-amount primary-500 font-semibold text-xl sm:text-3xl">
+                    <span style={{ marginRight: "1rem" }}>GBP</span>
+                    {resBox?.accommodation?.cheapest_rate_total_amount}
+                  </div>
+                  {/* <div className="hotel-actual-amount font-normal text-sm sm:text-xl line-through text-100">
                 C${resBox?.price != net ? resBox?.price : null}
                 C$ {resBox?.accommodation?.cheapest_rate_total_amount}
               </div>  */}
-              <div
-                className="hotel-discount font-medium text-sm sm:text-xl"
-                style={{ color: "var(--orange)" }}
-              >
-                {resBox?.discount > 0 ? resBox?.discount + "% off" : null}
+                  <div
+                    className="hotel-discount font-medium text-sm sm:text-xl"
+                    style={{ color: "var(--orange)" }}
+                  >
+                    {resBox?.discount > 0 ? resBox?.discount + "% off" : null}
+                  </div>
+                </div>
+                <div className="font-normal text-xs sm:text-base text-100">
+                  per room per night
+                </div>
               </div>
-            </div>
-            <div className="font-normal text-xs sm:text-base text-100">
-              per room per night
+              {/* <Button2
+              classes="font-medium text-xs sm:text-base sm:px-4"
+              style={{ background: "var(--primary-500)" }}
+              width="auto"
+              onClick={() => {
+                // navigate("/checkout_", { state: { resBox } });
+              }}
+            >
+              Check Rates
+            </Button2> */}
+
+              <Button2
+                classes="font-medium text-xs sm:text-base sm:px-4"
+                style={{ background: "var(--primary-500)" }}
+                width="auto"
+                onClick={() => {
+                  getRates({ search_id: resBox?.id }).then((res) => {
+                    // console.log(res);
+                    // console.log(res?.data?.data?.accommodation?.rooms);
+                    if (res?.data?.data?.accommodation?.rooms) {
+                      console.log(true);
+                      let temp = res?.data?.data?.accommodation?.rooms;
+                      console.log(temp);
+                      setRates(temp);
+                    } else console.log(false);
+                  });
+                }}
+              >
+                Show Rates
+              </Button2>
             </div>
           </div>
-          <Button2
-            classes="font-medium text-xs sm:text-base sm:px-4"
-            style={{ background: "var(--primary-500)" }}
-            width="auto"
-            onClick={() => {
-              navigate("/checkout_", { state: { resBox } });
-            }}
-          >
-            Book Now
-          </Button2>
-        </div>
-      </div>
-    </ResultBox>
+        </AccordionSummary>
+      </ResultBox>
+      <AccordionDetails className="bg-transparent" sx={{ mt: 5 }}>
+        {rates?.length > 0 &&
+          rates.map((room, roomIndex) => {
+            return (
+              <div key={roomIndex} className="flex flex-col gap-3 mb-10">
+                <div className="flex flex-row justify-between">
+                  <div className="text-lg font-semibold underline">
+                    {room.name}
+                  </div>
+                  <div className="flex flex-row justify-end gap-2">
+                    {room?.rates.map((rate, rateIndex) => {
+                      return (
+                        <Button2
+                          classes="font-medium text-xs sm:text-base sm:px-4"
+                          style={{ background: "var(--primary-500)" }}
+                          width="auto"
+                          onClick={() => {
+                            createQuote({ rate_id: rate?.id }).then((res) => {
+                              console.log(res);
+                              if (res?.data?.data?.id) {
+                                const quote = res?.data?.data;
+                                Swal.fire({
+                                  title: "Quote Created",
+                                  text: "Do you confirm to book this Room?",
+                                  icon: "question",
+                                  confirmButtonText: "Yes",
+                                  confirmButtonColor: "var(--primary-500)",
+                                  showCancelButton: true,
+                                  cancelButtonText: "No",
+                                  cancelButtonColor: "var(--text-100)",
+                                }).then((prompt) => {
+                                  if (prompt.isConfirmed) {
+                                    paymentIntent({
+                                      quote: quote,
+                                    })
+                                      .then((res) => {
+                                        console.log(res);
+                                        const pit = res.data.data.id;
+                                        const client_token =
+                                          res.data.data.client_token;
+                                        navigate("/checkout_", {
+                                          state: {
+                                            resBox,
+                                            quote,
+                                            pit,
+                                            client_token,
+                                          },
+                                        });
+                                      })
+                                      .catch((error) => {
+                                        console.error(error);
+                                        navigate("/checkout_", {
+                                          state: {
+                                            resBox,
+                                            quote,
+                                          },
+                                        });
+                                      });
+                                  }
+                                });
+                              } else {
+                                Swal.fire(
+                                  "The room is not available for booking.",
+                                  "",
+                                  "warning"
+                                );
+                              }
+                            });
+                          }}
+                        >
+                          {Math.round(rate.public_amount)}{" "}
+                          {rate.public_currency}
+                        </Button2>
+                      );
+                    })}
+                  </div>
+                </div>
+                <div className="w-full flex flex-row flex-wrap gap-2">
+                  {room?.photos.map((photo, photoIndex) => {
+                    return (
+                      <img
+                        src={photo.url}
+                        alt=""
+                        key={photoIndex}
+                        className="w-1/6 object-cover"
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+      </AccordionDetails>
+    </Accordion>
   );
 };
 
@@ -562,8 +687,8 @@ const ShowCarRentals = ({ resBox, uniqueName }) => {
   const net = resBox.price - resBox.price * (resBox.discount / 100);
   return (
     <ResultBox padding="p-0" justify="justify-start">
-      <div className="flight-logo w-1/3 mt-2 ml-3 self-center">
-        <img src={resBox.img} alt="" />
+      <div className="flight-logo mt-2 ml-3 self-center">
+        <img src={resBox.img} alt="" className="w-1/3 object-cover" />
       </div>
       {/* <img src={resBox.img} alt="" className="w-1/4 md:w-1/2 lg:w-72 lg:h-64" /> */}
       <div className="flex-grow flex flex-col p-4 gap-4 justify-evenly">
@@ -706,7 +831,8 @@ const ResultNumbers = ({
     if (items) {
       sortedResults(items);
     }
-    console.log("The items is: ", results);
+    // console.log("The items is: ", results);
+    console.log(results);
   }, [items]);
   return (
     <>

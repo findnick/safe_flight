@@ -6,6 +6,7 @@ import { APIS, useAPI } from "../api/config";
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../context/UserContext";
 import { CircularProgress } from "@mui/material";
+import Swal from "sweetalert2";
 
 export default function Accounts() {
   const [user, setUser] = useContext(UserContext);
@@ -14,13 +15,21 @@ export default function Accounts() {
   const [getUser, userLoading] = useAPI(APIS.getUserData);
   const [userData, setUserData] = useState({});
 
+  const redirect = (res) => {
+    Swal.fire(res.response.data.msg, "", "error");
+    setUser();
+    navigate("/");
+  };
+
   useEffect(() => {
-    getUser(token).then((res) => setUserData(res.data));
+    getUser(token)
+      .then((res) => setUserData(res?.data) || redirect(res))
+      .catch((res) => console.log(res));
   }, []);
 
   return (
     <div className="p-10 user-account flex flex-col gap-8">
-      {userLoading ? (
+      {userLoading || !userData ? (
         <div className="text-center">
           <CircularProgress />
         </div>
@@ -76,7 +85,7 @@ export default function Accounts() {
               </div>
             </div>
           </div>
-          <div className="user-content mx-10 flex flex-col gap-8">
+          <div className="user-content md:mx-10 flex flex-col gap-8">
             <div className="flex flex-row px-5 pt-5 bg-white rounded-lg shadow-md font-bold">
               <div
                 className="w-5/12 pb-3 cursor-pointer"

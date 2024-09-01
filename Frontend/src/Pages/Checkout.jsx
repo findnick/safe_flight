@@ -18,6 +18,7 @@ import { FaCheck, FaLock } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { CurrencyContext } from "../context/CurrencyContext";
+import { UserContext } from "../context/UserContext";
 
 function isEmpty(obj) {
   for (const prop in obj) {
@@ -102,6 +103,7 @@ export default function Checkout() {
   const [arrivingAddress, setArrivingAddress] = useState("");
   const [departingAddress, setDepartingAddress] = useState("");
   const navigate = useNavigate();
+  const [user, setUser, getUser] = useContext(UserContext);
   // const [total, setTotal] = useState(0.0);
   const setCost = async (offerId) => {
     return new Promise((resolve, reject) => {
@@ -122,28 +124,32 @@ export default function Checkout() {
     });
   };
 
-  const setMetadata = async (data) => {
+  const setMetadata = async (body) => {
     return new Promise((resolve, reject) => {
-      orderDetails.metadata = data;
+      const { offer, payment_intent } = body;
+      orderDetails.metadata = payment_intent;
+      orderDetails.offer_data = offer;
       setOrderDetails(orderDetails);
       resolve(orderDetails);
     });
   };
 
   const confirmPayment = async () => {
-    if (orderDetails.payment.amount == "") {
+    console.log(orderDetails);
+    if (orderDetails?.payment?.amount == "") {
       orderDetails.payment.amount = amountPayable;
       setOrderDetails(orderDetails);
     }
     try {
       const pay = await getPayment({ id: pit });
       const metadata = await setMetadata({
-        // offer: offer,
+        offer: offer,
         payment_intent: pit,
       });
-      console.log(pay);
-      console.log(metadata);
-      const res = await createOrder(orderDetails);
+      // console.log(pay);
+      // console.log(metadata);
+      const header = user && { "x-auth-token": user.data.token };
+      const res = await createOrder({ body: orderDetails, headers: header });
       console.log(res);
     } catch (err) {
       console.error(err);

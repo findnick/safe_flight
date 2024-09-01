@@ -4,13 +4,17 @@ import App from "./App.jsx";
 import "./index.css";
 import { UserProvider } from "./context/UserContext";
 import { CurrencyProvider } from "./context/CurrencyContext.jsx";
+import store from "./app/store";
+import { Provider } from "react-redux";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <UserProvider>
-      <CurrencyProvider>
-        <App />
-      </CurrencyProvider>
-    </UserProvider>
+    <Provider store={store}>
+      <UserProvider>
+        <CurrencyProvider>
+          <App />
+        </CurrencyProvider>
+      </UserProvider>
+    </Provider>
   </React.StrictMode>
 );

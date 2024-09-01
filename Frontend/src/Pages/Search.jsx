@@ -581,63 +581,23 @@ const SearchHotel = () => {
   const { data } = useContext(HotelContext);
   const location = useLocation();
   const [hotelData, sethotelData] = useState();
-  const dest = location?.state?.dest;
-  const checkin = location?.state?.checkin;
-  const checkout = location?.state?.checkout;
+  const hotelObject = location?.state?.hotelData;
   const [gettingHotels, hotelLoading] = useAPI(APIS.fetchHotels);
 
   const fetchHotels = async () => {
-    console.log(dest);
-    console.log(checkin);
-    console.log(checkout);
-
     try {
-      const response = await searching(dest);
-      console.log(response?.data);
-      const hotel = {
-        rooms: 1,
-        location: {
-          radius: 2,
-          geographic_coordinates: {
-            longitude: -0.1277653,
-            latitude: 51.5074456,
-          },
-        },
-        check_out_date: checkout,
-        check_in_date: checkin,
-        guests: [
-          {
-            type: "adult",
-          },
-          {
-            type: "adult",
-          },
-        ],
-      };
-
-      try {
-        // const response = await axios.post(
-        //   "https://cwbackend-444q2llyn-awais-zubairs-projects.vercel.app/api/hotels",
-        //   { hotel }
-        // );
-        const response = await gettingHotels({ hotel });
-        console.log(response);
-        console.log(response?.data);
-        sethotelData(response?.data?.data);
-      } catch (error) {
-        console.log(error);
-      }
+      const res = await gettingHotels({ hotel: hotelObject });
+      if (res.status != 200) console.error(res);
+      return res?.data;
     } catch (error) {
       console.log(error);
     }
   };
-  useEffect(() => {
-    fetchHotels();
-  }, []);
 
   useEffect(() => {
-    console.log(hotelData);
-  }, [hotelData]);
+    fetchHotels().then((res) => sethotelData(res?.data));
+  }, []);
+
   const checkBox = [
     {
       id: "round-trip",
@@ -722,9 +682,7 @@ const SearchHotel = () => {
       discount: 50,
     },
   ];
-  useEffect(() => {
-    console.log(dest, checkin, checkout);
-  }, []);
+
   return (
     <>
       <Section>
@@ -752,7 +710,7 @@ const SearchHotel = () => {
           <ResultNumbers
             uniqueName="hotel-search-results"
             items={hotelData && hotelData.results}
-            // hotelData={hotelData && hotelData.results}
+            hotelData={hotelData && hotelData.results}
             tabItems={tabs}
             type="hotel"
             loading={hotelLoading}
