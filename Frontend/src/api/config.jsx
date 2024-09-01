@@ -14,7 +14,7 @@ import APIS from ".";
 // http://localhost:8080/api
 
 const baseModule = axios.create({
-  baseURL: "http://localhost:8080/api",
+  baseURL: "http://flightsavior.com:8080/api/",
 });
 
 const useAPI = (api) => {
