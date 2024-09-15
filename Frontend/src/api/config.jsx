@@ -14,8 +14,9 @@ const AWAIS_FORWARD_PORT = "https://tj6h9ng2-8080.inc1.devtunnels.ms/api";
 // local link:
 const LOCAL_LINK = "http://localhost:8080/api";
 
+const WORKING_LINK = AWAIS_FORWARD_PORT;
 const baseModule = axios.create({
-  baseURL: HOST_LINK,
+  baseURL: WORKING_LINK,
 });
 
 const useAPI = (api) => {
@@ -37,4 +38,4 @@ const useAPI = (api) => {
   return [fetch_function, loading];
 };
 
-export { APIS, useAPI, baseModule };
+export { APIS, useAPI, baseModule, WORKING_LINK };

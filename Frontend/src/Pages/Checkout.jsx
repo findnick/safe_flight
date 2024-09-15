@@ -365,15 +365,15 @@ export default function Checkout() {
                       <div className="flex flex-row justify-between">
                         <div className="heading">Base Amount: </div>
                         <div className="display-cost">
-                          {convert(base).toFixed(2)}{" "}
+                          {convert(base, offer?.base_currency).toFixed(2)}{" "}
                           <span className="text-sm primary-500">
                             {" "}
                             ({curr}){" "}
                           </span>
                         </div>
                       </div>
-                      <div className="flex flex-row justify-between">
-                        <div className="heading">Fare Tax: </div>
+                      {/* <div className="flex flex-row justify-between">
+                        <div className="heading">Tax: </div>
                         <div className="display-cost">
                           {convert(tax).toFixed(2)}{" "}
                           <span className="text-sm primary-500">
@@ -381,13 +381,14 @@ export default function Checkout() {
                             ({curr}){" "}
                           </span>
                         </div>
-                      </div>
+                      </div> */}
                       <div className="flex flex-row justify-between">
-                        <div className="heading">Mark Up & Other Charges: </div>
+                        <div className="heading">Tax & Fee: </div>
                         <div className="display-cost">
-                          {convert(parseFloat(amount) - (base + tax)).toFixed(
-                            2
-                          )}{" "}
+                          {convert(
+                            parseFloat(amount) - base,
+                            offer?.base_currency
+                          ).toFixed(2)}{" "}
                           <span className="text-sm primary-500">
                             {" "}
                             ({curr}){" "}
@@ -397,7 +398,7 @@ export default function Checkout() {
                       <div className="flex flex-row justify-between border-t-2 pt-2 font-medium">
                         <div className="heading">Total: </div>
                         <div className="display-cost">
-                          {convert(amount).toFixed(2)}{" "}
+                          {convert(amount, offer?.base_currency).toFixed(2)}{" "}
                           <span className="text-sm primary-500">
                             {" "}
                             ({curr}){" "}

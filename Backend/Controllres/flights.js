@@ -33,6 +33,22 @@ const listOffers = async (req, res) => {
       offerRequest.data.offers = offerRequest.data.offers.filter(
         (offer) => offer.owner.iata_code !== "ZZ"
       );
+      const fxRate = 1;
+      const fxMarkup = 1.02;
+      const duffleRate = 0.029;
+      const response = await Markup.find({});
+      const markup = parseFloat(response[0].markup);
+      offerRequest.data.offers = offerRequest.data.offers.map((offer) => {
+        const paymentAmount = offer.total_amount;
+        const dufflePayment = parseFloat(paymentAmount);
+        const pay = (
+          ((dufflePayment + (dufflePayment * markup) / 100) * fxRate * fxMarkup) /
+          1 -
+          duffleRate
+        ).toFixed(2);
+        offer.markup_amount = pay;
+        return offer;
+      })
     }
 
     return res.status(200).json(offerRequest?.data);

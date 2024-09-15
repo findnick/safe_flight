@@ -17,6 +17,8 @@ import main_3 from "../assets/img/header-images/header-img-2.jpg";
 import TopHotels from "../Components/UnCommon/TopHotels";
 import { APIS, useAPI } from "../api/config";
 import { useEffect, useState } from "react";
+import { FAQ } from "./Footer_Links";
+import Campaign from "../Components/Common/Campaign";
 
 const Hotel = () => {
   const cards = [
@@ -115,7 +117,8 @@ const Hotel = () => {
         <SearchForm hotel="block" />
         {/* <HotelForm /> */}
       </Header>
-      <CardSection cards={cards} />
+      {/* <CardSection cards={cards} /> */}
+      <Campaign />
       <TopHotels main={main} />
       <General
         img={card_4}
@@ -123,7 +126,8 @@ const Hotel = () => {
         heading="Explore the Unseen"
         para={!contentLoading && content}
       />
-      <Questions questions={questions} />
+      <FAQ />
+      {/* <Questions questions={questions} /> */}
       {/* <Footer /> */}
     </>
   );

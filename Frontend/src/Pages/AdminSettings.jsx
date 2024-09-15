@@ -24,7 +24,7 @@ export default function AdminSettings() {
 
   const NavLinks = [
     {
-      text: "Add Markup",
+      text: "Add Flight Markup",
       link: "add-markup",
     },
     {
@@ -50,6 +50,14 @@ export default function AdminSettings() {
     {
       text: "Edit Home Banner",
       link: "edit-home-section",
+    },
+    {
+      text: "Edit Campaign Banner",
+      link: "edit-campaign-section",
+    },
+    {
+      text: "Edit Campaign Background",
+      link: "edit-campaign-background",
     },
   ];
 

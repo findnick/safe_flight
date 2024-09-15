@@ -15,6 +15,8 @@ import demoAirline from "../assets/img/flight/demo-airline-icon.png";
 import TopFlights from "../Components/UnCommon/TopFlights";
 import { APIS, useAPI } from "../api/config";
 import { useEffect, useState } from "react";
+import { FAQ } from "./Footer_Links";
+import Campaign from "../Components/Common/Campaign";
 
 const Flight = () => {
   const cards = [
@@ -164,7 +166,8 @@ const Flight = () => {
         <SearchForm flight="block" />
         {/* <FlightForm /> */}
       </Header>
-      <CardSection cards={cards} />
+      {/* <CardSection cards={cards} /> */}
+      <Campaign />
       <TopFlights main={main} />
       <General
         img={card_4}
@@ -173,7 +176,8 @@ const Flight = () => {
         // para="Lorem ipsum dolor sit amet consectetur. Nisl ultrices et eleifend proin quisque feugiat."
         para={!contentLoading && content}
       />
-      <Questions questions={questions} />
+      <FAQ />
+      {/* <Questions questions={questions} /> */}
       {/* <Footer /> */}
     </>
   );

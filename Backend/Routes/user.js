@@ -19,6 +19,7 @@ import {
   userFlightdata,
   allUserFlightdata,
   allUserHoteldata,
+  specificOrderData,
 } from "../Controllres/user.js";
 import { updateMarkup, getMarkup } from "../Controllres/markup.js";
 
@@ -41,5 +42,6 @@ routes.get("/getmarkup", admin, getMarkup);
 routes.get("/userflightdata", auth, userFlightdata);
 routes.get("/alluserflightdata", admin, allUserFlightdata);
 routes.get("/alluserhoteldata", admin, allUserHoteldata);
+routes.get("/specificUserData", admin, specificOrderData);
 
 export default routes;

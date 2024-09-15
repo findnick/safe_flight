@@ -344,7 +344,9 @@ export const ShowFlights = ({ resBox, uniqueName, showPrice = true }) => {
                   <span className="font-medium text-xs text-100">
                     starting from
                   </span>
-                  {convert(resBox.total_amount).toFixed(2)}
+                  {convert(resBox.markup_amount, resBox.base_currency).toFixed(
+                    2
+                  )}
                   <span className="font-regular text-base text-black">
                     {/* {resBox.base_currency} */}
                     {currency}
@@ -491,6 +493,7 @@ const ShowHotels = ({ results, resBox, uniqueName }) => {
   const [createQuote, quoteRating] = useAPI(APIS.hotelQuote);
   const [rates, setRates] = useState([]);
   const [paymentIntent, intentLoading] = useAPI(APIS.hotelPayment);
+  const [currency, _, convert] = useContext(CurrencyContext);
   const net = resBox?.price - resBox?.price * (resBox.discount / 100);
 
   return (
@@ -540,8 +543,11 @@ const ShowHotels = ({ results, resBox, uniqueName }) => {
               <div className="flex flex-col gap-1 flex-shrink">
                 <div className="flex flex-row items-center flex-wrap gap-1 sm:gap-3">
                   <div className="hotel-net-amount primary-500 font-semibold text-xl sm:text-3xl">
-                    <span style={{ marginRight: "1rem" }}>GBP</span>
-                    {resBox?.accommodation?.cheapest_rate_total_amount}
+                    <span style={{ marginRight: "1rem" }}>{currency}</span>
+                    {convert(
+                      resBox?.accommodation?.cheapest_rate_total_amount,
+                      resBox?.accommodation?.cheapest_rate_currency
+                    ).toFixed(2)}
                   </div>
                   {/* <div className="hotel-actual-amount font-normal text-sm sm:text-xl line-through text-100">
                 C${resBox?.price != net ? resBox?.price : null}
@@ -605,6 +611,7 @@ const ShowHotels = ({ results, resBox, uniqueName }) => {
                     {room?.rates.map((rate, rateIndex) => {
                       return (
                         <Button2
+                          key={rateIndex}
                           classes="font-medium text-xs sm:text-base sm:px-4"
                           style={{ background: "var(--primary-500)" }}
                           width="auto"
@@ -662,8 +669,11 @@ const ShowHotels = ({ results, resBox, uniqueName }) => {
                             });
                           }}
                         >
-                          {Math.round(rate.public_amount)}{" "}
-                          {rate.public_currency}
+                          {convert(
+                            rate.public_amount,
+                            rate.public_currency
+                          ).toFixed(2)}{" "}
+                          {currency}
                         </Button2>
                       );
                     })}

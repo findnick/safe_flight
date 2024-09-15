@@ -1,6 +1,12 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 
-export const useCurrency = (initialValue) => {
+export const useCurrency = (initialValue, converter = {
+    CAD: 1.506205,
+    EUR: 1,
+    GBP: 0.84473,
+    USD: 1.109257,
+}) => {
     const [currency, setCurrency] = useState(initialValue ? initialValue : 'GBP');
     const currencies = ['GBP', 'USD', 'EUR', 'CAD']
 
@@ -13,18 +19,14 @@ export const useCurrency = (initialValue) => {
         localStorage.setItem("currency", name);
     }
 
-    const convert = (value) => {
-        const converter = {
-            EUR: 0.840336,
-            USD: 0.775194,
-            CAD: 0.561798,
-            GBP: 1,
-        }
-
-        return (parseFloat(value) / converter[currency]);
+    const convert = (value, from = "EUR") => {
+        let temp = parseFloat(value) / converter[from];
+        return (temp * converter[currency]);
     }
 
     useEffect(() => {
+        // axios.get(`http://data.fixer.io/api/latest?access_key=cd1622b2f3fb8a3a97caa4e17c6847d4&symbols=${currencies.join(",")}`).then((res) => console.log(res));
+
         if (initialValue) {
             localStorage.setItem("currency", initialValue);
             return;

@@ -12,8 +12,8 @@ const getContent = async (req, res) => {
 
 const addContent = async (req, res) => {
     try {
-        const { privacy, cancellation, contactUs, aboutUs, home } = req.body;
-        const data = await Content.updateOne({ privacy, cancellation, contactUs, aboutUs, home });
+        const { privacy, cancellation, contactUs, aboutUs, home, campaign } = req.body;
+        const data = await Content.updateOne({ privacy, cancellation, contactUs, aboutUs, home, campaign });
         return res.status(200).json(data);
     } catch (err) {
         console.error(err);

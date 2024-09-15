@@ -194,6 +194,19 @@ const allUserHoteldata = async (req, res) => {
   }
 };
 
+const specificOrderData = async (req, res) => {
+  const { id } = req.body;
+  try {
+    const data = await Order.findById(id).populate("userId");
+    if (!data) {
+      return res.status(404).json({ message: "Order not found" });
+    }
+    res.status(200).json(data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server error" });
+  }
+};
 
 export {
   register,
@@ -207,4 +220,5 @@ export {
   userFlightdata,
   allUserFlightdata,
   allUserHoteldata,
+  specificOrderData,
 };

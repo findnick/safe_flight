@@ -57,8 +57,10 @@ import {
   EditContact,
   EditAbout,
   EditHome,
+  EditCampaign,
 } from "./Pages/Editor/EditorChanges";
 import AddHotelMarkup from "./Pages/AddHotelMarkup";
+import EditCampaignBackground from "./Pages/EditCampaignBackground";
 
 const footer_pages = [
   {
@@ -194,6 +196,14 @@ const App = () => {
                     <Route path="edit-contact-us" element={<EditContact />} />
                     <Route path="edit-about-us" element={<EditAbout />} />
                     <Route path="edit-home-section" element={<EditHome />} />
+                    <Route
+                      path="edit-campaign-section"
+                      element={<EditCampaign />}
+                    />
+                    <Route
+                      path="edit-campaign-background"
+                      element={<EditCampaignBackground />}
+                    />
                   </Route>
                 )}
               </>

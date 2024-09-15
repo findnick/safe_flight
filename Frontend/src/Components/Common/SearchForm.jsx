@@ -761,8 +761,8 @@ function FlightForm({
                     </Button>
                   </div>
                 </div>
-                <hr />
-                <div className="flex flex-row justify-between items-center gap-10">
+                {/* <hr /> */}
+                {/* <div className="flex flex-row justify-between items-center gap-10">
                   <div className="heading font-medium text-xl">
                     Infant on Seat
                     <br />
@@ -794,9 +794,9 @@ function FlightForm({
                       <Add className="bg-primary-500 text-white border-2 border-solid rounded-full" />
                     </Button>
                   </div>
-                </div>
-                <hr />
-                <div className="flex flex-row justify-between items-center gap-10">
+                </div> */}
+                {/* <hr /> */}
+                {/* <div className="flex flex-row justify-between items-center gap-10">
                   <div className="heading font-medium text-xl">
                     Infant on Lap
                     <br />
@@ -826,7 +826,7 @@ function FlightForm({
                       <Add className="bg-primary-500 text-white border-2 border-solid rounded-full" />
                     </Button>
                   </div>
-                </div>
+                </div> */}
                 {/* {child.length > 0 &&
                     child.map((item, i) => {
                   return (

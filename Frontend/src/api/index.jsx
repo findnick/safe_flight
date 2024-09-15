@@ -139,6 +139,13 @@ const APIS = {
       },
     });
   },
+  fetchImage: (body) => baseModule.get("bgImage/fetchImage"),
+  uploadImage: (body) =>
+    baseModule.post("bgImage/", body, {
+      headers: {
+        "Content-Type": "multipart/form-data", // Ensure correct content type
+      },
+    }),
 };
 
 export default APIS;

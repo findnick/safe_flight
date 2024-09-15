@@ -295,6 +295,10 @@ button.multiCityBtn {
     color: #ffffff;
 }
 
+.campaign-banner * {
+    color: white;
+}
+
 @media (min-width: 768px) {
     .md\:card-30 {
         width: 30%;
