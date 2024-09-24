@@ -8,7 +8,7 @@ const VERCEL_LINK =
 // my forwarded server port link
 const NABEEL_FORWARD_PORT = "https://sxtrqp1x-8080.inc1.devtunnels.ms/api";
 // website domain-host link:
-const HOST_LINK = "http://flightsavior.com:8080/api";
+const HOST_LINK = "https://flightsavior.com:8080/api";
 // awais testing link:
 const AWAIS_FORWARD_PORT = "https://tj6h9ng2-8080.inc1.devtunnels.ms/api";
 // local link:
