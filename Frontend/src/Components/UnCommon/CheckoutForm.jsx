@@ -60,7 +60,7 @@ const CheckoutForm = () => {
         // site first to authorize the payment, then redirected to the `return_url`.
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     } finally {
       navigate("/user/flight-bookings");
     }

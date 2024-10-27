@@ -150,7 +150,7 @@ export default function UserInfo() {
       const res = await updateUser({ body: body, token: token });
       return res.status;
     } catch (err) {
-      console.log(err);
+      console.error(err);
     }
   };
 

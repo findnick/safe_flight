@@ -10,7 +10,8 @@ export default defineConfig({
     },
   })],
   define: {
-    global: {}
+    global: {},
+    'process.env': {}
   },
   optimizeDeps: {
     include: ['@mui/material/Tooltip', '@emotion/styled', '@mui/material/Unstable_Grid2'],

@@ -7,29 +7,6 @@ import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
 import { Box, Grid } from "@mui/material";
 
-const products = [
-  {
-    name: "Professional plan",
-    desc: "Monthly subscription",
-    price: "$15.00",
-  },
-  {
-    name: "Dedicated support",
-    desc: "Included in the Professional plan",
-    price: "Free",
-  },
-  {
-    name: "Hardware",
-    desc: "Devices needed for development",
-    price: "$69.99",
-  },
-  {
-    name: "Landing page template",
-    desc: "License",
-    price: "$49.99",
-  },
-];
-
 function Info({ totalPrice, data }) {
   React.useEffect(() => {
     console.log(data);
@@ -50,18 +27,6 @@ function Info({ totalPrice, data }) {
         <span>{totalPrice}</span>
       </Typography>
       <List disablePadding>
-        {/* {products.map((product) => (
-                    <ListItem key={product.name} sx={{ py: 1, px: 0 }}>
-                        <ListItemText
-                            sx={{ mr: 2 }}
-                            primary={product.name}
-                            secondary={product.desc}
-                        />
-                        <Typography variant="body1" fontWeight="medium">
-                            {product.price}
-                        </Typography>
-                    </ListItem>
-                ))} */}
         <ListItem sx={{ py: 1, px: 0 }}>
           <ListItemText
             sx={{ mr: 2 }}
@@ -153,18 +118,6 @@ function Info({ totalPrice, data }) {
             <span>{data?.accommodation?.location?.address?.country_code}</span>
           </Typography>
         </ListItem>
-        {/* <ListItem sx={{ marginTop: '-1.3rem', px: 0, py: 1 }}>
-                    <ListItemText
-                        // primary={'Date'}
-                        secondary={'Region'}
-                    />
-                    <Typography variant="body1" fontWeight="medium" >
-                        <span>
-                            {data?.accommodation?.location?.address?.region || 'Null'}
-                        </span>
-                    </Typography>
-
-                </ListItem> */}
       </List>
     </React.Fragment>
   );

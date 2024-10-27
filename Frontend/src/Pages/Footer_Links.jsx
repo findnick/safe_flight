@@ -13,13 +13,11 @@ const Content = ({ type = "", setLoading }) => {
   useEffect(() => {
     getContent().then((res) => {
       const data = res.data[0];
-      // console.log(data[type]);
       setContent(`${data[type]}`);
     });
   }, []);
 
   useEffect(() => setLoading(contentLoading), [contentLoading]);
-  useEffect(() => console.log(content), [content]);
 
   return (
     !contentLoading && (
@@ -167,9 +165,8 @@ function Airlines() {
     fetch("/airlines.json")
       .then((response) => response.json())
       .then((res) => setAirlines(res.data))
-      .catch((err) => console.log(err));
+      .catch((err) => console.error(err));
   }, []);
-  useEffect(() => console.log(airlines), [airlines]);
   return (
     <div className="flex flex-col my-10 gap-5">
       <div className="mx-auto font-bold text-5xl capitalize">

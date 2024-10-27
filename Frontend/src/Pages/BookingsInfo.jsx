@@ -41,13 +41,9 @@ export default function BookingsInfo() {
     getUser(token)
       .then((res) => {
         setUserData(res?.data);
-        console.log(res?.data);
       })
-      .catch((res) => console.log(res));
+      .catch((res) => console.error(res));
   }, []);
-
-  useEffect(() => console.log(flightData), [flightData]);
-  useEffect(() => console.log(hotelData), [hotelData]);
 
   return (
     <>
@@ -87,7 +83,6 @@ export default function BookingsInfo() {
             const data = item?.orderData;
             const departure = moment(data.departureTime).format("Do MMM, YY");
             const arrival = moment(data.arrivalTime).format("Do MMM, YY");
-            // console.log(item);
             return (
               <div
                 key={i}

@@ -9,13 +9,11 @@ const Content = ({ type = "", setLoading }) => {
   useEffect(() => {
     getContent().then((res) => {
       const data = res.data[0];
-      // console.log(data[type]);
       setContent(`${data[type]}`);
     });
   }, []);
 
   useEffect(() => setLoading(contentLoading), [contentLoading]);
-  useEffect(() => console.log(content), [content]);
 
   return (
     !contentLoading && (

@@ -5,7 +5,6 @@ export const userSession = (data) => {
     useEffect(() => {
         if (data) {
             setUser({ data: data });
-            console.log(user);
         }
         if (localStorage.getItem("userSession")) {
             setUser(JSON.parse(localStorage.getItem("userSession")));

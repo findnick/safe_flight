@@ -24,7 +24,7 @@ export default function Accounts() {
   useEffect(() => {
     getUser(token)
       .then((res) => setUserData(res?.data) || redirect(res))
-      .catch((res) => console.log(res));
+      .catch((res) => console.error(res));
   }, []);
 
   return (

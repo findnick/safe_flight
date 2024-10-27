@@ -19,7 +19,7 @@ export default function AdminSettings() {
   useEffect(() => {
     getUser(token)
       .then((res) => res?.data || redirect(res))
-      .catch((res) => console.log(res));
+      .catch((res) => console.error(res));
   }, []);
 
   const NavLinks = [

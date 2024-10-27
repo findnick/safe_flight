@@ -53,7 +53,6 @@ const CustomFilterTimeComponent = ({
   handleDepart,
   terminals,
 }) => {
-  // console.log(terminals[0]);
   return (
     <>
       <Box>
@@ -233,7 +232,6 @@ const CustomFilterAirLineComponent = ({
   const airlineNames = Array.from(
     new Set(offers.map((item) => item.owner.name))
   );
-  // console.log(airlineNames);
   return (
     <>
       <Box>
@@ -323,12 +321,7 @@ const SearchFlight = () => {
 
   const getFlights = async (flightData) => {
     try {
-      // console.clear();
-      // console.log(formData);
-      // console.log(flightData);
-
       const res = await getOffers(flightData);
-      console.log(res);
       if (res?.response?.status === 400) {
         let errors = res.response.data.errors;
         Swal.fire({
@@ -340,7 +333,6 @@ const SearchFlight = () => {
         });
       }
       if (res?.data?.offers.length > 0) {
-        console.log(res.data.offers);
         setOffers(res.data.offers);
         const temp_offer = res.data.offers[0].slices;
 
@@ -449,11 +441,8 @@ const SearchFlight = () => {
   };
 
   useEffect(() => {
-    console.log("Location changed,");
     getFlights(JSON.parse(flights));
   }, [location]);
-
-  useEffect(() => console.log(displayOffers), [displayOffers]);
 
   useEffect(() => {
     if (offers.length > 0)
@@ -610,13 +599,12 @@ const SearchHotel = () => {
       if (res.status != 200) console.error(res);
       return res?.data;
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
   useEffect(() => {
     fetchHotels().then((res) => sethotelData(res?.data));
-    console.log(formData);
   }, [location]);
 
   const checkBox = [

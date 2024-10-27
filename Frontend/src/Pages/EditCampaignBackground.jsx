@@ -77,7 +77,6 @@ export default function EditCampaignBackground() {
             const form = new FormData();
             form.append("image", fileList);
             const res = await imageUpload({ image: fileList[0].originFileObj });
-            console.log(res);
             if (res?.status == 200) {
               setImgUrl(imgUrl);
             }

@@ -55,7 +55,6 @@ export default function AdminUsers() {
       if (del.isConfirmed) {
         deleteUserData({ id: id, token: token }).then(
           (res) => {
-            console.log(res);
             if (res?.name == "AxiosError")
               return Swal.fire("Error", res.message, "error");
             if (res?.data.deletedCount < 1)
@@ -73,7 +72,6 @@ export default function AdminUsers() {
             });
           },
           (res) => {
-            console.log(res);
             Swal.fire(
               "Account Deletion Failed",
               "Account cannot be deleted at this moment.",
@@ -88,10 +86,6 @@ export default function AdminUsers() {
   useEffect(() => {
     setUserData();
   }, []);
-
-  useEffect(() => {
-    console.log(users);
-  }, [users]);
 
   return (
     <>

@@ -6,6 +6,7 @@ import FormLabel from "@mui/material/FormLabel";
 import Grid from "@mui/material/Grid";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import { styled } from "@mui/system";
+import moment from "moment";
 
 const FormGrid = styled(Grid)(() => ({
   display: "flex",
@@ -28,7 +29,15 @@ export default function AddressForm({
   let tempGuest = guestList.map(() => {
     return { given_name: "", family_name: "", born_on: "" };
   });
-  // React.useEffect(() => console.log(quoteObject), []);
+
+  const [birthErrors, setBirthErrors] = React.useState([]);
+  const handleBirthDates = (value, index) => {
+    const birth = moment(value);
+    const age = Math.abs(birth.diff(moment(), "years"));
+    const dobs = [...birthErrors];
+    dobs[index] = age < 18 && true;
+    setBirthErrors(dobs);
+  };
 
   return (
     <>
@@ -43,9 +52,9 @@ export default function AddressForm({
             name="email"
             type="email"
             placeholder=""
-            autoComplete="shipping address-line2"
+            autoComplete="shipping email"
             required
-            // value={quoteObject.email}
+            defaultValue={quoteObject.email}
             onChange={(e) => {
               quoteObject.email = e.target.value;
               setObject(quoteObject);
@@ -53,15 +62,15 @@ export default function AddressForm({
           />
         </FormGrid>
         <FormGrid item xs={12} md={6}>
-          <FormLabel htmlFor="email">Phone *</FormLabel>
+          <FormLabel htmlFor="phone">Phone *</FormLabel>
           <OutlinedInput
             id="phone"
             name="phone"
             type="text"
             placeholder=""
-            autoComplete="shipping address-line2"
+            autoComplete="shipping phone"
             required
-            // value={quoteObject.phone_number}
+            defaultValue={quoteObject.phone_number}
             onChange={(e) => {
               quoteObject.phone_number = e.target.value;
               setObject(quoteObject);
@@ -81,9 +90,9 @@ export default function AddressForm({
             name="stay_special_requests"
             type="text"
             placeholder="2:00 PM early check-in required"
-            autoComplete="shipping address-line2"
+            autoComplete="shipping stay-special-request"
             required
-            // value={quoteObject.stay_special_requests}
+            defaultValue={quoteObject.stay_special_requests}
             onChange={(e) => {
               quoteObject.stay_special_requests = e.target.value;
               setObject(quoteObject);
@@ -97,9 +106,9 @@ export default function AddressForm({
             name="accommodation_special_requests"
             type="text"
             placeholder="2:00 PM early check-in required"
-            autoComplete="shipping address-line2"
+            autoComplete="shipping accommodation-special-request"
             required
-            // value={quoteObject.accommodation_special_requests}
+            defaultValue={quoteObject.accommodation_special_requests}
             onChange={(e) => {
               quoteObject.accommodation_special_requests = e.target.value;
               setObject(quoteObject);
@@ -110,7 +119,6 @@ export default function AddressForm({
           <hr />
         </FormGrid>
         {guestList.map((guest, i) => {
-          // console.log(guest);
           return (
             <>
               <FormGrid item xs={12}>
@@ -127,7 +135,7 @@ export default function AddressForm({
                   placeholder="John"
                   autoComplete="first name"
                   required
-                  // value={quoteObject.guests[i].given_name}
+                  defaultValue={quoteObject.guests[i].given_name}
                   onChange={(e) => {
                     quoteObject.guests[i].given_name = e.target.value;
                     setObject(quoteObject);
@@ -146,7 +154,7 @@ export default function AddressForm({
                   placeholder="Snow"
                   autoComplete="last name"
                   required
-                  // value={quoteObject.guests[i].family_name}
+                  defaultValue={quoteObject.guests[i].family_name}
                   onChange={(e) => {
                     quoteObject.guests[i].family_name = e.target.value;
                     setObject(quoteObject);
@@ -158,6 +166,11 @@ export default function AddressForm({
                 <FormLabel htmlFor="state" required>
                   Birth Date
                 </FormLabel>
+                {birthErrors[i] && (
+                  <span className="text-sm font-normal text-red-600 mb-1">
+                    * Guest should be above 18 years of age.
+                  </span>
+                )}
                 <OutlinedInput
                   id="state"
                   name="state"
@@ -165,8 +178,9 @@ export default function AddressForm({
                   placeholder="NY"
                   autoComplete="State"
                   required
-                  // value={quoteObject.guests[i].born_on}
+                  defaultValue={quoteObject.guests[i].born_on}
                   onChange={(e) => {
+                    handleBirthDates(e.target.value, i);
                     quoteObject.guests[i].born_on = e.target.value;
                     setObject(quoteObject);
                   }}
@@ -220,7 +234,7 @@ export default function AddressForm({
             name="city"
             type="city"
             placeholder="New York"
-            autoComplete="City"
+            autoComplete="shipping city"
             required
             onChange={(e) => {
               setCity(e.target.value);
@@ -236,7 +250,7 @@ export default function AddressForm({
             name="state"
             type="state"
             placeholder="NY"
-            autoComplete="State"
+            autoComplete="shipping state"
             required
             onChange={(e) => {
               setState(e.target.value);

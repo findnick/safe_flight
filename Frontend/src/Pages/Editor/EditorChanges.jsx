@@ -32,14 +32,10 @@ const Content = ({ type = "" }) => {
 
   useEffect(() => {
     getContent().then((res) => {
-      console.log(res);
       const data = res.data[0];
-      // console.log(data[type]);
       setContent(`${data[type]}`);
     });
   }, []);
-
-  useEffect(() => console.log(content), [content]);
 
   return (
     !contentLoading && <RichTextEditor userContent={content} type={type} />

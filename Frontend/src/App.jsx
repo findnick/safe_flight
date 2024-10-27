@@ -1,27 +1,16 @@
-import { useEffect, createContext, useContext } from "react";
-import {
-  BrowserRouter,
-  createBrowserRouter,
-  Route,
-  RouterProvider,
-  Routes,
-  useLocation,
-} from "react-router-dom";
+import { useEffect, useContext } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import CarRental from "./Pages/CarRental";
 import Flight from "./Pages/Flight";
 import Hotel from "./Pages/Hotel";
-import Landing from "./Pages/Landing";
 import Accounts from "./Pages/Accounts";
-import Navbar from "./Components/Common/Navbar";
-import Footer from "./Components/Common/Footer";
 import {
   Search,
   SearchFlight,
   SearchHotel,
   SearchCarRental,
 } from "./Pages/Search";
-import Dashboard from "./Pages/Dashboard";
 import Login from "./Pages/Login";
 import Checkout from "./Pages/Checkout";
 import {
@@ -37,17 +26,13 @@ import {
   AboutUs,
   Airlines,
 } from "./Pages/Footer_Links";
-import PassengerInformation from "./Pages/PassengerInformation";
 import SignUp from "./Pages/Signup";
-import IndexRoutes from "./routes/IndexRoutes";
 import Layout from "./layout/Layout";
 import { UserContext } from "./context/UserContext";
 import UserInfo from "./Pages/UserInfo";
 import BookingsInfo from "./Pages/BookingsInfo";
 import AdminUsers from "./Pages/AdminUsers";
 import AdminBookings from "./Pages/AdminBookings";
-import { HotelProvider } from "./context/HoteContext";
-import Checkout_temp from "./Pages/checkout_temp/Checkout_temp";
 import CheckoutRender from "./Pages/CheckoutRender/CheckoutRender";
 import AdminSettings from "./Pages/AdminSettings";
 import AddMarkup from "./Pages/AddMarkup";
@@ -61,66 +46,116 @@ import {
 } from "./Pages/Editor/EditorChanges";
 import AddHotelMarkup from "./Pages/AddHotelMarkup";
 import EditCampaignBackground from "./Pages/EditCampaignBackground";
-
-const footer_pages = [
-  {
-    path: "/terms-of-service",
-    element: <ToS />,
-  },
-  {
-    path: "/privacy-policy",
-    element: <Privacy />,
-  },
-  {
-    path: "/security-policy",
-    element: <Security />,
-  },
-  {
-    path: "/help-center",
-    element: <Help />,
-  },
-  {
-    path: "/safety-information",
-    element: <Safety />,
-  },
-  {
-    path: "/cancellation",
-    element: <Cancellation />,
-  },
-  {
-    path: "/report-complaint",
-    element: <Complaint />,
-  },
-  {
-    path: "/contact-us",
-    element: <ContactUs />,
-  },
-  {
-    path: "/about-us",
-    element: <AboutUs />,
-  },
-  {
-    path: "/faqs",
-    element: <FAQ />,
-  },
-  {
-    path: "/airline-information",
-    element: <Airlines />,
-  },
-];
-
-// const router = createBrowserRouter(routes);
+import { APIS, useAPI } from "./api/config";
+import moment from "moment";
+import { currencies } from "./hooks/useCurrency";
 
 const App = () => {
-  const [user, , getUserData] = useContext(UserContext);
+  const [user, setUser, getUserData] = useContext(UserContext);
+  const [getUser, userLoading] = useAPI(APIS.getUserData);
+
+  const { VITE_FIXER_KEY } = import.meta.env;
+
+  const footer_pages = [
+    {
+      path: "/terms-of-service",
+      element: <ToS />,
+    },
+    {
+      path: "/privacy-policy",
+      element: <Privacy />,
+    },
+    {
+      path: "/security-policy",
+      element: <Security />,
+    },
+    {
+      path: "/help-center",
+      element: <Help />,
+    },
+    {
+      path: "/safety-information",
+      element: <Safety />,
+    },
+    {
+      path: "/cancellation",
+      element: <Cancellation />,
+    },
+    {
+      path: "/report-complaint",
+      element: <Complaint />,
+    },
+    {
+      path: "/contact-us",
+      element: <ContactUs />,
+    },
+    {
+      path: "/about-us",
+      element: <AboutUs />,
+    },
+    {
+      path: "/faqs",
+      element: <FAQ />,
+    },
+    {
+      path: "/airline-information",
+      element: <Airlines />,
+    },
+  ];
+
+  const redirect = (res) => {
+    Swal.fire(res.response.data.msg, "", "error");
+    setUser();
+  };
+
+  useEffect(() => {
+    if (user?.data) {
+      const { token } = user.data;
+      getUser(token)
+        .then((res) => res?.data || redirect(res))
+        .catch((res) => console.error(res));
+    }
+
+    let latestCurrencyRates = true;
+    if (localStorage.getItem("Currency Rates")) {
+      const { timestamp } = JSON.parse(localStorage.getItem("Currency Rates"));
+      const dateDiff = Math.abs(
+        moment(timestamp).diff(moment().unix(), "hours")
+      );
+      if (dateDiff > 24) {
+        latestCurrencyRates = false;
+      } else {
+        latestCurrencyRates = true;
+      }
+    } else {
+      latestCurrencyRates = false;
+    }
+
+    if (!latestCurrencyRates) {
+      axios
+        .get(
+          `http://data.fixer.io/api/latest?access_key=${VITE_FIXER_KEY}&symbols=${currencies.join(
+            ","
+          )}`
+        )
+        .then((res) => {
+          if (res.status === 200) {
+            const today = moment().unix();
+            var currencyObject = { ...res.data };
+            currencyObject.timestamp = today;
+            localStorage.setItem(
+              "Currency Rates",
+              JSON.stringify(currencyObject)
+            );
+          }
+        });
+    }
+  });
+
   return (
     <>
       <BrowserRouter>
         <Routes>
-          {/* <Route
-            path="checkout_/"
-            element={<CheckoutRender />}
-          /> */}
           <Route path="/" element={<Layout />}>
             <Route index element={<Flight />} />
             <Route path="checkout_/" element={<CheckoutRender />} />
@@ -141,7 +176,6 @@ const App = () => {
                 element={<Search component={<SearchCarRental />} />}
               />
             </Route>
-
             <Route
               path="checkout/:client_token/:pit/:offer_id"
               element={<Checkout />}
@@ -171,11 +205,7 @@ const App = () => {
                   />
                 </Route>
                 {localStorage.getItem("admin") && (
-                  <Route
-                    path="admin-settings/"
-                    element={<AdminSettings />}
-                    key="adminPath"
-                  >
+                  <Route path="admin-settings/" element={<AdminSettings />}>
                     <Route
                       index
                       element={<p>You can configure your settings here</p>}

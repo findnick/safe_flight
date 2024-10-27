@@ -42,27 +42,7 @@ function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
         position: "fixed",
         bottom: 24,
       }}
-    >
-      {/* <ToggleButtonGroup
-                color="primary"
-                exclusive
-                value={showCustomTheme}
-                onChange={toggleCustomTheme}
-                aria-label="Platform"
-                sx={{
-                    backgroundColor: 'background.default',
-                    '& .Mui-selected': {
-                        pointerEvents: 'none',
-                    },
-                }}
-            >
-                <ToggleButton value>
-                    <AutoAwesomeRoundedIcon sx={{ fontSize: '20px', mr: 1 }} />
-                    Custom theme
-                </ToggleButton>
-                <ToggleButton value={false}>Material Design 2</ToggleButton>
-            </ToggleButtonGroup> */}
-    </Box>
+    ></Box>
   );
 }
 
@@ -158,6 +138,8 @@ export default function Checkout_temp() {
             setCvv_={setCvv}
             setName_={setName}
             setExpiration_={setExpiration}
+            paymentAmount={data.cheapest_rate_total_amount}
+            paymentCurrency={data.cheapest_rate_currency}
           />
         );
       case 2:
@@ -199,9 +181,7 @@ export default function Checkout_temp() {
       let tempData = quoteObject;
       tempData.someData = quote;
       console.log(tempData);
-      const { token } = user.data;
-      console.log(token);
-      const header = user && { "x-auth-token": token };
+      const header = user && { "x-auth-token": user?.data.token };
       const res = await createBooking({ body: tempData, headers: header });
       console.log(res);
     } catch (err) {
@@ -213,21 +193,17 @@ export default function Checkout_temp() {
     if (activeStep == steps.length) {
       Swal.fire({
         title: " Thankyou!",
-        text: "Your flight has been booked",
+        text: "Your hotel has been booked",
         icon: "success",
         showConfirmButton: false,
         timer: 4000,
       }).then(() => navigate(`/`));
     }
-    console.log(quoteObject);
   }, [activeStep]);
 
-  // React.useEffect(() => console.log(quoteObject), [quoteObject]);
-
   React.useEffect(() => {
-    // console.log(user.data.token);
-    // console.log(data);
-    // getRates({ search_id: data?.id }).then((res) => console.log(res));
+    console.log(data.cheapest_rate_total_amount);
+    console.log(data.cheapest_rate_currency);
   }, []);
 
   const toggleColorMode = () => {

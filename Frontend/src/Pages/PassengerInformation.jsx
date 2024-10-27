@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { APIS, useAPI } from "../api/config";
 import Swal from "sweetalert2";
 import moment from "moment";
+import dayjs from "dayjs";
 
 const PassengerForm = ({ title, id }) => {
   const [countries, setCountries] = useState([]);
@@ -37,6 +38,18 @@ const PassengerForm = ({ title, id }) => {
       setCountries(arr);
     });
   }, []);
+
+  // Helper function to validate age
+  const validateAge = (_, value) => {
+    if (!value) {
+      return Promise.reject(new Error("Date of Birth is required"));
+    }
+    const age = dayjs().diff(dayjs(value), "years"); // Using dayjs to calculate the age difference
+    if (age < 18) {
+      return Promise.reject(new Error("You must be at least 18 years old"));
+    }
+    return Promise.resolve();
+  };
 
   return (
     // <div className="flex">
@@ -129,7 +142,10 @@ const PassengerForm = ({ title, id }) => {
             <Form.Item
               name={`${id}-dob`}
               noStyle
-              rules={[{ required: true, message: "Date of Birth is Required" }]}
+              rules={[
+                { required: true, message: "Date of Birth is Required" },
+                { validator: validateAge }, // Custom age validation rule
+              ]}
             >
               <DatePicker className="w-full" />
             </Form.Item>
@@ -164,7 +180,7 @@ const PassengerForm = ({ title, id }) => {
           </Form.Item>
         </div>
       </Form.Item>
-      <Form.Item name={`${id}-line-3`} style={{ minHeight: "4rem" }}>
+      {/* <Form.Item name={`${id}-line-3`} style={{ minHeight: "4rem" }}>
         <div className="flex flex-row gap-3 flex-wrap">
           <Form.Item
             label="Country of Issue"
@@ -186,7 +202,7 @@ const PassengerForm = ({ title, id }) => {
             </Form.Item>
           </Form.Item>
         </div>
-      </Form.Item>
+      </Form.Item> */}
       {/* <Form.Item name={`${id}-line-4`} style={{ minHeight: "4rem" }}>
         <div className="flex flex-row gap-3 flex-wrap">
           <Form.Item
@@ -256,15 +272,11 @@ export default function PassengerInformation({
 
   useEffect(() => {
     offer({ offerId: offer_id }).then((res) => {
-      // console.log(res);
-      // paymentObj.amount = (parseFloat(res.data.total_amount) + 32).toFixed(2);
-      // setPaymentObj(paymentObj);
       const arr = res.data.passengers
         .filter((item) => item.type === "adult")
         .map((item) => {
           return { id: item.id };
         });
-      // console.log(arr);
       setPassengers(arr);
       const childArr = res.data.passengers
         .filter((item) => item.type !== "adult")
@@ -275,10 +287,7 @@ export default function PassengerInformation({
     });
   }, []);
 
-  // useEffect(() => console.log(paymentObj), [paymentObj]);
-
   const submitDetails = async (values) => {
-    // console.log(values);
     const passengerDetails = passengers.map((passenger, i) => {
       const id = passenger.id;
       const date = values[`${id}-dob`];
@@ -296,7 +305,6 @@ export default function PassengerInformation({
         id: id,
       };
     });
-    console.log(passengerDetails);
     setPassengers(passengerDetails);
     const orderDetails = {
       payment: paymentObj,
@@ -304,7 +312,6 @@ export default function PassengerInformation({
       offerId: offer_id,
       metadata: {},
     };
-    // console.log(orderDetails);
     onSubmit(orderDetails);
     document.getElementById("passengerSubmitBtn").disabled = true;
     document.getElementById("passengerSubmitBtn").style.background = "grey";

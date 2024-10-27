@@ -19,51 +19,6 @@ import { FAQ } from "./Footer_Links";
 import Campaign from "../Components/Common/Campaign";
 
 const Flight = () => {
-  const cards = [
-    {
-      heading: "Start Your Journey",
-      text: "Fly to your dream destination with ease and comfort.",
-      img: card_1,
-    },
-    {
-      heading: "Discover Serenity",
-      text: "Explore the tranquil beauty of nature’s finest lakes.",
-      img: card_2,
-    },
-    {
-      heading: "Adventure Awaits",
-      text: "Embark on a journey to the world's most breathtaking peaks.",
-      img: card_3,
-    },
-    {
-      heading: "Road to Freedom",
-      text: "Hit the open road and discover the wonders of the wild west.",
-      img: card_4,
-    },
-  ];
-  const questions = [
-    {
-      question: "How do I book a flight?",
-      answer:
-        "To book a flight, simply enter your departure and destination cities, select your travel dates, and choose from the available flights. Follow the prompts to complete your booking and payment.",
-    },
-    {
-      question: "Can I cancel or change my booking?",
-      answer:
-        "Yes, you can cancel or change your booking. Please visit the Manage Booking section of our website, enter your booking details, and follow the instructions. Note that cancellation and change fees may apply depending on the airline's policy.",
-    },
-    {
-      question: "What payment methods are accepted?",
-      answer:
-        "We accept all major credit and debit cards, including Visa, MasterCard, and American Express. You can also use PayPal for secure and convenient payment.",
-    },
-    {
-      question: "How do I know if my booking is confirmed?",
-      answer:
-        "Once your booking is complete, you will receive a confirmation email with your booking reference number. You can also check the status of your booking in the Manage Booking section of our website.",
-    },
-  ];
-
   const main = [
     {
       img: "https://images.unsplash.com/photo-1559511260-66a654ae982a?q=80&w=1518&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

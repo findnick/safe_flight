@@ -248,14 +248,9 @@ export const ShowFlights = ({ resBox, uniqueName, showPrice = true }) => {
   const [paymentIntent, intentLoading] = useAPI(APIS.createPaymentIntent);
   const [currency, _, convert] = useContext(CurrencyContext);
   const navigate = useNavigate();
-  const location = useLocation();
-  // const formData = JSON.parse(location.state.formData);
   const flightSegments = resBox.slices[0].segments;
   const depart = flightSegments[0].departing_at.split("T");
   const arrival = flightSegments.slice(-1)[0].arriving_at.split("T");
-  var inititalTime = moment(resBox.slices[0].segments[0].arriving_at);
-  var finalTime = moment(resBox.slices.at(-1).segments.at(-1).departing_at);
-  // console.log(finalTime.diff(inititalTime, "days"));
   const flightCodes = flightSegments
     .filter(
       (item) =>
@@ -458,7 +453,6 @@ export const ShowFlights = ({ resBox, uniqueName, showPrice = true }) => {
                       offerId: resBox.id,
                       currency: "GBP",
                     });
-                    console.log(res);
                     const pit = res.data.data.id;
                     const client_token = res.data.data.client_token;
                     navigate(`/checkout/${client_token}/${pit}/${resBox.id}`, {
@@ -581,14 +575,15 @@ const ShowHotels = ({ results, resBox, uniqueName }) => {
                 width="auto"
                 onClick={() => {
                   getRates({ search_id: resBox?.id }).then((res) => {
-                    // console.log(res);
-                    // console.log(res?.data?.data?.accommodation?.rooms);
                     if (res?.data?.data?.accommodation?.rooms) {
-                      console.log(true);
                       let temp = res?.data?.data?.accommodation?.rooms;
-                      console.log(temp);
                       setRates(temp);
-                    } else console.log(false);
+                    } else
+                      Swal.fire({
+                        titleText: "No Rooms",
+                        text: "No rooms available at this moment",
+                        icon: "warning",
+                      });
                   });
                 }}
               >
@@ -617,7 +612,6 @@ const ShowHotels = ({ results, resBox, uniqueName }) => {
                           width="auto"
                           onClick={() => {
                             createQuote({ rate_id: rate?.id }).then((res) => {
-                              console.log(res);
                               if (res?.data?.data?.id) {
                                 const quote = res?.data?.data;
                                 Swal.fire({
@@ -635,7 +629,6 @@ const ShowHotels = ({ results, resBox, uniqueName }) => {
                                       quote: quote,
                                     })
                                       .then((res) => {
-                                        console.log(res);
                                         const pit = res.data.data.id;
                                         const client_token =
                                           res.data.data.client_token;
@@ -847,8 +840,6 @@ const ResultNumbers = ({
     if (items) {
       sortedResults(items);
     }
-    // console.log("The items is: ", results);
-    console.log(results);
   }, [items]);
   return (
     <>

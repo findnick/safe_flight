@@ -102,6 +102,7 @@ export default function Checkout() {
   const [orderDetails, setOrderDetails] = useState([]);
   const [arrivingAddress, setArrivingAddress] = useState("");
   const [departingAddress, setDepartingAddress] = useState("");
+  const [isPassengerFormComplete, setPassengerFormComplete] = useState(false);
   const navigate = useNavigate();
   const [user, setUser, getUser] = useContext(UserContext);
   // const [total, setTotal] = useState(0.0);
@@ -110,7 +111,6 @@ export default function Checkout() {
       getOffer({ offerId: offerId })
         .then(
           (res) => {
-            // console.log(res.data);
             if (res?.data) resolve(res.data);
             else reject("Offer rejected");
           },
@@ -135,7 +135,6 @@ export default function Checkout() {
   };
 
   const confirmPayment = async () => {
-    console.log(orderDetails);
     if (orderDetails?.payment?.amount == "") {
       orderDetails.payment.amount = amountPayable;
       setOrderDetails(orderDetails);
@@ -146,21 +145,29 @@ export default function Checkout() {
         offer: offer,
         payment_intent: pit,
       });
-      // console.log(pay);
-      // console.log(metadata);
       const header = user && { "x-auth-token": user.data.token };
       const res = await createOrder({ body: orderDetails, headers: header });
-      console.log(res);
+      if (res.status === 200) {
+        Swal.fire({
+          title: " Thankyou!",
+          text: "Your flight has been booked",
+          icon: "success",
+          showConfirmButton: false,
+          timer: 4000,
+        }).then(() => navigate(`/`));
+      } else {
+        console.error(res);
+        let error = res.response?.data?.errors[0];
+        Swal.fire({
+          title: error.title,
+          text: error.message,
+          icon: "error",
+          showConfirmButton: false,
+        });
+      }
     } catch (err) {
       console.error(err);
     }
-    Swal.fire({
-      title: " Thankyou!",
-      text: "Your flight has been booked",
-      icon: "success",
-      showConfirmButton: false,
-      timer: 4000,
-    }).then(() => navigate(`/`));
   };
 
   useEffect(() => {
@@ -175,11 +182,7 @@ export default function Checkout() {
       .catch((err) => console.error(err));
   }, []);
 
-  useEffect(() => console.log(orderDetails), [orderDetails]);
-
   useEffect(() => {
-    console.log(paymentObj);
-    console.log(offer);
     if (!isEmpty(offer)) {
       setBase(parseFloat(offer.base_amount));
       setTax(parseFloat(offer.tax_amount));
@@ -250,6 +253,7 @@ export default function Checkout() {
                     amount={amountPayable}
                     onSubmit={(orderDetails) => {
                       setOrderDetails(orderDetails);
+                      setPassengerFormComplete(true); // Mark form as complete
                     }}
                   />
                   <div>
@@ -480,11 +484,15 @@ export default function Checkout() {
                         className="mt-4 rounded-2xl border p-4 flex flex-col"
                         style={{ background: "var(--green-blue)" }}
                       >
-                        <div className="text-sm font-semibold flex flex-row items-center gap-1">
+                        <div className="text-sm font-semibold flex flex-row items-center gap-1 mb-3">
                           <span>
                             <IoMailOutline />
                           </span>
                           Where should we send your ticket?
+                          <span className="font-medium text-xs">
+                            (The email you provided above will be given
+                            priority)
+                          </span>
                         </div>
                         <div className="flex flex-row gap-3 flex-wrap">
                           <Form.Item
@@ -497,7 +505,7 @@ export default function Checkout() {
                             </Form.Item>
                           </Form.Item>
                           <Form.Item
-                            label="Email Address"
+                            label="Confirm Email Address"
                             layout="vertical"
                             className="flex-grow-[2]"
                           >
@@ -513,16 +521,23 @@ export default function Checkout() {
                         </div>
                       </div>
                     </Form>
-                    {/* </div>
-                  <div className="flex flex-col md:mx-auto w-full md:max-w-full border p-4 rounded-2xl"> */}
-                    <DuffelPayments
-                      paymentIntentClientToken={client_token}
-                      onSuccessfulPayment={confirmPayment}
-                      onFailedPayment={console.log}
-                    />
+                    <div className="mt-7 flex flex-col gap-5">
+                      <h4>Payment Information</h4>
+                      <hr />
+                      {isPassengerFormComplete ? (
+                        <DuffelPayments
+                          paymentIntentClientToken={client_token}
+                          onSuccessfulPayment={confirmPayment}
+                          onFailedPayment={console.error}
+                        />
+                      ) : (
+                        <div className="font-light">
+                          Fill out the Passenger Information above, to proceed
+                          to payment.
+                        </div>
+                      )}
+                    </div>
                   </div>
-                  {/* </AccordionDetails>
-                  </Accordion> */}
                 </div>
                 <div className="flex flex-row flex-wrap md:flex-col md:flex-nowrap md:w-3/12 gap-5 md:gap-8">
                   <SideBox>

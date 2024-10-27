@@ -231,15 +231,10 @@ export default ({ userContent = "", type = "" }) => {
   const [html, setHtml] = useState(userContent);
   const [addContent, saveLoading] = useAPI(APIS.postContent);
 
-  useEffect(() => {
-    console.log(html);
-  }, [html]);
-
   const saveContent = async () => {
     let body = {};
     body[type] = html.toString();
     const res = await addContent({ body: body, token: token });
-    console.log(res);
   };
 
   return (

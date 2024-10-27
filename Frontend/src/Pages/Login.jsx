@@ -65,7 +65,6 @@ export default function Login() {
       password: data.get("password"),
     })
       .then((res) => {
-        console.log(res);
         if (res?.code) return Swal.fire("Error", res.message, "error");
         if (res.data.token) {
           if (data.get("email") == "admin@gmail.com")
@@ -83,7 +82,7 @@ export default function Login() {
           });
         }
       })
-      .catch((err) => console.log(err))
+      .catch((err) => console.error(err))
       .finally(() => {
         document.getElementById("signupButton").disabled = false;
         document.getElementById("signupButton").innerText = "LOGIN";

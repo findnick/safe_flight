@@ -761,119 +761,6 @@ function FlightForm({
                     </Button>
                   </div>
                 </div>
-                {/* <hr /> */}
-                {/* <div className="flex flex-row justify-between items-center gap-10">
-                  <div className="heading font-medium text-xl">
-                    Infant on Seat
-                    <br />
-                    <span className="font-medium text-base text-100">
-                      (Under 2)
-                    </span>
-                  </div>
-                  <div className="numbers flex flex-row justify-end items-center">
-                    <Button
-                      disabled={infantSeat.length <= 0}
-                      onClick={() => {
-                        setInfantSeat(
-                          infantSeat.length > 0
-                            ? infantSeat.slice(0, -1)
-                            : infantSeat
-                        );
-                      }}
-                    >
-                      <Remove className="bg-gray-200 text-gray-500 border-2 border-solid rounded-full" />
-                    </Button>
-                    <div className="w-3/12 text-center">
-                      {infantSeat.length}
-                    </div>
-                    <Button
-                      onClick={() => {
-                        setInfantSeat([...infantSeat, { age: 1 }]);
-                      }}
-                    >
-                      <Add className="bg-primary-500 text-white border-2 border-solid rounded-full" />
-                    </Button>
-                  </div>
-                </div> */}
-                {/* <hr /> */}
-                {/* <div className="flex flex-row justify-between items-center gap-10">
-                  <div className="heading font-medium text-xl">
-                    Infant on Lap
-                    <br />
-                    <span className="font-medium text-base text-100">
-                      (Under 2)
-                    </span>
-                  </div>
-                  <div className="numbers flex flex-row justify-end items-center">
-                    <Button
-                      disabled={infantLap.length <= 0}
-                      onClick={() => {
-                        setInfantLap(
-                          infantLap.length > 0
-                            ? infantLap.slice(0, -1)
-                            : infantLap
-                        );
-                      }}
-                    >
-                      <Remove className="bg-gray-200 text-gray-500 border-2 border-solid rounded-full" />
-                    </Button>
-                    <div className="w-3/12 text-center">{infantLap.length}</div>
-                    <Button
-                      onClick={() => {
-                        setInfantLap([...infantLap, { age: 1 }]);
-                      }}
-                    >
-                      <Add className="bg-primary-500 text-white border-2 border-solid rounded-full" />
-                    </Button>
-                  </div>
-                </div> */}
-                {/* {child.length > 0 &&
-                    child.map((item, i) => {
-                  return (
-                    <div
-                      key={i}
-                      className="flex flex-row justify-around items-center"
-                      id={`child-no-${i + 1}`}
-                    >
-                      <div className="heading font-medium text-xl">
-                        Age
-                        <br />
-                        <span className="font-medium text-base text-100">
-                          (Child {i + 1})
-                        </span>
-                      </div>
-                      <div className="numbers flex flex-row gap-5 items-center">
-                        <Button
-                          className="child-rem-btn"
-                          disabled={item.age <= 0}
-                          onClick={() => {
-                            item.age = item.age > 0 ? item.age - 1 : 0;
-                            if (item.age <= 0) {
-                              document
-                                .querySelector(`#child-no-${i + 1} .child-rem-btn`)
-                                .setAttribute("disabled", true);
-                            }
-                            setChild(child);
-                            console.log(child);
-                          }}
-                        >
-                          <Remove className="border-2 border-solid border-black rounded-md" />
-                        </Button>
-                        {item.age}
-                        <Button
-                          className="child-add-btn"
-                          onClick={() => {
-                            item.age += 1;
-                            setChild(child);
-                            console.log(child);
-                          }}
-                        >
-                          <Add className="border-2 border-solid border-black rounded-md" />
-                        </Button>
-                      </div>
-                    </div>
-                  );
-                })} */}
                 <button
                   className="border border-black rounded-full mt-3 py-2 w-28 self-end active:bg-gray-300"
                   onClick={closeDialog}
@@ -1020,7 +907,6 @@ function HotelForm({
   };
 
   const showHotels = () => {
-    console.log(hotelObject);
     navigate("/search/hotels", {
       state: { hotelData: hotelObject, formData: hotelFormData },
     });

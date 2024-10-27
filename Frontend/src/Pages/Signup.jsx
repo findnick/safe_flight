@@ -94,13 +94,10 @@ function SignUp(props) {
     };
     register(user)
       .then((res) => {
-        console.log(res);
         if (res?.data?.token) {
           setUser({ token: res.data.token });
           return navigate("/user");
         } else {
-          console.log(res);
-          // console.log(Object.keys(res));
           Swal.fire({
             title: "",
             text: res.response.data.errors.errors[0].msg,
@@ -111,7 +108,7 @@ function SignUp(props) {
         }
       })
       .catch((valError) => {
-        console.log("The Error is: ", valError);
+        console.error("The Error is: ", valError);
         if (valError?.response) {
           if (valError.response?.data) {
             const res = valError.response.data;
@@ -153,7 +150,6 @@ function SignUp(props) {
       })
       .finally(() => {
         document.getElementById("nameError").style.display = "none";
-        // console.log("The error is: ", response);
         document.getElementById("signupButton").disabled = false;
         document.getElementById("signupButton").innerText = "Sign Up";
       });
