@@ -52,7 +52,7 @@ export const useCurrency = () => {
         if (!latestCurrencyRates) {
             axios
                 .get(
-                    `http://data.fixer.io/api/latest?access_key=${VITE_FIXER_KEY}&symbols=${currencies.join(
+                    `https://data.fixer.io/api/latest?access_key=${VITE_FIXER_KEY}&symbols=${currencies.join(
                         ","
                     )}`
                 )
