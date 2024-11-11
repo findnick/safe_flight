@@ -67,7 +67,10 @@ function FAQ() {
   const questions = [
     {
       question: "Help! I need to change/cancel my reservation!",
-      answer: `FlightSavior compares flight prices of various airline reservation sites and find the lowest price for you. Select the lowest price you want and we will link you to the site so that you can complete your reservation. Since the actual reservation is connected to the airline or travel agent you have selected, FlightSavior is not involved in the reservation and payment, and your reservation information cannot be verified. Therefore, if you have any inquiries regarding reservation changes or cancellations, please contact the customer center of the airline or travel agency where the reservation was made. If you can't remember which reservation site you booked from, please check your payment details. If you look at the payment destination, you can check the reservation destination.`,
+      answer: `KAYAK compares flight prices of various airline reservation sites and find the lowest price for you. Select the lowest price you want and we will link you to the site so that you can complete your reservation.
+Since the actual reservation is connected to the airline or travel agent you have selected, KAYAK is not involved in the reservation and payment, and your reservation information cannot be verified.
+
+Therefore, if you have any inquiries regarding reservation changes or cancellations, please contact the customer center of the airline or travel agency where the reservation was made. If you can't remember which reservation site you booked from, please check your payment details. If you look at the payment destination, you can check the reservation destination.`,
     },
     {
       question:
@@ -75,18 +78,18 @@ function FAQ() {
       answer: `Because we're searching hundreds of other travel sites at once, sometimes there are accuracy issues originating from the information we're receiving from those sites. Either the site isn't updating their inventory with us, has given the wrong path, or another traveler has booked the last available room.`,
     },
     {
-      question: "What is FlightSavior's refund policy?",
-      answer: `Because FlightSavior is a search engine, not a seller, we don't have a refund policy -- that's handled solely by the provider that booked your trip. Not sure what company to talk to? Check your credit card statement and/or go to Bookings to locate your provider's information.`,
+      question: "What is KAYAK's refund policy?",
+      answer: `Because KAYAK is a search engine, not a seller, we don't have a refund policy -- that's handled solely by the provider that booked your trip. Not sure what company to talk to? Check your credit card statement and/or go to Bookings to locate your provider's information.`,
     },
     {
       question: "What's a Hacker Fare?",
-      answer: `Everyone likes saving money, right? We figured out that one of the best ways to get a great deal on certain flights was to book two one- ways instead of a round trip. So, that's what a Hacker Fare does: finds two compatible one-way flights to help you save. Just make sure to first confirm that each leg of your trip is available before booking.`,
+      answer: `Everyone likes saving money, right? We figured out that one of the best ways to get a great deal on certain flights was to book two one-ways instead of a round trip. So, that's what a Hacker Fare does: finds two compatible one-way flights to help you save. Just make sure to first confirm that each leg of your trip is available before booking.`,
     },
     {
       question: "Do prices include Taxes and Fees?",
       answer: `All flight prices on KAYAK include applicable taxes and fees. Any exceptions to this are any optional fees like checked baggage or airlines that charge for seat selection, pet accommodations, etc. These types of add-ons will have to be arranged separately with your airline. Want to know what sort of fees an airline might charge? We got you.
 
-All flight prices on FlightSavior include applicable taxes and fees. Any exceptions to this are any optional fees like checked baggage or airlines that charge for seat selection, pet accommodations, etc. These types of add-ons will have to be arranged separately with your airline. Want to know what sort of fees an airline might charge? We got you. `,
+Train and bus prices on KAYAK include applicable taxes and fees. Some partners may charge an additional service fee, a fee for additional baggage, or a fee for certain payment methods.`,
     },
     {
       question: "Do flight prices include baggage fees?",
@@ -116,7 +119,7 @@ All flight prices on FlightSavior include applicable taxes and fees. Any excepti
     {
       question:
         "I'm looking to land-hop. Can I book a flight that goes to more than one city?",
-      answer: `We've got you covered. When you're on the FlightSavior Flights page, select "Multi-City" above the search bar before you perform your search. This will allow you to search for a flight with multiple legs.`,
+      answer: `We've got you covered. When you're on the KAYAK Flights page, select "Multi-City" above the search bar before you perform your search. This will allow you to search for a flight with multiple legs.`,
     },
     {
       question: 'What are "flexible dates" and why should I care?',
@@ -132,7 +135,6 @@ All flight prices on FlightSavior include applicable taxes and fees. Any excepti
         'Why does it say "Major Airline" instead of a name I recognize?',
       answer: `Mysterious, isn't it? Sometimes, providers will give out special discounted rates on flights with one caveat: because the rates are so low, the airline wants to remain anonymous until you've completed your purchase.`,
     },
-    
   ];
 
   return (
