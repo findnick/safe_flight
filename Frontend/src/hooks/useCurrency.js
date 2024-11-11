@@ -15,7 +15,6 @@ export const useCurrency = () => {
     })
 
     const [currency, setCurrency] = useState(initialValue.current ? initialValue.current : 'GBP');
-
     const setCurrencyState = (name) => {
         if (!currencies.includes(name)) {
             console.error("Invalid value for currency");
@@ -50,6 +49,7 @@ export const useCurrency = () => {
         }
 
         if (!latestCurrencyRates) {
+            console.log(initialValue.current);
             axios
                 .get(
                     `https://data.fixer.io/api/latest?access_key=${VITE_FIXER_KEY}&symbols=${currencies.join(
