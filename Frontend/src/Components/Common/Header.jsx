@@ -14,7 +14,7 @@ const Header = ({ headingStart, headingEnd, para, img, children }) => {
       }}
     >
       <div className="bg-transparent text-white flex mb-10">
-        <div className="inline-nav text-lg font-semibold flex-grow sm:flex-grow-0 sm:mx-auto flex flex-row text-center gap-5 rounded-full">
+        <div className="inline-nav text-lg font-semibold text-center gap-5 rounded-full flex flex-row flex-grow justify-between sm:flex-grow-0 sm:mx-auto">
           <NavLink
             to="/"
             className={({ isActive }) => {
@@ -33,7 +33,7 @@ const Header = ({ headingStart, headingEnd, para, img, children }) => {
           >
             Hotels
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/car-rental"
             className={({ isActive }) => {
               const def = "basis-28 md:w-28 py-4 rounded-full";
@@ -41,7 +41,7 @@ const Header = ({ headingStart, headingEnd, para, img, children }) => {
             }}
           >
             Cars
-          </NavLink>
+          </NavLink> */}
         </div>
       </div>
       <HeaderText>{headingStart}</HeaderText>

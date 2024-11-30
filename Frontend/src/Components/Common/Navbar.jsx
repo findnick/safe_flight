@@ -19,7 +19,8 @@ import { FaAngleDown } from "react-icons/fa";
 
 const Navbar = () => {
   const [user, setUserData, getUserData] = useContext(UserContext);
-  const [currency, setCurrency, convert] = useContext(CurrencyContext);
+  const [currency, setCurrency, convert, allCurrencies] =
+    useContext(CurrencyContext);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -41,11 +42,21 @@ const Navbar = () => {
         onOpenChange={toggleOpen}
         content={
           <div className="flex flex-col text-center py-6 bg-white rounded-lg text-lg font-medium">
-            <div className="text-base font-normal mx-2 raleway">
-              {/* Select Currency */}
-            </div>
-            {/* <hr className="mt-2 mb-5 mx-5" /> */}
-            <a
+            <div className="text-base font-normal mx-2 raleway"></div>
+            {allCurrencies.map((value, i) => {
+              return (
+                <a
+                  onClick={() => {
+                    changeCurrency(value);
+                  }}
+                  key={i}
+                  className="px-7 hover:text-white hover:bg-blue-500 hover:font-bold"
+                >
+                  {value}
+                </a>
+              );
+            })}
+            {/* <a
               onClick={() => {
                 changeCurrency("USD");
               }}
@@ -76,7 +87,7 @@ const Navbar = () => {
               className="px-7 hover:text-white hover:bg-blue-500 hover:font-bold"
             >
               EUR
-            </a>
+            </a> */}
           </div>
         }
       >
@@ -126,23 +137,6 @@ const Navbar = () => {
     },
   ];
 
-  const linkList = [
-    {
-      img: nav_1,
-      title: "flight",
-      url: "flight",
-    },
-    {
-      img: nav_2,
-      title: "hotel",
-      url: "hotel",
-    },
-    {
-      img: nav_3,
-      title: "car-rental",
-      url: "car-rental",
-    },
-  ];
   return (
     <nav className="p-2 md:p-5 flex items-center justify-between break-normal shadow-lg">
       <Link to="/" className="pb-2 px-2 basis-44 flex-shrink-[2]">

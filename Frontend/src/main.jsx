@@ -11,7 +11,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
       <UserProvider>
-        <CurrencyProvider>
+        <CurrencyProvider
+          initCurrency="CAD"
+          currencies={["GBP", "USD", "EUR", "CAD", "AUD", "PKR", "INR"]}
+        >
           <App />
         </CurrencyProvider>
       </UserProvider>

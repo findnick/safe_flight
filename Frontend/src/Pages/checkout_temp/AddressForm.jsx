@@ -81,10 +81,12 @@ export default function AddressForm({
           <hr />
         </FormGrid>
         <FormGrid item xs={12}>
-          <div className="text-lg font-medium">Special Preferences</div>
+          <div className="text-lg font-medium">
+            Special Preferences (Optional)
+          </div>
         </FormGrid>
         <FormGrid item xs={12}>
-          <FormLabel htmlFor="email">Stays Special Request *</FormLabel>
+          <FormLabel htmlFor="email">Stays Special Request</FormLabel>
           <OutlinedInput
             id="stay_special_requests"
             name="stay_special_requests"
@@ -100,7 +102,7 @@ export default function AddressForm({
           />
         </FormGrid>
         <FormGrid item xs={12}>
-          <FormLabel htmlFor="email">Accommodation Special Request *</FormLabel>
+          <FormLabel htmlFor="email">Accommodation Special Request</FormLabel>
           <OutlinedInput
             id="accommodation_special_requests"
             name="accommodation_special_requests"
@@ -126,7 +128,7 @@ export default function AddressForm({
               </FormGrid>
               <FormGrid item xs={12} md={6}>
                 <FormLabel htmlFor="first-name" required>
-                  Given name
+                  First name
                 </FormLabel>
                 <OutlinedInput
                   id="first-name"
@@ -145,7 +147,7 @@ export default function AddressForm({
               </FormGrid>
               <FormGrid item xs={12} md={6}>
                 <FormLabel htmlFor="last-name" required>
-                  Family name
+                  Last name
                 </FormLabel>
                 <OutlinedInput
                   id="last-name"

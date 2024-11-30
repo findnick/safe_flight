@@ -116,6 +116,14 @@ const APIS = {
       },
     });
   },
+  deleteOrderRecord: (req) => {
+    return baseModule.delete("user/deleteorder", {
+      headers: {
+        "X-Auth-Token": req.token,
+      },
+      data: req.body,
+    });
+  },
   getMarkup: (token) => {
     return baseModule.get("user/getmarkup", {
       headers: { "X-Auth-Token": token },

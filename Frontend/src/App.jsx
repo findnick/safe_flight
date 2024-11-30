@@ -47,14 +47,10 @@ import {
 import AddHotelMarkup from "./Pages/AddHotelMarkup";
 import EditCampaignBackground from "./Pages/EditCampaignBackground";
 import { APIS, useAPI } from "./api/config";
-import moment from "moment";
-import { currencies } from "./hooks/useCurrency";
 
 const App = () => {
   const [user, setUser, getUserData] = useContext(UserContext);
   const [getUser, userLoading] = useAPI(APIS.getUserData);
-
-  const { VITE_FIXER_KEY } = import.meta.env;
 
   const footer_pages = [
     {
@@ -114,41 +110,6 @@ const App = () => {
       getUser(token)
         .then((res) => res?.data || redirect(res))
         .catch((res) => console.error(res));
-    }
-
-    let latestCurrencyRates = true;
-    if (localStorage.getItem("Currency Rates")) {
-      const { timestamp } = JSON.parse(localStorage.getItem("Currency Rates"));
-      const dateDiff = Math.abs(
-        moment(timestamp).diff(moment().unix(), "hours")
-      );
-      if (dateDiff > 24) {
-        latestCurrencyRates = false;
-      } else {
-        latestCurrencyRates = true;
-      }
-    } else {
-      latestCurrencyRates = false;
-    }
-
-    if (!latestCurrencyRates) {
-      axios
-        .get(
-          `http://data.fixer.io/api/latest?access_key=${VITE_FIXER_KEY}&symbols=${currencies.join(
-            ","
-          )}`
-        )
-        .then((res) => {
-          if (res.status === 200) {
-            const today = moment().unix();
-            var currencyObject = { ...res.data };
-            currencyObject.timestamp = today;
-            localStorage.setItem(
-              "Currency Rates",
-              JSON.stringify(currencyObject)
-            );
-          }
-        });
     }
   });
 

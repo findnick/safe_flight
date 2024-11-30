@@ -10,7 +10,7 @@ const NABEEL_FORWARD_PORT = "https://sxtrqp1x-8080.inc1.devtunnels.ms/api";
 // website domain-host link:
 const HOST_LINK = "https://flightsavior.com/api";
 // awais testing link:
-const AWAIS_FORWARD_PORT = "https://tj6h9ng2-8080.inc1.devtunnels.ms/api";
+const AWAIS_FORWARD_PORT = "https://k5jtsr9t-8080.inc1.devtunnels.ms/api";
 // local link:
 const LOCAL_LINK = "http://localhost:8080/api";
 

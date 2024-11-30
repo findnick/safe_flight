@@ -67,8 +67,8 @@ function FAQ() {
   const questions = [
     {
       question: "Help! I need to change/cancel my reservation!",
-      answer: `KAYAK compares flight prices of various airline reservation sites and find the lowest price for you. Select the lowest price you want and we will link you to the site so that you can complete your reservation.
-Since the actual reservation is connected to the airline or travel agent you have selected, KAYAK is not involved in the reservation and payment, and your reservation information cannot be verified.
+      answer: `FlightSavior compares flight prices of various airline reservation sites and find the lowest price for you. Select the lowest price you want and we will link you to the site so that you can complete your reservation.
+Since the actual reservation is connected to the airline or travel agent you have selected, FlightSavior is not involved in the reservation and payment, and your reservation information cannot be verified.
 
 Therefore, if you have any inquiries regarding reservation changes or cancellations, please contact the customer center of the airline or travel agency where the reservation was made. If you can't remember which reservation site you booked from, please check your payment details. If you look at the payment destination, you can check the reservation destination.`,
     },
@@ -78,8 +78,8 @@ Therefore, if you have any inquiries regarding reservation changes or cancellati
       answer: `Because we're searching hundreds of other travel sites at once, sometimes there are accuracy issues originating from the information we're receiving from those sites. Either the site isn't updating their inventory with us, has given the wrong path, or another traveler has booked the last available room.`,
     },
     {
-      question: "What is KAYAK's refund policy?",
-      answer: `Because KAYAK is a search engine, not a seller, we don't have a refund policy -- that's handled solely by the provider that booked your trip. Not sure what company to talk to? Check your credit card statement and/or go to Bookings to locate your provider's information.`,
+      question: "What is FlightSavior's refund policy?",
+      answer: `Because FlightSavior is a search engine, not a seller, we don't have a refund policy -- that's handled solely by the provider that booked your trip. Not sure what company to talk to? Check your credit card statement and/or go to Bookings to locate your provider's information.`,
     },
     {
       question: "What's a Hacker Fare?",
@@ -87,9 +87,9 @@ Therefore, if you have any inquiries regarding reservation changes or cancellati
     },
     {
       question: "Do prices include Taxes and Fees?",
-      answer: `All flight prices on KAYAK include applicable taxes and fees. Any exceptions to this are any optional fees like checked baggage or airlines that charge for seat selection, pet accommodations, etc. These types of add-ons will have to be arranged separately with your airline. Want to know what sort of fees an airline might charge? We got you.
+      answer: `All flight prices on FlightSavior include applicable taxes and fees. Any exceptions to this are any optional fees like checked baggage or airlines that charge for seat selection, pet accommodations, etc. These types of add-ons will have to be arranged separately with your airline. Want to know what sort of fees an airline might charge? We got you.
 
-Train and bus prices on KAYAK include applicable taxes and fees. Some partners may charge an additional service fee, a fee for additional baggage, or a fee for certain payment methods.`,
+Train and bus prices on FlightSavior include applicable taxes and fees. Some partners may charge an additional service fee, a fee for additional baggage, or a fee for certain payment methods.`,
     },
     {
       question: "Do flight prices include baggage fees?",
@@ -110,7 +110,7 @@ Train and bus prices on KAYAK include applicable taxes and fees. Some partners m
     },
     {
       question: "Can I search for a flight with my child?",
-      answer: `When searching for flights on KAYAK, you can select the number of children and infant passengers via the traveler drop-down menu.`,
+      answer: `When searching for flights on FlightSavior, you can select the number of children and infant passengers via the traveler drop-down menu.`,
     },
     {
       question: "Can I book a flight for another person?",
@@ -119,7 +119,7 @@ Train and bus prices on KAYAK include applicable taxes and fees. Some partners m
     {
       question:
         "I'm looking to land-hop. Can I book a flight that goes to more than one city?",
-      answer: `We've got you covered. When you're on the KAYAK Flights page, select "Multi-City" above the search bar before you perform your search. This will allow you to search for a flight with multiple legs.`,
+      answer: `We've got you covered. When you're on the FlightSavior Flights page, select "Multi-City" above the search bar before you perform your search. This will allow you to search for a flight with multiple legs.`,
     },
     {
       question: 'What are "flexible dates" and why should I care?',
@@ -128,7 +128,7 @@ Train and bus prices on KAYAK include applicable taxes and fees. Some partners m
     {
       question:
         "A bunch of us are going on a trip together -- how do I book a flight for a large group?",
-      answer: `Currently KAYAK can search for a maximum of nine passengers at a time. That said, KAYAK can still help you locate the best itineraries for your group. We suggest you find the flight you wish to purchase by completing a search at www.ca.kayak.com and then contacting the airline directly to discuss group trips.`,
+      answer: `Currently FlightSavior can search for a maximum of nine passengers at a time. That said, FlightSavior can still help you locate the best itineraries for your group. We suggest you find the flight you wish to purchase by completing a search at www.ca.kayak.com and then contacting the airline directly to discuss group trips.`,
     },
     {
       question:

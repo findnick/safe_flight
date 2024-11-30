@@ -6,6 +6,7 @@ import { GoDash } from "react-icons/go";
 import { UserContext } from "../context/UserContext";
 import { APIS, useAPI } from "../api/config";
 import { CircularProgress } from "@mui/material";
+import { MdDeleteForever } from "react-icons/md";
 
 export default function AdminBookings() {
   const [user, ,] = useContext(UserContext);
@@ -13,6 +14,7 @@ export default function AdminBookings() {
   const [getFlightData, flightDataLoading] = useAPI(APIS.getAllFlightData);
   const [getHotelData, hotelDataLoading] = useAPI(APIS.getAllHotelData);
   const [getUser, userLoading] = useAPI(APIS.getSingleUser);
+  const [deleteOrder, deleteOrderLoading] = useAPI(APIS.deleteOrderRecord);
   const [flightData, setFlightData] = useState([]);
   const [hotelData, setHotelData] = useState([]);
   const [emails, setEmails] = useState({}); // Store user emails
@@ -23,6 +25,15 @@ export default function AdminBookings() {
     "hidden",
     "hidden",
   ]);
+
+  const deleteOrderRecord = async (deleteObject) => {
+    try {
+      const res = await deleteOrder({ body: deleteObject, token: token });
+      return res;
+    } catch (err) {
+      return err;
+    }
+  };
 
   const changeActive = (i) => {
     const tabTemp = ["", "", ""];
@@ -49,7 +60,7 @@ export default function AdminBookings() {
       });
       setHotelData(combinedArray);
     });
-  }, []);
+  }, [deleteOrderLoading]);
 
   useEffect(() => {
     // Fetch missing emails for flight data
@@ -109,22 +120,38 @@ export default function AdminBookings() {
       <div
         className={`${activeBookTab[0]} flex flex-col justify-center items-stretch gap-8`}
       >
-        {flightDataLoading ? (
+        {flightDataLoading || deleteOrderLoading ? (
           <CircularProgress className="self-center" />
         ) : (
           flightData.length > 0 &&
           flightData.map((item, i) => {
             const data = item?.flightData || item?.orderData;
-            const departure = moment(data.departureTime).format("Do MMM, YY");
+            // const departure = moment(data.departureTime).format("Do MMM, YY");
             const arrival = moment(data.arrivalTime).format("Do MMM, YY");
             const email =
               item.email || emails[item.userId] || "john.doe@gmail.com";
-
+            const deleteObject = {
+              type: item["orderId"] ? "user" : "guest",
+              id: item["orderId"] || item["_id"],
+            };
             return (
               <div
                 key={i}
-                className="flex flex-row items-center justify-between flex-wrap bg-white rounded-lg shadow-md p-3"
+                className="relative flex flex-row items-center justify-between flex-wrap bg-white rounded-lg shadow-md p-3"
               >
+                <div className="absolute right-4 top-4">
+                  <button
+                    className="bg-red-400 text-white p-1 rounded-lg cursor-pointer hover:bg-red-600 active:bg-red-200"
+                    onClick={() => {
+                      deleteOrderRecord(deleteObject)
+                        .then((res) => console.log(res))
+                        .catch((err) => console.log(err));
+                      console.log(deleteObject);
+                    }}
+                  >
+                    <MdDeleteForever size={30} />
+                  </button>
+                </div>
                 <div className="flex flex-col md:flex-row items-center gap-4">
                   <div className="flex justify-center lg:p-3 m-6 lg:flex-shrink-0 md:border border-gray-200 rounded-lg">
                     <img
@@ -187,7 +214,7 @@ export default function AdminBookings() {
       <div
         className={`${activeBookTab[1]} flex flex-col justify-center items-stretch gap-8`}
       >
-        {hotelDataLoading ? (
+        {hotelDataLoading || deleteOrderLoading ? (
           <CircularProgress className="self-center" />
         ) : (
           hotelData.length > 0 &&
@@ -197,12 +224,28 @@ export default function AdminBookings() {
             const checkout = moment(data.check_out_date).format("Do MMM, YY");
             const email =
               item.email || emails[item.userId] || "john.doe@gmail.com";
-
+            const deleteObject = {
+              type: item["orderId"] ? "user" : "guestHotel",
+              id: item["orderId"] || item["_id"],
+            };
             return (
               <div
                 key={i}
-                className="flex flex-row items-center justify-between bg-white rounded-lg shadow-md"
+                className="relative flex flex-row items-center justify-between bg-white rounded-lg shadow-md"
               >
+                <div className="absolute right-4 top-4">
+                  <button
+                    className="bg-red-400 text-white p-1 rounded-lg cursor-pointer hover:bg-red-600 active:bg-red-200"
+                    onClick={() => {
+                      deleteOrderRecord(deleteObject)
+                        .then((res) => console.log(res))
+                        .catch((err) => console.log(err));
+                      console.log(deleteObject);
+                    }}
+                  >
+                    <MdDeleteForever size={30} />
+                  </button>
+                </div>
                 <div className="flex flex-row items-center gap-4">
                   <div className="lg:p-3 lg:m-6 lg:flex-shrink-0 border border-gray-200 rounded-lg">
                     <img

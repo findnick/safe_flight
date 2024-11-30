@@ -2,21 +2,17 @@ import axios from "axios";
 import moment from "moment";
 import { useEffect, useRef, useState } from "react";
 
-export const currencies = ['GBP', 'USD', 'EUR', 'CAD']
-export const useCurrency = () => {
+export const useCurrency = (initCurrency = 'CAD', currencies = ['GBP', 'USD', 'EUR', 'CAD', 'AUD', 'PKR', 'INR']) => {
     const { VITE_FIXER_KEY } = import.meta.env;
-    const initialValue = useRef();
+    const currentCurrency = useRef(initCurrency);
     const base = useRef("EUR");
-    const converter = useRef({
-        CAD: 1.506205,
-        EUR: 1,
-        GBP: 0.84473,
-        USD: 1.109257,
-    })
+    const [converter, setConverter] = useState([]);
+    const [allCurrencies, setAllCurrencies] = useState(currencies);
 
-    const [currency, setCurrency] = useState(initialValue.current ? initialValue.current : 'GBP');
+    const [currency, setCurrency] = useState(currentCurrency.current ? currentCurrency.current : 'CAD');
+
     const setCurrencyState = (name) => {
-        if (!currencies.includes(name)) {
+        if (!allCurrencies.includes(name)) {
             console.error("Invalid value for currency");
             return;
         }
@@ -25,8 +21,8 @@ export const useCurrency = () => {
     }
 
     const convert = (value, from = base.current) => {
-        let temp = parseFloat(value) / converter.current[from];
-        return (temp * converter.current[currency]);
+        let temp = parseFloat(value) / converter[from];
+        return (temp * converter[currency]);
     }
 
     useEffect(() => {
@@ -49,12 +45,9 @@ export const useCurrency = () => {
         }
 
         if (!latestCurrencyRates) {
-            console.log(initialValue.current);
             axios
                 .get(
-                    `https://data.fixer.io/api/latest?access_key=${VITE_FIXER_KEY}&symbols=${currencies.join(
-                        ","
-                    )}`
+                    `https://data.fixer.io/api/latest?access_key=${VITE_FIXER_KEY}`
                 )
                 .then((res) => {
                     if (res.status === 200) {
@@ -65,18 +58,20 @@ export const useCurrency = () => {
                             "Currency Rates",
                             JSON.stringify(currencyObject)
                         );
+                        setConverter(currencyObject.rates);
+                        base.current = currencyObject.base;
                     }
                 });
         } else {
-            initialValue.current = "GBP";
+            currentCurrency.current = "CAD";
             base.current = defaultRates.base;
-            converter.current = defaultRates.rates;
+            setConverter(defaultRates.rates);
         }
-    });
+    }, []);
 
     useEffect(() => {
-        if (initialValue) {
-            localStorage.setItem("currency", initialValue);
+        if (currentCurrency.current) {
+            localStorage.setItem("currency", currentCurrency.current);
             return;
         }
 
@@ -89,5 +84,5 @@ export const useCurrency = () => {
         }
     }, []);
 
-    return [currency, setCurrencyState, convert];
+    return [currency, setCurrencyState, convert, allCurrencies];
 }
