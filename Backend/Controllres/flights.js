@@ -8,7 +8,7 @@ import nodemailer from "nodemailer";
 import emailTemplate from "../Utilis/emailTemplate.js";
 
 const duffel = new Duffel({
-  token: "duffel_test_Eldk1ddsQj9nufWz8vYHfk-KfLh4jWvunNxjPx_aJdx",
+  token: process.env.DUFFLE_SECRET,
 });
 
 const listOffers = async (req, res) => {

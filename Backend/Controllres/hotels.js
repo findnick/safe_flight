@@ -7,7 +7,7 @@ import nodemailer from "nodemailer";
 import hotelTemplate from "../Utilis/hotelTemplate.js";
 
 const duffel = new Duffel({
-  token: "duffel_test_nDU7qNaJM4o5KhtbvyYXl26mKJGOELJkk3Cgjy2hkqh",
+  token: process.env.DUFFLE_SECRET,
 });
 
 const searchLocation = async (req, res) => {
